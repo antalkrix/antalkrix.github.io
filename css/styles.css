@@ -13,3 +13,50 @@ footer {
     background-color:rgb(106, 252, 230);
     padding: 20px;
 }
+
+p {
+    margin: 10px 0;
+    padding-left: 3px;
+}
+
+h2 {
+    padding: 3px;
+}
+
+nav {
+    width: 25%;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    background-color: rgb(96, 96, 96);
+    padding: 8px;
+}
+
+nav li:hover {
+    background-color: rgb(116, 116, 116);
+}
+
+nav li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.main-content {
+    width: 75%;
+}
+
+.column {
+    float: left;
+    padding: 10px;
+}
+
+.clearfix::after{
+    content:"";
+    clear: both;
+    display: table;
+}
