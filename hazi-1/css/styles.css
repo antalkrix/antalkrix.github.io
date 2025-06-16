@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff3b5;
+}
+
+h1 {
+    background-color: #d8fbcdec;
+    padding: 5px;
+}
+
+p {
+    padding: 20px;
+}
