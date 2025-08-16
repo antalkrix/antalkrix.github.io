@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,67 +18,86 @@
             align-items: center;
             height: 100vh;
         }
+
         .container {
             text-align: center;
         }
+
         h1 {
             color: #0078d4;
             margin-bottom: 40px;
         }
+
         .module-selection {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
             max-width: 1200px;
         }
+
         .module-card {
             background-color: #fff;
             padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-decoration: none;
             color: #333;
             transition: transform 0.2s, box-shadow 0.2s;
         }
+
         .module-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
+
         .module-card h2 {
             margin-top: 0;
             color: #0078d4;
         }
+
         .module-card p {
             font-size: 14px;
             color: #666;
         }
+
+        @media only screen and (max-width: 800px) {
+            body {
+                display: initial;
+            }
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
-        <h1>SC-900: Microsoft Security, Compliance, and Identity Fundamentals</h1>
+        <h1>SC-900: Microsoft Security, Compliance, and Identity Fundamentals <br> Quiz Module Selection</h1>
         <div class="module-selection">
             <a href="module1_quiz.html" class="module-card">
                 <h2>Module 1</h2>
-                <img src="https://learn.microsoft.com/en-us/training/achievements/describe-the-concepts-of-security-compliance-and-identity.svg" alt="...">
+                <img src="https://learn.microsoft.com/en-us/training/achievements/describe-the-concepts-of-security-compliance-and-identity.svg"
+                    alt="...">
                 <p>Describe the concepts of security, compliance, and identity.</p>
             </a>
             <a href="module2_quiz.html" class="module-card">
                 <h2>Module 2</h2>
-                <img src="https://learn.microsoft.com/en-us/training/achievements/describe-capabilities-of-microsoft-identity-access-management-solutions.svg" alt="...">
+                <img src="https://learn.microsoft.com/en-us/training/achievements/describe-capabilities-of-microsoft-identity-access-management-solutions.svg"
+                    alt="...">
                 <p>Describe the capabilities of Microsoft Entra.</p>
             </a>
             <a href="module3_quiz.html" class="module-card">
                 <h2>Module 3</h2>
-                <img src="https://learn.microsoft.com/en-us/training/achievements/describe-the-capabilities-of-microsoft-security-solutions.svg" alt="...">
+                <img src="https://learn.microsoft.com/en-us/training/achievements/describe-the-capabilities-of-microsoft-security-solutions.svg"
+                    alt="...">
                 <p>Describe the capabilities of Microsoft security solutions.</p>
             </a>
             <a href="module4_quiz.html" class="module-card">
                 <h2>Module 4</h2>
-                <img src="https://learn.microsoft.com/en-us/training/achievements/describe-the-capabilities-of-microsoft-compliance-solutions.svg" alt="...">
+                <img src="https://learn.microsoft.com/en-us/training/achievements/describe-the-capabilities-of-microsoft-compliance-solutions.svg"
+                    alt="...">
                 <p>Describe the capabilities of Microsoft compliance solutions.</p>
             </a>
         </div>
     </div>
 </body>
+
 </html>
