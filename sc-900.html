@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft SC-900 Practice Test</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #0078d4;
+        }
+        #quizForm {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .question {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            margin-bottom: 10px;
+        }
+        label {
+            cursor: pointer;
+            display: inline-block;
+            margin-left: 5px;
+        }
+        #submit {
+            display: block;
+            margin: 20px auto;
+            padding: 12px 25px;
+            background-color: #0078d4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #submit:disabled {
+            background-color: #a0a0a0;
+            cursor: not-allowed;
+        }
+        #results {
+            margin: 0 0 20px 0;
+            font-weight: bold;
+            text-align: center;
+            font-size: 20px;
+            padding: 15px;
+            background-color: #e7f3fe;
+            border-left: 6px solid #0078d4;
+            display: none; /* Hidden by default */
+        }
+        /* Styles for feedback */
+        .correct-answer label {
+            color: #107c10;
+            font-weight: bold;
+        }
+        .incorrect-answer label {
+            color: #d83b01;
+            font-weight: bold;
+        }
+        .explanation {
+            display: none; /* Hidden by default */
+            margin-top: 15px;
+            padding: 12px;
+            border: 1px solid #ffb900;
+            background-color: #fffbdd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>SC-900: Security, Compliance, and Identity Fundamentals Practice Exam</h1>
+
+    <div id="results"></div>
+
+    <form id="quizForm">
+
+        <div class="question" id="question-container-q1">
+            <p>1. Which security principle assumes that a breach is inevitable and requires verification for every access request, regardless of where it originates?</p>
+            <ul class="options">
+                <li><input type="radio" name="q1" value="a" id="q1a"> <label for="q1a">a) Defense in Depth</label></li>
+                <li><input type="radio" name="q1" value="b" id="q1b"> <label for="q1b">b) Least Privilege Access</label></li>
+                <li><input type="radio" name="q1" value="c" id="q1c"> <label for="q1c">c) Zero Trust</label></li>
+                <li><input type="radio" name="q1" value="d" id="q1d"> <label for="q1d">d) Shared Responsibility</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q1"></div>
+        </div>
+
+        <div class="question" id="question-container-q2">
+            <p>2. In the context of the shared responsibility model for an Infrastructure as a Service (IaaS) offering, who is responsible for patching the operating system of a virtual machine?</p>
+            <ul class="options">
+                <li><input type="radio" name="q2" value="a" id="q2a"> <label for="q2a">a) The cloud provider</label></li>
+                <li><input type="radio" name="q2" value="b" id="q2b"> <label for="q2b">b) The customer</label></li>
+                <li><input type="radio" name="q2" value="c" id="q2c"> <label for="q2c">c) It is a shared responsibility between the customer and the provider</label></li>
+                <li><input type="radio" name="q2" value="d" id="q2d"> <label for="q2d">d) The hardware vendor</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q2"></div>
+        </div>
+
+        <div class="question" id="question-container-q3">
+            <p>3. What is the primary function of authentication in identity and access management?</p>
+            <ul class="options">
+                <li><input type="radio" name="q3" value="a" id="q3a"> <label for="q3a">a) To determine what a user is allowed to do</label></li>
+                <li><input type="radio" name="q3" value="b" id="q3b"> <label for="q3b">b) To prove that a user is who they claim to be</label></li>
+                <li><input type="radio" name="q3" value="c" id="q3c"> <label for="q3c">c) To track a user's activities</label></li>
+                <li><input type="radio" name="q3" value="d" id="q3d"> <label for="q3d">d) To encrypt user data</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q3"></div>
+        </div>
+
+        <div class="question" id="question-container-q4">
+            <p>4. Which Azure Active Directory (Azure AD) feature provides a secure way for users to access external apps by using their organizational credentials?</p>
+            <ul class="options">
+                <li><input type="radio" name="q4" value="a" id="q4a"> <label for="q4a">a) Multi-Factor Authentication (MFA)</label></li>
+                <li><input type="radio" name="q4" value="b" id="q4b"> <label for="q4b">b) Single Sign-On (SSO)</label></li>
+                <li><input type="radio" name="q4" value="c" id="q4c"> <label for="q4c">c) Conditional Access</label></li>
+                <li><input type="radio" name="q4" value="d" id="q4d"> <label for="q4d">d) Privileged Identity Management (PIM)</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q4"></div>
+        </div>
+
+        <div class="question" id="question-container-q5">
+            <p>5. Your company wants to ensure that administrators are prompted for a second form of verification when they try to access the Azure portal. Which feature should you use?</p>
+            <ul class="options">
+                <li><input type="radio" name="q5" value="a" id="q5a"> <label for="q5a">a) Azure AD Identity Protection</label></li>
+                <li><input type="radio" name="q5" value="b" id="q5b"> <label for="q5b">b) Role-Based Access Control (RBAC)</label></li>
+                <li><input type="radio" name="q5" value="c" id="q5c"> <label for="q5c">c) Azure AD Conditional Access policies</label></li>
+                <li><input type="radio" name="q5" value="d" id="q5d"> <label for="q5d">d) Azure AD B2C</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q5"></div>
+        </div>
+
+        <div class="question" id="question-container-q6">
+            <p>6. What is the purpose of Azure AD Privileged Identity Management (PIM)?</p>
+            <ul class="options">
+                <li><input type="radio" name="q6" value="a" id="q6a"> <label for="q6a">a) To provide passwordless authentication for users</label></li>
+                <li><input type="radio" name="q6" value="b" id="q6b"> <label for="q6b">b) To manage and monitor access to important resources by providing just-in-time (JIT) access</label></li>
+                <li><input type="radio" name="q6" value="c" id="q6c"> <label for="q6c">c) To connect on-premises Active Directory with Azure AD</label></li>
+                <li><input type="radio" name="q6" value="d" id="q6d"> <label for="q6d">d) To provide business-to-customer identity services</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q6"></div>
+        </div>
+
+        <div class="question" id="question-container-q7">
+            <p>7. Which Microsoft 365 Defender service is specifically designed to protect against threats in emails, links, and collaboration tools?</p>
+            <ul class="options">
+                <li><input type="radio" name="q7" value="a" id="q7a"> <label for="q7a">a) Microsoft Defender for Endpoint</label></li>
+                <li><input type="radio" name="q7" value="b" id="q7b"> <label for="q7b">b) Microsoft Defender for Identity</label></li>
+                <li><input type="radio" name="q7" value="c" id="q7c"> <label for="q7c">c) Microsoft Defender for Office 365</label></li>
+                <li><input type="radio" name="q7" value="d" id="q7d"> <label for="q7d">d) Microsoft Defender for Cloud Apps</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q7"></div>
+        </div>
+
+        <div class="question" id="question-container-q8">
+            <p>8. What is the primary function of Microsoft Sentinel?</p>
+            <ul class="options">
+                <li><input type="radio" name="q8" value="a" id="q8a"> <label for="q8a">a) To manage security policies for endpoints</label></li>
+                <li><input type="radio" name="q8" value="b" id="q8b"> <label for="q8b">b) To act as a cloud-native Security Information and Event Management (SIEM) and Security Orchestration, Automation, and Response (SOAR) solution</label></li>
+                <li><input type="radio" name="q8" value="c" id="q8c"> <label for="q8c">c) To protect on-premises Active Directory domain controllers</label></li>
+                <li><input type="radio" name="q8" value="d" id="q8d"> <label for="q8d">d) To manage data retention and classification labels</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q8"></div>
+        </div>
+
+        <div class="question" id="question-container-q9">
+            <p>9. Which Azure service helps you manage and enforce policies to ensure your Azure resources stay compliant with corporate standards?</p>
+            <ul class="options">
+                <li><input type="radio" name="q9" value="a" id="q9a"> <label for="q9a">a) Azure Advisor</label></li>
+                <li><input type="radio" name="q9" value="b" id="q9b"> <label for="q9b">b) Azure Monitor</label></li>
+                <li><input type="radio" name="q9" value="c" id="q9c"> <label for="q9c">c) Azure Policy</label></li>
+                <li><input type="radio" name="q9" value="d" id="q9d"> <label for="q9d">d) Azure Blueprints</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q9"></div>
+        </div>
+
+        <div class="question" id="question-container-q10">
+            <p>10. What is the main purpose of Sensitivity Labels in Microsoft Purview Information Protection?</p>
+            <ul class="options">
+                <li><input type="radio" name="q10" value="a" id="q10a"> <label for="q10a">a) To monitor for insider risks</label></li>
+                <li><input type="radio" name="q10" value="b" id="q10b"> <label for="q10b">b) To classify and protect documents and emails by applying markings and encryption</label></li>
+                <li><input type="radio" name="q10" value="c" id="q10c"> <label for="q10c">c) To manage the lifecycle of data</label></li>
+                <li><input type="radio" name="q10" value="d" id="q10d"> <label for="q10d">d) To perform eDiscovery searches</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q10"></div>
+        </div>
+
+        <div class="question" id="question-container-q11">
+            <p>11. The Service Trust Portal provides information about Microsoft's compliance with various standards. What kind of report details the design and operational effectiveness of Microsoft's security controls?</p>
+            <ul class="options">
+                <li><input type="radio" name="q11" value="a" id="q11a"> <label for="q11a">a) Data Protection Impact Assessments (DPIA)</label></li>
+                <li><input type="radio" name="q11" value="b" id="q11b"> <label for="q11b">b) Security Baselines</label></li>
+                <li><input type="radio" name="q11" value="c" id="q11c"> <label for="q11c">c) Independent Audit Reports (like SOC 2)</label></li>
+                <li><input type="radio" name="q11" value="d" id="q11d"> <label for="q11d">d) Azure Policy Compliance Reports</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q11"></div>
+        </div>
+
+        <div class="question" id="question-container-q12">
+            <p>12. Which tool within Microsoft Purview helps you measure your organization's progress in completing actions that help reduce risks around data protection and regulatory standards?</p>
+            <ul class="options">
+                <li><input type="radio" name="q12" value="a" id="q12a"> <label for="q12a">a) Compliance Manager</label></li>
+                <li><input type="radio" name="q12" value="b" id="q12b"> <label for="q12b">b) eDiscovery (Premium)</label></li>
+                <li><input type="radio" name="q12" value="c" id="q12c"> <label for="q12c">c) Information Protection</label></li>
+                <li><input type="radio" name="q12" value="d" id="q12d"> <label for="q12d">d) Service Trust Portal</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q12"></div>
+        </div>
+
+        <div class="question" id="question-container-q13">
+            <p>13. A user signs in from a location they have never used before. Azure AD Identity Protection flags this as a risk. This is an example of what type of protection?</p>
+            <ul class="options">
+                <li><input type="radio" name="q13" value="a" id="q13a"> <label for="q13a">a) Proactive threat detection</label></li>
+                <li><input type="radio" name="q13" value="b" id="q13b"> <label for="q13b">b) Manual policy enforcement</label></li>
+                <li><input type="radio" name="q13" value="c" id="q13c"> <label for="q13c">c) Data loss prevention</label></li>
+                <li><input type="radio" name="q13" value="d" id="q13d"> <label for="q13d">d) Information barrier policy</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q13"></div>
+        </div>
+
+        <div class="question" id="question-container-q14">
+            <p>14. What is the concept of granting users only the permissions they need to perform their job tasks and nothing more?</p>
+            <ul class="options">
+                <li><input type="radio" name="q14" value="a" id="q14a"> <label for="q14a">a) Defense in Depth</label></li>
+                <li><input type="radio" name="q14" value="b" id="q14b"> <label for="q14b">b) Principle of Least Privilege</label></li>
+                <li><input type="radio" name="q14" value="c" id="q14c"> <label for="q14c">c) Zero Trust</label></li>
+                <li><input type="radio" name="q14" value="d" id="q14d"> <label for="q14d">d) Single Sign-On</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q14"></div>
+        </div>
+
+        <div class="question" id="question-container-q15">
+            <p>15. Which Azure network security feature filters traffic to and from Azure resources on a virtual network?</p>
+            <ul class="options">
+                <li><input type="radio" name="q15" value="a" id="q15a"> <label for="q15a">a) Azure DDoS Protection</label></li>
+                <li><input type="radio" name="q15" value="b" id="q15b"> <label for="q15b">b) Azure Firewall</label></li>
+                <li><input type="radio" name="q15" value="c" id="q15c"> <label for="q15c">c) Network Security Groups (NSGs)</label></li>
+                <li><input type="radio" name="q15" value="d" id="q15d"> <label for="q15d">d) Azure Application Gateway</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q15"></div>
+        </div>
+
+        <div class="question" id="question-container-q16">
+            <p>16. Your organization needs to provide identity services to external customers for your consumer-facing applications. Which Azure AD service should you use?</p>
+            <ul class="options">
+                <li><input type="radio" name="q16" value="a" id="q16a"> <label for="q16a">a) Azure AD Domain Services</label></li>
+                <li><input type="radio" name="q16" value="b" id="q16b"> <label for="q16b">b) Azure AD B2B (Business-to-Business)</label></li>
+                <li><input type="radio" name="q16" value="c" id="q16c"> <label for="q16c">c) Azure AD Connect</label></li>
+                <li><input type="radio" name="q16" value="d" id="q16d"> <label for="q16d">d) Azure AD B2C (Business-to-Customer)</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q16"></div>
+        </div>
+
+        <div class="question" id="question-container-q17">
+            <p>17. Which security posture management service provides a Secure Score to give you visibility into your organization's security state across Azure, on-premises, and other clouds?</p>
+            <ul class="options">
+                <li><input type="radio" name="q17" value="a" id="q17a"> <label for="q17a">a) Microsoft Sentinel</label></li>
+                <li><input type="radio" name="q17" value="b" id="q17b"> <label for="q17b">b) Microsoft Defender for Cloud</label></li>
+                <li><input type="radio" name="q17" value="c" id="q17c"> <label for="q17c">c) Microsoft 365 Defender</label></li>
+                <li><input type="radio" name="q17" value="d" id="q17d"> <label for="q17d">d) Microsoft Purview Compliance Manager</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q17"></div>
+        </div>
+
+        <div class="question" id="question-container-q18">
+            <p>18. A company wants to prevent emails containing credit card numbers from being sent outside the organization. Which Microsoft Purview feature can help achieve this?</p>
+            <ul class="options">
+                <li><input type="radio" name="q18" value="a" id="q18a"> <label for="q18a">a) Retention Policies</label></li>
+                <li><input type="radio" name="q18" value="b" id="q18b"> <label for="q18b">b) Data Loss Prevention (DLP) Policies</label></li>
+                <li><input type="radio" name="q18" value="c" id="q18c"> <label for="q18c">c) eDiscovery</label></li>
+                <li><input type="radio" name="q18" value="d" id="q18d"> <label for="q18d">d) Insider Risk Management</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q18"></div>
+        </div>
+
+        <div class="question" id="question-container-q19">
+            <p>19. What is the primary difference between Authentication and Authorization?</p>
+            <ul class="options">
+                <li><input type="radio" name="q19" value="a" id="q19a"> <label for="q19a">a) Authentication is for users, while Authorization is for devices.</label></li>
+                <li><input type="radio" name="q19" value="b" id="q19b"> <label for="q19b">b) Authentication verifies identity, while Authorization determines access rights.</label></li>
+                <li><input type="radio" name="q19" value="c" id="q19c"> <label for="q19c">c) Authentication is done on-premises, while Authorization is done in the cloud.</label></li>
+                <li><input type="radio" name="q19" value="d" id="q19d"> <label for="q19d">d) There is no difference; the terms are interchangeable.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q19"></div>
+        </div>
+
+        <div class="question" id="question-container-q20">
+            <p>20. Which feature is an example of passwordless authentication in Azure AD?</p>
+            <ul class="options">
+                <li><input type="radio" name="q20" value="a" id="q20a"> <label for="q20a">a) Using a 16-character complex password</label></li>
+                <li><input type="radio" name="q20" value="b" id="q20b"> <label for="q20b">b) Self-Service Password Reset (SSPR)</label></li>
+                <li><input type="radio" name="q20" value="c" id="q20c"> <label for="q20c">c) Windows Hello for Business</label></li>
+                <li><input type="radio" name="q20" value="d" id="q20d"> <label for="q20d">d) Requiring Multi-Factor Authentication</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q20"></div>
+        </div>
+
+        <div class="question" id="question-container-q21">
+            <p>21. A legal team needs to find all documents related to a specific court case within the organization's Microsoft 365 environment. Which Microsoft Purview solution should they use?</p>
+            <ul class="options">
+                <li><input type="radio" name="q21" value="a" id="q21a"> <label for="q21a">a) Data Lifecycle Management</label></li>
+                <li><input type="radio" name="q21" value="b" id="q21b"> <label for="q21b">b) Communication Compliance</label></li>
+                <li><input type="radio" name="q21" value="c" id="q21c"> <label for="q21c">c) eDiscovery</label></li>
+                <li><input type="radio" name="q21" value="d" id="q21d"> <label for="q21d">d) Records Management</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q21"></div>
+        </div>
+
+        <div class="question" id="question-container-q22">
+            <p>22. Microsoft Defender for Endpoint is designed to protect what kind of asset?</p>
+            <ul class="options">
+                <li><input type="radio" name="q22" value="a" id="q22a"> <label for="q22a">a) User identities</label></li>
+                <li><input type="radio" name="q22" value="b" id="q22b"> <label for="q22b">b) Cloud applications</label></li>
+                <li><input type="radio" name="q22" value="c" id="q22c"> <label for="q22c">c) Devices like laptops and servers</label></li>
+                <li><input type="radio" name="q22" value="d" id="q22d"> <label for="q22d">d) Email and documents</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q22"></div>
+        </div>
+
+        <div class="question" id="question-container-q23">
+            <p>23. What does "SOAR" stand for in the context of Microsoft Sentinel?</p>
+            <ul class="options">
+                <li><input type="radio" name="q23" value="a" id="q23a"> <label for="q23a">a) Security Operations and Analytics Reporting</label></li>
+                <li><input type="radio" name="q23" value="b" id="q23b"> <label for="q23b">b) System Outage and Recovery</label></li>
+                <li><input type="radio" name="q23" value="c" id="q23c"> <label for="q23c">c) Secure Orchestration, Automation, and Response</label></li>
+                <li><input type="radio" name="q23" value="d" id="q23d"> <label for="q23d">d) Service Optimization and Resource management</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q23"></div>
+        </div>
+
+        <div class="question" id="question-container-q24">
+            <p>24. Which component of the Zero Trust model involves checking device health and compliance before granting access?</p>
+            <ul class="options">
+                <li><input type="radio" name="q24" value="a" id="q24a"> <label for="q24a">a) Verify explicitly</label></li>
+                <li><input type="radio" name="q24" value="b" id="q24b"> <label for="q24b">b) Use least privileged access</label></li>
+                <li><input type="radio" name="q24" value="c" id="q24c"> <label for="q24c">c) Assume breach</label></li>
+                <li><input type="radio" name="q24" value="d" id="q24d"> <label for="q24d">d) This is not part of the Zero Trust model</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q24"></div>
+        </div>
+
+        <div class="question" id="question-container-q25">
+            <p>25. What is the purpose of Microsoft Purview's Data Lifecycle Management?</p>
+            <ul class="options">
+                <li><input type="radio" name="q25" value="a" id="q25a"> <label for="q25a">a) To encrypt all data at rest</label></li>
+                <li><input type="radio" name="q25" value="b" id="q25b"> <label for="q25b">b) To manage content by keeping what you need and deleting what you don't</label></li>
+                <li><input type="radio" name="q25" value="c" id="q25c"> <label for="q25d">c) To prevent users from sharing sensitive data</label></li>
+                <li><input type="radio" name="q25" value="d" id="q25d"> <label for="q25d">d) To classify data based on its content</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q25"></div>
+        </div>
+
+        <div class="question" id="question-container-q26">
+            <p>26. A user's credentials have been found on the dark web. Which service can detect this and flag the user's account as high-risk?</p>
+            <ul class="options">
+                <li><input type="radio" name="q26" value="a" id="q26a"> <label for="q26a">a) Microsoft Defender for Office 365</label></li>
+                <li><input type="radio" name="q26" value="b" id="q26b"> <label for="q26b">b) Azure AD Identity Protection</label></li>
+                <li><input type="radio" name="q26" value="c" id="q26c"> <label for="q26c">c) Microsoft Sentinel</label></li>
+                <li><input type="radio" name="q26" value="d" id="q26d"> <label for="q26d">d) Microsoft Defender for Endpoint</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q26"></div>
+        </div>
+
+        <div class="question" id="question-container-q27">
+            <p>27. What is the primary role of a Cloud Access Security Broker (CASB) like Microsoft Defender for Cloud Apps?</p>
+            <ul class="options">
+                <li><input type="radio" name="q27" value="a" id="q27a"> <label for="q27a">a) To provide a secure VPN connection to the cloud</label></li>
+                <li><input type="radio" name="q27" value="b" id="q27b"> <label for="q27b">b) To act as a gatekeeper to broker access between users and cloud services</label></li>
+                <li><input type="radio" name="q27" value="c" id="q27c"> <label for="q27c">c) To manage and patch virtual machines in the cloud</label></li>
+                <li><input type="radio" name="q27" value="d" id="q27d"> <label for="q27d">d) To scan emails for phishing attempts</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q27"></div>
+        </div>
+
+        <div class="question" id="question-container-q28">
+            <p>28. Your company needs to synchronize user identities from an on-premises Windows Server Active Directory to Azure AD. Which tool is designed for this purpose?</p>
+            <ul class="options">
+                <li><input type="radio" name="q28" value="a" id="q28a"> <label for="q28a">a) Azure AD PIM</label></li>
+                <li><input type="radio" name="q28" value="b" id="q28b"> <label for="q28b">b) Azure Lighthouse</label></li>
+                <li><input type="radio" name="q28" value="c" id="q28c"> <label for="q28c">c) Azure AD Connect</label></li>
+                <li><input type="radio" name="q28" value="d" id="q28d"> <label for="q28d">d) Azure Arc</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q28"></div>
+        </div>
+
+        <div class="question" id="question-container-q29">
+            <p>29. The security operations team wants to proactively hunt for threats across their datasets using structured queries. Which service is best suited for this task?</p>
+            <ul class="options">
+                <li><input type="radio" name="q29" value="a" id="q29a"> <label for="q29a">a) Microsoft Defender for Cloud</label></li>
+                <li><input type="radio" name="q29" value="b" id="q29b"> <label for="q29b">b) Microsoft Sentinel</label></li>
+                <li><input type="radio" name="q29" value="c" id="q29c"> <label for="q29c">c) Azure Monitor</label></li>
+                <li><input type="radio" name="q29" value="d" id="q29d"> <label for="q29d">d) Microsoft Purview</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q29"></div>
+        </div>
+
+        <div class="question" id="question-container-q30">
+            <p>30. What is a key benefit of using a layered security strategy, also known as Defense in Depth?</p>
+            <ul class="options">
+                <li><input type="radio" name="q30" value="a" id="q30a"> <label for="q30a">a) It simplifies security management by using a single solution.</label></li>
+                <li><input type="radio" name="q30" value="b" id="q30b"> <label for="q30b">b) It eliminates the need for user authentication.</label></li>
+                <li><input type="radio" name="q30" value="c" id="q30c"> <label for="q30c">c) It slows down an attacker by providing multiple barriers, even if one layer is breached.</label></li>
+                <li><input type="radio" name="q30" value="d" id="q30d"> <label for="q30d">d) It is the responsibility of the cloud provider only.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q30"></div>
+        </div>
+
+        <div class="question" id="question-container-q31">
+            <p>31. Which feature allows you to define and enforce rules about which Azure regions your organization can deploy resources to?</p>
+            <ul class="options">
+                <li><input type="radio" name="q31" value="a" id="q31a"> <label for="q31a">a) Azure Role-Based Access Control (RBAC)</label></li>
+                <li><input type="radio" name="q31" value="b" id="q31b"> <label for="q31b">b) Azure Management Groups</label></li>
+                <li><input type="radio" name="q31" value="c" id="q31c"> <label for="q31c">c) Azure Policy</label></li>
+                <li><input type="radio" name="q31" value="d" id="q31d"> <label for="q31d">d) Azure Resource Locks</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q31"></div>
+        </div>
+
+        <div class="question" id="question-container-q32">
+            <p>32. An organization needs to automatically detect and remediate policy violations for their cloud resources. Which service is designed for this?</p>
+            <ul class="options">
+                <li><input type="radio" name="q32" value="a" id="q32a"> <label for="q32a">a) Microsoft Defender for Cloud</label></li>
+                <li><input type="radio" name="q32" value="b" id="q32b"> <label for="q32b">b) Azure Active Directory</label></li>
+                <li><input type="radio" name="q32" value="c" id="q32c"> <label for="q32c">c) Microsoft Sentinel</label></li>
+                <li><input type="radio" name="q32" value="d" id="q32d"> <label for="q32d">d) Azure Information Protection</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q32"></div>
+        </div>
+
+        <div class="question" id="question-container-q33">
+            <p>33. What is the function of the "Safe Links" feature in Microsoft Defender for Office 365?</p>
+            <ul class="options">
+                <li><input type="radio" name="q33" value="a" id="q33a"> <label for="q33a">a) It encrypts email attachments.</label></li>
+                <li><input type="radio" name="q33" value="b" id="q33b"> <label for="q33b">b) It provides time-of-click verification of URLs in emails and Office files.</label></li>
+                <li><input type="radio" name="q33" value="c" id="q33c"> <label for="q33c">c) It checks user identities before allowing access to a link.</label></li>
+                <li><input type="radio" name="q33" value="d" id="q33d"> <label for="q33d">d) It blocks all hyperlinks from external senders.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q33"></div>
+        </div>
+
+        <div class="question" id="question-container-q34">
+            <p>34. What type of identity is used for an application or service principal that needs to access Azure resources?</p>
+            <ul class="options">
+                <li><input type="radio" name="q34" value="a" id="q34a"> <label for="q34a">a) User identity</label></li>
+                <li><input type="radio" name="q34" value="b" id="q34b"> <label for="q34b">b) Group identity</label></li>
+                <li><input type="radio" name="q34" value="c" id="q34c"> <label for="q34c">c) Device identity</label></li>
+                <li><input type="radio" name="q34" value="d" id="q34d"> <label for="q34d">d) Workload identity (Managed Identity)</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q34"></div>
+        </div>
+
+        <div class="question" id="question-container-q35">
+            <p>35. Microsoft Purview Insider Risk Management is designed to help organizations address what kind of problem?</p>
+            <ul class="options">
+                <li><input type="radio" name="q35" value="a" id="q35a"> <label for="q35a">a) External hacking attempts from cybercriminals</label></li>
+                <li><input type="radio" name="q35" value="b" id="q35b"> <label for="q35b">b) Accidental data leaks or malicious data theft by employees</label></li>
+                <li><input type="radio" name="q35" value="c" id="q35c"> <label for="q35c">c) Ransomware attacks on corporate servers</label></li>
+                <li><input type="radio" name="q35" value="d" id="q35d"> <label for="q35d">d) Compliance with regional data residency laws</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q35"></div>
+        </div>
+
+        <div class="question" id="question-container-q36">
+            <p>36. What is the purpose of an Information Barrier policy in Microsoft Purview?</p>
+            <ul class="options">
+                <li><input type="radio" name="q36" value="a" id="q36a"> <label for="q36a">a) To prevent specific segments of users (e.g., day traders) from communicating with other segments (e.g., financial analysts)</label></li>
+                <li><input type="radio" name="q36" value="b" id="q36b"> <label for="q36b">b) To block all incoming external email</label></li>
+                <li><input type="radio" name="q36" value="c" id="q36c"> <label for="q36c">c) To encrypt data stored in SharePoint Online</label></li>
+                <li><input type="radio" name="q36" value="d" id="q36d"> <label for="q36d">d) To manage physical access to data centers</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q36"></div>
+        </div>
+
+        <div class="question" id="question-container-q37">
+            <p>37. A company wants to use a single identity for a user across both their on-premises and cloud environments. This concept is known as:</p>
+            <ul class="options">
+                <li><input type="radio" name="q37" value="a" id="q37a"> <label for="q37a">a) Federated Identity</label></li>
+                <li><input type="radio" name="q37" value="b" id="q37b"> <label for="q37b">b) Hybrid Identity</label></li>
+                <li><input type="radio" name="q37" value="c" id="q37c"> <label for="q37c">c) Cloud-native Identity</label></li>
+                <li><input type="radio" name="q37" value="d" id="q37d"> <label for="q37d">d) Decentralized Identity</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q37"></div>
+        </div>
+
+        <div class="question" id="question-container-q38">
+            <p>38. Which type of attack is Azure DDoS Protection specifically designed to mitigate?</p>
+            <ul class="options">
+                <li><input type="radio" name="q38" value="a" id="q38a"> <label for="q38a">a) Phishing attacks via email</label></li>
+                <li><input type="radio" name="q38" value="b" id="q38b"> <label for="q38b">b) SQL injection attacks on a web application</label></li>
+                <li><input type="radio" name="q38" value="c" id="q38c"> <label for="q38c">c) Malware infection on an endpoint</label></li>
+                <li><input type="radio" name="q38" value="d" id="q38d"> <label for="q38d">d) Volumetric attacks that attempt to overwhelm a network with traffic</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q38"></div>
+        </div>
+
+        <div class="question" id="question-container-q39">
+            <p>39. Microsoft Defender for Identity focuses on monitoring signals from which environment?</p>
+            <ul class="options">
+                <li><input type="radio" name="q39" value="a" id="q39a"> <label for="q39a">a) Azure virtual machines</label></li>
+                <li><input type="radio" name="q39" value="b" id="q39b"> <label for="q39b">b) On-premises Active Directory Domain Services</label></li>
+                <li><input type="radio" name="q39" value="c" id="q39c"> <label for="q39c">c) User laptops and mobile devices</label></li>
+                <li><input type="radio" name="q39" value="d" id="q39d"> <label for="q39d">d) Microsoft 365 applications like SharePoint and Teams</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q39"></div>
+        </div>
+
+        <div class="question" id="question-container-q40">
+            <p>40. What does XDR stand for in the context of Microsoft 365 Defender?</p>
+            <ul class="options">
+                <li><input type="radio" name="q40" value="a" id="q40a"> <label for="q40a">a) Cross-Device Response</label></li>
+                <li><input type="radio" name="q40" value="b" id="q40b"> <label for="q40b">b) Extended Detection and Response</label></li>
+                <li><input type="radio" name="q40" value="c" id="q40c"> <label for="q40c">c) XML Data Redaction</label></li>
+                <li><input type="radio" name="q40" value="d" id="q40d"> <label for="q40d">d) External Data Recovery</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q40"></div>
+        </div>
+
+        <div class="question" id="question-container-q41">
+            <p>41. You need to assign an Azure role to a user that gives them permission to read all resources in a resource group but not make any changes. Which role should you assign?</p>
+            <ul class="options">
+                <li><input type="radio" name="q41" value="a" id="q41a"> <label for="q41a">a) Contributor</label></li>
+                <li><input type="radio" name="q41" value="b" id="q41b"> <label for="q41b">b) Owner</label></li>
+                <li><input type="radio" name="q41" value="c" id="q41c"> <label for="q41c">c) Reader</label></li>
+                <li><input type="radio" name="q41" value="d" id="q41d"> <label for="q41d">d) User Access Administrator</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q41"></div>
+        </div>
+
+        <div class="question" id="question-container-q42">
+            <p>42. Which service is a central place to manage access and security for all your SaaS applications, both from Microsoft and third-party vendors?</p>
+            <ul class="options">
+                <li><input type="radio" name="q42" value="a" id="q42a"> <label for="q42a">a) Microsoft Defender for Cloud</label></li>
+                <li><input type="radio" name="q42" value="b" id="q42b"> <label for="q42b">b) Microsoft Sentinel</label></li>
+                <li><input type="radio" name="q42" value="c" id="q42c"> <label for="q42c">c) Microsoft Defender for Cloud Apps</label></li>
+                <li><input type="radio" name="q42" value="d" id="q42d"> <label for="q42d">d) Azure Active Directory</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q42"></div>
+        </div>
+
+        <div class="question" id="question-container-q43">
+            <p>43. An organization wants to ensure that all virtual machines are configured with disk encryption. Which Azure service can be used to enforce this requirement?</p>
+            <ul class="options">
+                <li><input type="radio" name="q43" value="a" id="q43a"> <label for="q43a">a) Azure Policy</label></li>
+                <li><input type="radio" name="q43" value="b" id="q43b"> <label for="q43b">b) Azure Key Vault</label></li>
+                <li><input type="radio" name="q43" value="c" id="q43c"> <label for="q43c">c) Microsoft Defender for Cloud</label></li>
+                <li><input type="radio" name="q43" value="d" id="q43d"> <label for="q43d">d) Azure Monitor</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q43"></div>
+        </div>
+
+        <div class="question" id="question-container-q44">
+            <p>44. Your organization's Compliance Score in Microsoft Purview is calculated based on actions that are the responsibility of whom?</p>
+            <ul class="options">
+                <li><input type="radio" name="q44" value="a" id="q44a"> <label for="q44a">a) Only Microsoft</label></li>
+                <li><input type="radio" name="q44" value="b" id="q44b"> <label for="q44b">b) Only your organization (the customer)</label></li>
+                <li><input type="radio" name="q44" value="c" id="q44c"> <label for="q44c">c) Both Microsoft and your organization, based on the shared responsibility model</label></li>
+                <li><input type="radio" name="q44" value="d" id="q44d"> <label for="q44d">d) Independent third-party auditors</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q44"></div>
+        </div>
+
+        <div class="question" id="question-container-q45">
+            <p>45. What is the primary purpose of a "retention label" in Microsoft Purview?</p>
+            <ul class="options">
+                <li><input type="radio" name="q45" value="a" id="q45a"> <label for="q45a">a) To apply encryption to a file.</label></li>
+                <li><input type="radio" name="q45" value="b" id="q45b"> <label for="q45b">b) To classify content so it can be retained or deleted to meet business or regulatory requirements.</label></li>
+                <li><input type="radio" name="q45" value="c" id="q45c"> <label for="q45c">c) To add a visual marking, like a watermark, to a document.</label></li>
+                <li><input type="radio" name="q45" value="d" id="q45d"> <label for="q45d">d) To prevent a document from being shared externally.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q45"></div>
+        </div>
+
+        <div class="question" id="question-container-q46">
+            <p>46. To improve security, your organization wants to block sign-in attempts from specific high-risk countries. Which Azure AD feature is best suited for creating this policy?</p>
+            <ul class="options">
+                <li><input type="radio" name="q46" value="a" id="q46a"> <label for="q46a">a) Azure AD Identity Protection</label></li>
+                <li><input type="radio" name="q46" value="b" id="q46b"> <label for="q46b">b) Azure AD Conditional Access</label></li>
+                <li><input type="radio" name="q46" value="c" id="q46c"> <label for="q46c">c) Azure AD Privileged Identity Management</label></li>
+                <li><input type="radio" name="q46" value="d" id="q46d"> <label for="q46d">d) Azure Policy</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q46"></div>
+        </div>
+
+        <div class="question" id="question-container-q47">
+            <p>47. Which Microsoft 365 Defender service provides a unified view of security incidents from across endpoints, identities, email, and applications?</p>
+            <ul class="options">
+                <li><input type="radio" name="q47" value="a" id="q47a"> <label for="q47a">a) The Microsoft 365 Defender portal</label></li>
+                <li><input type="radio" name="q47" value="b" id="q47b"> <label for="q47b">b) The Microsoft Purview compliance portal</label></li>
+                <li><input type="radio" name="q47" value="c" id="q47c"> <label for="q47c">c) The Microsoft Sentinel workspace</label></li>
+                <li><input type="radio" name="q47" value="d" id="q47d"> <label for="q47d">d) The Azure portal</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q47"></div>
+        </div>
+
+        <div class="question" id="question-container-q48">
+            <p>48. A company wants to provide users with a simple way to reset their forgotten passwords without calling the help desk. What Azure AD feature enables this?</p>
+            <ul class="options">
+                <li><input type="radio" name="q48" value="a" id="q48a"> <label for="q48a">a) Multi-Factor Authentication (MFA)</label></li>
+                <li><input type="radio" name="q48" value="b" id="q48b"> <label for="q48b">b) Self-Service Password Reset (SSPR)</label></li>
+                <li><input type="radio" name="q48" value="c" id="q48c"> <label for="q48c">c) Conditional Access policies</label></li>
+                <li><input type="radio" name="q48" value="d" id="q48d"> <label for="q48d">d) Password writeback</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q48"></div>
+        </div>
+
+        <div class="question" id="question-container-q49">
+            <p>49. You need to securely store and manage secrets, keys, and certificates used by your cloud applications. Which Azure service is designed for this?</p>
+            <ul class="options">
+                <li><input type="radio" name="q49" value="a" id="q49a"> <label for="q49a">a) Azure Storage Account</label></li>
+                <li><input type="radio" name="q49" value="b" id="q49b"> <label for="q49b">b) Azure Policy</label></li>
+                <li><input type="radio" name="q49" value="c" id="q49c"> <label for="q49c">c) Azure Key Vault</label></li>
+                <li><input type="radio" name="q49" value="d" id="q49d"> <label for="q49d">d) Azure Active Directory</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q49"></div>
+        </div>
+
+        <div class="question" id="question-container-q50">
+            <p>50. What is the core concept of "Identity as the primary security perimeter"?</p>
+            <ul class="options">
+                <li><input type="radio" name="q50" value="a" id="q50a"> <label for="q50a">a) Network firewalls are no longer important for security.</label></li>
+                <li><input type="radio" name="q50" value="b" id="q50b"> <label for="q50b">b) The network has eroded as a reliable boundary, so controlling and securing user and device identity is now central to security.</label></li>
+                <li><input type="radio" name="q50" value="c" id="q50c"> <label for="q50c">c) Physical security of data centers is the most critical security control.</label></li>
+                <li><input type="radio" name="q50" value="d" id="q50d"> <label for="q50d">d) Only user identities need to be secured, not device or service identities.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q50"></div>
+        </div>
+
+        <button type="button" id="submit">Submit Answers</button>
+    </form>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const quizForm = document.getElementById('quizForm');
+            const submitButton = document.getElementById('submit');
+            const resultsDiv = document.getElementById('results');
+
+            const quizData = {
+                q1: { answer: 'c', explanation: 'Zero Trust is a security model based on the principle of "never trust, always verify." It treats every access request as originating from an untrusted network, requiring verification for every attempt to access resources.' },
+                q2: { answer: 'b', explanation: 'In an IaaS model, the cloud provider manages the physical infrastructure (servers, networking, storage), but the customer is responsible for everything above it, including the operating system, middleware, and applications. This includes applying OS patches and updates.' },
+                q3: { answer: 'b', explanation: 'Authentication is the process of verifying a user\'s identity, essentially proving they are who they say they are, typically through credentials like a password, biometrics, or a security key. Authorization, on the other hand, determines what an authenticated user is permitted to do.' },
+                q4: { answer: 'b', explanation: 'Single Sign-On (SSO) allows users to sign in once with their organizational account and gain access to multiple different applications and services without needing to re-enter their credentials for each one.' },
+                q5: { answer: 'c', explanation: 'Azure AD Conditional Access policies allow you to enforce specific controls based on conditions. You can create a policy that targets users with administrative roles and requires them to perform multi-factor authentication (MFA) when signing in.' },
+                q6: { answer: 'b', explanation: 'Azure AD Privileged Identity Management (PIM) is a service that enables you to manage, control, and monitor access to important resources. It provides just-in-time (JIT) privileged access, which means users must request and justify elevation to a privileged role for a limited time.' },
+                q7: { answer: 'c', explanation: 'Microsoft Defender for Office 365 (formerly Office 365 ATP) provides protection against threats in email messages, links (URLs), and collaboration tools like SharePoint, OneDrive, and Microsoft Teams. Its features include Safe Links and Safe Attachments.' },
+                q8: { answer: 'b', explanation: 'Microsoft Sentinel is a scalable, cloud-native solution that provides Security Information and Event Management (SIEM) for collecting data from many sources, and Security Orchestration, Automation, and Response (SOAR) for automating responses to threats.' },
+                q9: { answer: 'c', explanation: 'Azure Policy helps you create, assign, and manage policies that enforce different rules and effects over your Azure resources. This ensures that your resources stay compliant with your corporate standards and service level agreements.' },
+                q10: { answer: 'b', explanation: 'Sensitivity Labels from Microsoft Purview Information Protection allow you to classify data across your organization. Once classified, you can apply protection actions like encryption, content marking (watermarks), and access restrictions to protect it.' },
+                q11: { answer: 'c', explanation: 'The Service Trust Portal provides access to independent audit reports, such as SOC (Service Organization Controls), ISO, and FedRAMP. These reports are from third-party auditors and attest to the design and effectiveness of Microsoft\'s security controls.' },
+                q12: { answer: 'a', explanation: 'Microsoft Purview Compliance Manager helps translate complex regulatory requirements into specific controls and provides a quantifiable score to help you track your compliance posture. It gives you recommended actions to take to improve your score.' },
+                q13: { answer: 'a', explanation: 'Azure AD Identity Protection uses machine learning and heuristics to proactively detect risks, such as anonymous IP address usage, atypical travel, or leaked credentials. It automatically flags suspicious sign-ins for review or remediation.' },
+                q14: { answer: 'b', explanation: 'The Principle of Least Privilege is a foundational concept in security that states users should be granted only the minimum levels of access—or permissions—needed to perform their job functions.' },
+                q15: { answer: 'c', explanation: 'Network Security Groups (NSGs) contain a list of security rules that allow or deny network traffic to and from resources connected to Azure Virtual Networks (VNet). NSGs can be associated with subnets or individual network interfaces.' },
+                q16: { answer: 'd', explanation: 'Azure AD B2C (Business-to-Customer) is a customer identity and access management solution that enables you to customize and control how customers sign up, sign in, and manage their profiles when using your applications.' },
+                q17: { answer: 'b', explanation: 'Microsoft Defender for Cloud is a Cloud Security Posture Management (CSPM) and Cloud Workload Protection Platform (CWPP). Its Secure Score feature continuously assesses your resources for security issues and provides prioritized recommendations to improve your posture.' },
+                q18: { answer: 'b', explanation: 'Data Loss Prevention (DLP) policies in Microsoft Purview can identify, monitor, and automatically protect sensitive information. You can create a DLP policy with a condition that looks for content containing credit card numbers and an action to block it from being sent externally.' },
+                q19: { answer: 'b', explanation: 'This is a fundamental concept. Authentication (AuthN) is about identity ("Who are you?"), while Authorization (AuthZ) is about permissions ("What are you allowed to do?"). You must be authenticated before you can be authorized.' },
+                q20: { answer: 'c', explanation: 'Passwordless authentication removes the traditional password in favor of more secure methods. Windows Hello for Business (using biometrics like a fingerprint or facial recognition), FIDO2 security keys, and the Microsoft Authenticator app are all examples of passwordless methods.' },
+                q21: { answer: 'c', explanation: 'eDiscovery (Electronic Discovery) is the process of identifying and delivering electronic information that can be used as evidence in legal cases. Microsoft Purview eDiscovery tools allow you to search for content in Exchange Online, SharePoint Online, OneDrive, Teams, and more.' },
+                q22: { answer: 'c', explanation: 'Microsoft Defender for Endpoint is an enterprise endpoint security platform designed to help enterprise networks prevent, detect, investigate, and respond to advanced threats on devices (endpoints) like desktops, laptops, and servers.' },
+                q23: { answer: 'c', explanation: 'SOAR stands for Security Orchestration, Automation, and Response. In Microsoft Sentinel, this refers to the capabilities that allow you to automate common tasks and responses to security incidents using playbooks (based on Azure Logic Apps).' },
+                q24: { answer: 'a', explanation: 'Verifying explicitly is a core principle of Zero Trust. It means you should always authenticate and authorize based on all available data points, including user identity, location, device health, service or workload, data classification, and anomalies.' },
+                q25: { answer: 'b', explanation: 'Data Lifecycle Management (formerly Records Management) in Microsoft Purview helps you govern your data for compliance or regulatory requirements. It allows you to create policies to retain content for a specific period and then automatically delete it.' },
+                q26: { answer: 'b', explanation: 'Azure AD Identity Protection is the service that detects identity-based risks, including leaked credentials found on the dark web, sign-ins from anonymous IP addresses, and impossible travel scenarios. It can then apply policies to mitigate the risk, such as forcing a password reset.' },
+                q27: { answer: 'b', explanation: 'A Cloud Access Security Broker (CASB) sits between users and cloud services to enforce security policies and provide visibility into cloud usage. Microsoft Defender for Cloud Apps is Microsoft\'s CASB solution.' },
+                q28: { answer: 'c', explanation: 'Azure AD Connect is the Microsoft tool designed to meet and accomplish your hybrid identity goals. It provides features like password hash synchronization, pass-through authentication, and federation integration to connect your on-premises Active Directory with Azure AD.' },
+                q29: { answer: 'b', explanation: 'Microsoft Sentinel includes powerful hunting search and query tools based on the Kusto Query Language (KQL). This allows security analysts to proactively hunt for security threats and anomalies across their organization\'s data sources.' },
+                q30: { answer: 'c', explanation: 'Defense in Depth is a strategy that uses multiple layers of security controls. The idea is that if one layer fails or is bypassed by an attacker, other layers are in place to prevent a full breach. It provides redundancy in security.' },
+                q31: { answer: 'c', explanation: 'Azure Policy can enforce rules over your resources. One of its built-in policy definitions is "Allowed locations," which restricts the regions where your organization can create resources, helping with data sovereignty and compliance requirements.' },
+                q32: { answer: 'a', explanation: 'Microsoft Defender for Cloud continuously assesses your cloud resources against security standards and provides recommendations. For many recommendations, it offers "Fix" actions that can automatically remediate a non-compliant resource.' },
+                q33: { answer: 'b', explanation: 'Safe Links is a feature of Defender for Office 365 that provides URL scanning and rewriting of inbound email messages in mail flow, and time-of-click verification of URLs and links in email messages and other locations.' },
+                q34: { answer: 'd', explanation: 'A workload identity, often implemented as a Managed Identity in Azure, provides an identity for applications and services to use when connecting to resources that support Azure AD authentication. This avoids the need to manage credentials like passwords or secrets in code.' },
+                q35: { answer: 'b', explanation: 'Insider Risk Management in Microsoft Purview correlates various signals to identify potential malicious or inadvertent insider risks, such as data theft by departing employees, confidential data leaks, and security policy violations.' },
+                q36: { answer: 'a', explanation: 'Information Barriers are policies that an admin can configure to prevent individuals or groups from communicating with each other. This is often used in highly regulated industries like finance to avoid conflicts of interest.' },
+                q37: { answer: 'b', explanation: 'A hybrid identity is one that is created in an on-premises Active Directory and then synchronized to a cloud directory like Azure AD. This allows users to use the same credentials to access both on-premises and cloud resources.' },
+                q38: { answer: 'd', explanation: 'Azure DDoS (Distributed Denial of Service) Protection is designed to defend against large-scale, volumetric network attacks. These attacks try to consume a resource\'s network bandwidth, making it unavailable to legitimate users.' },
+                q39: { answer: 'b', explanation: 'Microsoft Defender for Identity (formerly Azure ATP) is a cloud-based security solution that leverages your on-premises Active Directory signals to identify, detect, and investigate advanced threats, compromised identities, and malicious insider actions directed at your organization.' },
+                q40: { answer: 'b', explanation: 'XDR stands for Extended Detection and Response. Microsoft 365 Defender is an XDR solution that collects, correlates, and analyzes signal data from across the Microsoft 365 environment (endpoints, identities, apps, email) to provide a unified incident response experience.' },
+                q41: { answer: 'c', explanation: 'Azure Role-Based Access Control (RBAC) uses built-in roles to assign permissions. The Reader role allows users to view all resources but does not permit them to make any changes, delete, or create new resources.' },
+                q42: { answer: 'c', explanation: 'Microsoft Defender for Cloud Apps is a Cloud Access Security Broker (CASB). It provides rich visibility, control over data travel, and sophisticated analytics to identify and combat cyberthreats across all your cloud services, including SaaS apps.' },
+                q43: { answer: 'a', explanation: 'While Defender for Cloud can recommend enabling encryption, Azure Policy is the service used to create and enforce a rule that requires disk encryption on all virtual machines. You can set the policy effect to "Deny" to prevent the creation of non-compliant VMs.' },
+                q44: { answer: 'c', explanation: 'Compliance Manager operates on the shared responsibility model. It tracks improvement actions taken by Microsoft and actions that are the responsibility of your organization to implement, providing a score based on both.' },
+                q45: { answer: 'b', explanation: 'Retention labels are used in Data Lifecycle Management to classify data for governance. You can configure a label to retain content for a certain period, delete it after a certain period, or mark it as a permanent record.' },
+                q46: { answer: 'b', explanation: 'Azure AD Conditional Access is the perfect tool for this. You can create a policy that uses the "locations" condition to define a named location (e.g., "Blocked Countries") and then create a policy that blocks sign-in attempts originating from that location.' },
+                q47: { answer: 'a', explanation: 'The Microsoft 365 Defender portal (security.microsoft.com) is the central XDR platform that aggregates alerts from Defender for Endpoint, Identity, Office 365, and Cloud Apps into unified incidents, simplifying investigation.' },
+                q48: { answer: 'b', explanation: 'Self-Service Password Reset (SSPR) is an Azure AD feature that allows users to reset their own passwords after verifying their identity through methods like a code sent to their phone or alternate email, without needing to contact IT support.' },
+                q49: { answer: 'c', explanation: 'Azure Key Vault is a cloud service for securely storing and accessing secrets. A secret is anything that you want to tightly control access to, such as API keys, passwords, certificates, or cryptographic keys.' },
+                q50: { answer: 'b', explanation: 'This concept acknowledges that with mobile workforces and cloud applications, the traditional corporate network is no longer a reliable security boundary. Therefore, the primary perimeter shifts to identity, requiring strong authentication and authorization for every user and device trying to access data, regardless of location.' },
+            };
+
+            submitButton.addEventListener('click', () => {
+                let score = 0;
+                const userAnswers = new FormData(quizForm);
+                const answeredQuestions = new Set(Array.from(userAnswers.keys()));
+
+                // Disable the button after submission
+                submitButton.disabled = true;
+
+                // Process all questions
+                for (let i = 1; i <= 50; i++) {
+                    const questionKey = `q${i}`;
+                    const container = document.getElementById(`question-container-${questionKey}`);
+                    const selectedValue = userAnswers.get(questionKey);
+                    const correctAnswer = quizData[questionKey].answer;
+                    const explanationText = quizData[questionKey].explanation;
+                    const explanationDiv = document.getElementById(`explanation-${questionKey}`);
+
+                    const radioButtons = container.querySelectorAll(`input[name="${questionKey}"]`);
+                    
+                    radioButtons.forEach(radio => {
+                        const listItem = radio.parentElement;
+                        // Remove previous classes
+                        listItem.classList.remove('correct-answer', 'incorrect-answer');
+
+                        if (radio.value === correctAnswer) {
+                             // Highlight the correct answer in green
+                            listItem.classList.add('correct-answer');
+                        }
+
+                        if (selectedValue && radio.value === selectedValue && selectedValue !== correctAnswer) {
+                            // If this option was selected and it's wrong, mark it red
+                            listItem.classList.add('incorrect-answer');
+                        }
+                    });
+
+                    if (selectedValue === correctAnswer) {
+                        score++;
+                    } else {
+                        // Show explanation for incorrect or unanswered questions
+                        explanationDiv.innerHTML = `<strong>Explanation:</strong> ${explanationText}`;
+                        explanationDiv.style.display = 'block';
+                    }
+                }
+
+                resultsDiv.innerHTML = `You scored ${score} out of 50. Review your answers below.`;
+                resultsDiv.style.display = 'block';
+                window.scrollTo(0, 0); // Scroll to the top to show results
+            });
+        });
+    </script>
+
+</body>
+</html>

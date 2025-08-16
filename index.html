@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Protected</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: sans-serif; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .container { background-color: white; padding: 2em; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center; }
+        input[type="password"] { padding: 0.5em; width: 80%; margin-bottom: 1em; }
+        input[type="button"] { padding: 0.5em 1.5em; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+        #errorMessage { color: red; margin-top: 1em; display: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Enter Password to Continue</h2>
+        <input type="password" id="password" placeholder="Password">
+        <br>
+        <input type="button" value="Submit" onclick="checkPassword()">
+        <p id="errorMessage">Incorrect Password</p>
+    </div>
+
+    <script type="text/javascript">
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            var errorMessage = document.getElementById("errorMessage");
+            if (password === "sc-900") {
+                window.location.href = "sc-900.html";
+            } else {
+                errorMessage.style.display = "block";
+            }
+        }
+        // Allow pressing Enter to submit
+        document.getElementById("password").addEventListener("keyup", function(event) {
+            if (event.key === "Enter") {
+                checkPassword();
+            }
+        });
+    </script>
+</body>
+</html>
