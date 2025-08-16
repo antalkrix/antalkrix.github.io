@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SC-900 Module 4 Practice Test</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #0078d4;
+        }
+        #quizForm {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-width: 900px;
+            margin: auto;
+        }
+        .question {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            margin-bottom: 10px;
+            padding: 5px;
+            border-radius: 4px;
+        }
+        label {
+            cursor: pointer;
+            display: inline-block;
+            margin-left: 5px;
+        }
+        #submit {
+            display: block;
+            margin: 20px auto;
+            padding: 12px 25px;
+            background-color: #0078d4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #submit:disabled {
+            background-color: #a0a0a0;
+            cursor: not-allowed;
+        }
+        #results {
+            margin: 0 auto 20px auto;
+            font-weight: bold;
+            text-align: center;
+            font-size: 20px;
+            padding: 15px;
+            background-color: #e7f3fe;
+            border-left: 6px solid #0078d4;
+            display: none; /* Hidden by default */
+            max-width: 900px;
+        }
+        .correct-answer label {
+            color: #107c10;
+            font-weight: bold;
+        }
+        .incorrect-answer {
+            background-color: #fde7e9;
+        }
+        .incorrect-answer label {
+            color: #d83b01;
+            font-weight: bold;
+        }
+        .explanation {
+            display: none; /* Hidden by default */
+            margin-top: 15px;
+            padding: 12px;
+            border: 1px solid #ffb900;
+            background-color: #fffbdd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Module 4: Describe the capabilities of Microsoft compliance solutions</h1>
+
+    <div id="results"></div>
+
+    <form id="quizForm">
+
+        <div class="question" id="question-container-q1">
+            <p>1. What is the main purpose of Sensitivity Labels in Microsoft Purview Information Protection?</p>
+            <ul class="options">
+                <li><input type="radio" name="q1" value="a" id="q1a"> <label for="q1a">a) To monitor for insider risks</label></li>
+                <li><input type="radio" name="q1" value="b" id="q1b"> <label for="q1b">b) To classify and protect documents and emails by applying markings and encryption</label></li>
+                <li><input type="radio" name="q1" value="c" id="q1c"> <label for="q1c">c) To manage the lifecycle of data</label></li>
+                <li><input type="radio" name="q1" value="d" id="q1d"> <label for="q1d">d) To perform eDiscovery searches</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q1"></div>
+        </div>
+
+        <div class="question" id="question-container-q2">
+            <p>2. A company wants to prevent emails containing credit card numbers from being sent outside the organization. Which Microsoft Purview feature can help achieve this?</p>
+            <ul class="options">
+                <li><input type="radio" name="q2" value="a" id="q2a"> <label for="q2a">a) Retention Policies</label></li>
+                <li><input type="radio" name="q2" value="b" id="q2b"> <label for="q2b">b) Data Loss Prevention (DLP) Policies</label></li>
+                <li><input type="radio" name="q2" value="c" id="q2c"> <label for="q2c">c) eDiscovery</label></li>
+                <li><input type="radio" name="q2" value="d" id="q2d"> <label for="q2d">d) Insider Risk Management</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q2"></div>
+        </div>
+
+        <div class="question" id="question-container-q3">
+            <p>3. Which tool within Microsoft Purview helps you measure your organization's progress in completing actions that help reduce risks around data protection and regulatory standards?</p>
+            <ul class="options">
+                <li><input type="radio" name="q3" value="a" id="q3a"> <label for="q3a">a) Compliance Manager</label></li>
+                <li><input type="radio" name="q3" value="b" id="q3b"> <label for="q3b">b) eDiscovery (Premium)</label></li>
+                <li><input type="radio" name="q3" value="c" id="q3c"> <label for="q3c">c) Information Protection</label></li>
+                <li><input type="radio" name="q3" value="d" id="q3d"> <label for="q3d">d) Service Trust Portal</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q3"></div>
+        </div>
+
+        <div class="question" id="question-container-q4">
+            <p>4. A legal team needs to find all documents related to a specific court case within the organization's Microsoft 365 environment. Which Microsoft Purview solution should they use?</p>
+            <ul class="options">
+                <li><input type="radio" name="q4" value="a" id="q4a"> <label for="q4a">a) Data Lifecycle Management</label></li>
+                <li><input type="radio" name="q4" value="b" id="q4b"> <label for="q4b">b) Communication Compliance</label></li>
+                <li><input type="radio" name="q4" value="c" id="q4c"> <label for="q4c">c) eDiscovery</label></li>
+                <li><input type="radio" name="q4" value="d" id="q4d"> <label for="q4d">d) Records Management</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q4"></div>
+        </div>
+
+        <div class="question" id="question-container-q5">
+            <p>5. What is the purpose of Microsoft Purview's Data Lifecycle Management?</p>
+            <ul class="options">
+                <li><input type="radio" name="q5" value="a" id="q5a"> <label for="q5a">a) To encrypt all data at rest</label></li>
+                <li><input type="radio" name="q5" value="b" id="q5b"> <label for="q5b">b) To manage content by keeping what you need and deleting what you don't</label></li>
+                <li><input type="radio" name="q5" value="c" id="q5c"> <label for="q5c">c) To prevent users from sharing sensitive data</label></li>
+                <li><input type="radio" name="q5" value="d" id="q5d"> <label for="q5d">d) To classify data based on its content</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q5"></div>
+        </div>
+        
+        <div class="question" id="question-container-q6">
+            <p>6. The Service Trust Portal provides information about Microsoft's compliance with various standards. What kind of report details the design and operational effectiveness of Microsoft's security controls?</p>
+            <ul class="options">
+                <li><input type="radio" name="q6" value="a" id="q6a"> <label for="q6a">a) Data Protection Impact Assessments (DPIA)</label></li>
+                <li><input type="radio" name="q6" value="b" id="q6b"> <label for="q6b">b) Security Baselines</label></li>
+                <li><input type="radio" name="q6" value="c" id="q6c"> <label for="q6c">c) Independent Audit Reports (like SOC 2)</label></li>
+                <li><input type="radio" name="q6" value="d" id="q6d"> <label for="q6d">d) Azure Policy Compliance Reports</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q6"></div>
+        </div>
+
+        <div class="question" id="question-container-q7">
+            <p>7. Microsoft Purview Insider Risk Management is designed to help organizations address what kind of problem?</p>
+            <ul class="options">
+                <li><input type="radio" name="q7" value="a" id="q7a"> <label for="q7a">a) External hacking attempts from cybercriminals</label></li>
+                <li><input type="radio" name="q7" value="b" id="q7b"> <label for="q7b">b) Accidental data leaks or malicious data theft by employees</label></li>
+                <li><input type="radio" name="q7" value="c" id="q7c"> <label for="q7c">c) Ransomware attacks on corporate servers</label></li>
+                <li><input type="radio" name="q7" value="d" id="q7d"> <label for="q7d">d) Compliance with regional data residency laws</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q7"></div>
+        </div>
+
+        <div class="question" id="question-container-q8">
+            <p>8. What is the purpose of an Information Barrier policy in Microsoft Purview?</p>
+            <ul class="options">
+                <li><input type="radio" name="q8" value="a" id="q8a"> <label for="q8a">a) To prevent specific segments of users (e.g., day traders) from communicating with other segments (e.g., financial analysts)</label></li>
+                <li><input type="radio" name="q8" value="b" id="q8b"> <label for="q8b">b) To block all incoming external email</label></li>
+                <li><input type="radio" name="q8" value="c" id="q8c"> <label for="q8c">c) To encrypt data stored in SharePoint Online</label></li>
+                <li><input type="radio" name="q8" value="d" id="q8d"> <label for="q8d">d) To manage physical access to data centers</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q8"></div>
+        </div>
+        
+        <div class="question" id="question-container-q9">
+            <p>9. What is the primary purpose of a "retention label" in Microsoft Purview?</p>
+            <ul class="options">
+                <li><input type="radio" name="q9" value="a" id="q9a"> <label for="q9a">a) To apply encryption to a file.</label></li>
+                <li><input type="radio" name="q9" value="b" id="q9b"> <label for="q9b">b) To classify content so it can be retained or deleted to meet business or regulatory requirements.</label></li>
+                <li><input type="radio" name="q9" value="c" id="q9c"> <label for="q9c">c) To add a visual marking, like a watermark, to a document.</label></li>
+                <li><input type="radio" name="q9" value="d" id="q9d"> <label for="q9d">d) To prevent a document from being shared externally.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q9"></div>
+        </div>
+
+        <div class="question" id="question-container-q10">
+            <p>10. Your organization's Compliance Score in Microsoft Purview Compliance Manager is calculated based on actions that are the responsibility of whom?</p>
+            <ul class="options">
+                <li><input type="radio" name="q10" value="a" id="q10a"> <label for="q10a">a) Only Microsoft</label></li>
+                <li><input type="radio" name="q10" value="b" id="q10b"> <label for="q10b">b) Only your organization (the customer)</label></li>
+                <li><input type="radio" name="q10" value="c" id="q10c"> <label for="q10c">c) Both Microsoft and your organization, based on the shared responsibility model</label></li>
+                <li><input type="radio" name="q10" value="d" id="q10d"> <label for="q10d">d) Independent third-party auditors</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q10"></div>
+        </div>
+
+        <div class="question" id="question-container-q11">
+             <p>11. When a sensitivity label applies encryption, what technology is it using?</p>
+             <ul class="options">
+                 <li><input type="radio" name="q11" value="a" id="q11a"> <label for="q11a">a) BitLocker Drive Encryption</label></li>
+                 <li><input type="radio" name="q11" value="b" id="q11b"> <label for="q11b">b) Azure Rights Management (Azure RMS)</label></li>
+                 <li><input type="radio" name="q11" value="c" id="q11c"> <label for="q11c">c) Transport Layer Security (TLS)</label></li>
+                 <li><input type="radio" name="q11" value="d" id="q11d"> <label for="q11d">d) Secure Hashing Algorithm (SHA-256)</label></li>
+             </ul>
+             <div class="explanation" id="explanation-q11"></div>
+        </div>
+
+        <div class="question" id="question-container-q12">
+            <p>12. Microsoft Purview Communication Compliance is used to:</p>
+            <ul class="options">
+                <li><input type="radio" name="q12" value="a" id="q12a"> <label for="q12a">a) Manage access to Microsoft Teams channels.</label></li>
+                <li><input type="radio" name="q12" value="b" id="q12b"> <label for="q12b">b) Block all social media websites.</label></li>
+                <li><input type="radio" name="q12" value="c" id="q12c"> <label for="q12c">c) Capture and review messages for policy violations, such as harassment or sharing of sensitive information.</label></li>
+                <li><input type="radio" name="q12" value="d" id="q12d"> <label for="q12d">d) Ensure high-quality video and audio during Teams meetings.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q12"></div>
+        </div>
+
+        <div class="question" id="question-container-q13">
+            <p>13. A user applies a sensitivity label with a watermark to a Word document. This is an example of what kind of action?</p>
+            <ul class="options">
+                <li><input type="radio" name="q13" value="a" id="q13a"> <label for="q13a">a) Encryption</label></li>
+                <li><input type="radio" name="q13" value="b" id="q13b"> <label for="q13b">b) Content Marking</label></li>
+                <li><input type="radio" name="q13" value="c" id="q13c"> <label for="q13c">c) Data Retention</label></li>
+                <li><input type="radio" name="q13" value="d" id="q13d"> <label for="q13d">d) eDiscovery</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q13"></div>
+        </div>
+        
+        <div class="question" id="question-container-q14">
+            <p>14. In eDiscovery (Premium), what is the process of placing a user's data sources on hold so that the content is preserved for a legal case?</p>
+            <ul class="options">
+                <li><input type="radio" name="q14" value="a" id="q14a"> <label for="q14a">a) Creating a review set</label></li>
+                <li><input type="radio" name="q14" value="b" id="q14b"> <label for="q14b">b) Exporting a report</label></li>
+                <li><input type="radio" name="q14" value="c" id="q14c"> <label for="q14c">c) Adding custodians to a case</label></li>
+                <li><input type="radio" name="q14" value="d" id="q14d"> <label for="q14d">d) Applying a legal hold</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q14"></div>
+        </div>
+        
+        <div class="question" id="question-container-q15">
+            <p>15. What is the primary function of the Microsoft Purview compliance portal?</p>
+            <ul class="options">
+                <li><input type="radio" name="q15" value="a" id="q15a"> <label for="q15a">a) To manage security alerts from endpoints.</label></li>
+                <li><input type="radio" name="q15" value="b" id="q15b"> <label for="q15b">b) To provide a centralized location for managing an organization's data governance and compliance needs.</label></li>
+                <li><input type="radio" name="q15" value="c" id="q15c"> <label for="q15c">c) To configure network firewalls for Azure.</label></li>
+                <li><input type="radio" name="q15" value="d" id="q15d"> <label for="q15d">d) To manage user identities and multi-factor authentication.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q15"></div>
+        </div>
+
+        <div class="question" id="question-container-q16">
+            <p>16. A Data Loss Prevention (DLP) policy can apply to which of the following locations?</p>
+            <ul class="options">
+                <li><input type="radio" name="q16" value="a" id="q16a"> <label for="q16a">a) Exchange Online and SharePoint Online only</label></li>
+                <li><input type="radio" name="q16" value="b" id="q16b"> <label for="q16b">b) On-premises file shares only</label></li>
+                <li><input type="radio" name="q16" value="c" id="q16c"> <label for="q16c">c) Microsoft 365 services, endpoints, on-premises repositories, and third-party cloud apps</label></li>
+                <li><input type="radio" name="q16" value="d" id="q16d"> <label for="q16d">d) Azure virtual machines only</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q16"></div>
+        </div>
+        
+        <div class="question" id="question-container-q17">
+            <p>17. You need to create a retention label that declares a document as a permanent, immutable record. What type of label should you create?</p>
+            <ul class="options">
+                <li><input type="radio" name="q17" value="a" id="q17a"> <label for="q17a">a) A standard retention label</label></li>
+                <li><input type="radio" name="q17" value="b" id="q17b"> <label for="q17b">b) A regulatory record retention label</label></li>
+                <li><input type="radio" name="q17" value="c" id="q17c"> <label for="q17c">c) A sensitivity label</label></li>
+                <li><input type="radio" name="q17" value="d" id="q17d"> <label for="q17d">d) A DLP policy label</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q17"></div>
+        </div>
+
+        <div class="question" id="question-container-q18">
+            <p>18. Which solution helps detect inappropriate or threatening language in Microsoft Teams communications?</p>
+            <ul class="options">
+                <li><input type="radio" name="q18" value="a" id="q18a"> <label for="q18a">a) Information Barriers</label></li>
+                <li><input type="radio" name="q18" value="b" id="q18b"> <label for="q18b">b) Data Loss Prevention</label></li>
+                <li><input type="radio" name="q18" value="c" id="q18c"> <label for="q18c">c) Communication Compliance</label></li>
+                <li><input type="radio" name="q18" value="d" id="q18d"> <label for="q18d">d) eDiscovery</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q18"></div>
+        </div>
+        
+        <div class="question" id="question-container-q19">
+            <p>19. The "improvement actions" in Compliance Manager provide:</p>
+            <ul class="options">
+                <li><input type="radio" name="q19" value="a" id="q19a"> <label for="q19a">a) A list of all non-compliant users in the organization.</label></li>
+                <li><input type="radio" name="q19" value="b" id="q19b"> <label for="q19b">b) Step-by-step guidance for implementing controls to meet compliance requirements.</label></li>
+                <li><input type="radio" name="q19" value="c" id="q19c"> <label for="q19c">c) Automated scripts to fix all compliance issues.</label></li>
+                <li><input type="radio" name="q19" value="d" id="q19d"> <label for="q19d">d) The contact information for third-party auditors.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q19"></div>
+        </div>
+        
+        <div class="question" id="question-container-q20">
+            <p>20. What is a "sensitive information type" in the context of Microsoft Purview?</p>
+            <ul class="options">
+                <li><input type="radio" name="q20" value="a" id="q20a"> <label for="q20a">a) A type of user account with high privileges.</label></li>
+                <li><input type="radio" name="q20" value="b" id="q20b"> <label for="q20b">b) A pattern-based classifier, such as a credit card number or national ID number, used to detect sensitive data.</label></li>
+                <li><input type="radio" name="q20" value="c" id="q20c"> <label for="q20c">c) A document that has been encrypted.</label></li>
+                <li><input type="radio" name="q20" value="d" id="q20d"> <label for="q20d">d) A user who has access to confidential information.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q20"></div>
+        </div>
+
+        <div class="question" id="question-container-q21">
+            <p>21. Where would you go to find Microsoft's independent third-party audit reports (e.g., SOC, ISO 27001)?</p>
+            <ul class="options">
+                <li><input type="radio" name="q21" value="a" id="q21a"> <label for="q21a">a) The Microsoft 365 Defender portal</label></li>
+                <li><input type="radio" name="q21" value="b" id="q21b"> <label for="q21b">b) The Microsoft Purview compliance portal</label></li>
+                <li><input type="radio" name="q21" value="c" id="q21c"> <label for="q21c">c) The Microsoft Service Trust Portal</label></li>
+                <li><input type="radio" name="q21" value="d" id="q21d"> <label for="q21d">d) The Azure portal</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q21"></div>
+        </div>
+        
+        <div class="question" id="question-container-q22">
+            <p>22. A policy tip is a feature of which Microsoft Purview solution?</p>
+            <ul class="options">
+                <li><input type="radio" name="q22" value="a" id="q22a"> <label for="q22a">a) Data Loss Prevention (DLP)</label></li>
+                <li><input type="radio" name="q22" value="b" id="q22b"> <label for="q22b">b) eDiscovery</label></li>
+                <li><input type="radio" name="q22" value="c" id="q22c"> <label for="q22c">c) Insider Risk Management</label></li>
+                <li><input type="radio" name="q22" value="d" id="q22d"> <label for="q22d">d) Records Management</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q22"></div>
+        </div>
+        
+        <div class="question" id="question-container-q23">
+            <p>23. The "disposition" phase in the data lifecycle refers to what action?</p>
+            <ul class="options">
+                <li><input type="radio" name="q23" value="a" id="q23a"> <label for="q23a">a) Creating the data.</label></li>
+                <li><input type="radio" name="q23" value="b" id="q23b"> <label for="q23b">b) Sharing the data with external users.</label></li>
+                <li><input type="radio" name="q23" value="c" id="q23c"> <label for="q23c">c) Reviewing and permanently deleting the data after its retention period.</label></li>
+                <li><input type="radio" name="q23" value="d" id="q23d"> <label for="q23d">d) Encrypting the data.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q23"></div>
+        </div>
+        
+        <div class="question" id="question-container-q24">
+            <p>24. An organization needs to ensure that its traders cannot communicate with its financial analysts via Microsoft Teams to prevent conflicts of interest. What should be configured?</p>
+            <ul class="options">
+                <li><input type="radio" name="q24" value="a" id="q24a"> <label for="q24a">a) A DLP policy</label></li>
+                <li><input type="radio" name="q24" value="b" id="q24b"> <label for="q24b">b) Information Barriers</label></li>
+                <li><input type="radio" name="q24" value="c" id="q24c"> <label for="q24c">c) A retention policy</label></li>
+                <li><input type="radio" name="q24" value="d" id="q24d"> <label for="q24d">d) A sensitivity label</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q24"></div>
+        </div>
+        
+        <div class="question" id="question-container-q25">
+            <p>25. A key difference between eDiscovery (Standard) and eDiscovery (Premium) is that Premium offers:</p>
+            <ul class="options">
+                <li><input type="radio" name="q25" value="a" id="q25a"> <label for="q25a">a) The ability to search SharePoint Online.</label></li>
+                <li><input type="radio" name="q25" value="b" id="q25b"> <label for="q25b">b) Advanced capabilities like custodian management and review set analytics.</label></li>
+                <li><input type="radio" name="q25" value="c" id="q25c"> <label for="q25c">c) The ability to export search results.</label></li>
+                <li><input type="radio" name="q25" value="d" id="q25d"> <label for="q25d">d) The ability to search Exchange Online mailboxes.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q25"></div>
+        </div>
+        
+        <div class="question" id="question-container-q26">
+            <p>26. What is the primary purpose of Microsoft Purview Audit?</p>
+            <ul class="options">
+                <li><input type="radio" name="q26" value="a" id="q26a"> <label for="q26a">a) To assign compliance scores to users.</label></li>
+                <li><input type="radio" name="q26" value="b" id="q26b"> <label for="q26b">b) To provide a log of user and administrator activities across Microsoft 365 services.</label></li>
+                <li><input type="radio" name="q26" value="c" id="q26c"> <label for="q26c">c) To block the sharing of sensitive information.</label></li>
+                <li><input type="radio" name="q26" value="d" id="q26d"> <label for="q26d">d) To encrypt documents and emails.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q26"></div>
+        </div>
+        
+        <div class="question" id="question-container-q27">
+            <p>27. A departing employee copies a large number of confidential files to a USB drive right before resigning. Which solution is designed to detect this type of risky activity?</p>
+            <ul class="options">
+                <li><input type="radio" name="q27" value="a" id="q27a"> <label for="q27a">a) Data Lifecycle Management</label></li>
+                <li><input type="radio" name="q27" value="b" id="q27b"> <label for="q27b">b) Communication Compliance</label></li>
+                <li><input type="radio" name="q27" value="c" id="q27c"> <label for="q27c">c) Insider Risk Management</label></li>
+                <li><input type="radio" name="q27" value="d" id="q27d"> <label for="q27d">d) eDiscovery</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q27"></div>
+        </div>
+
+        <div class="question" id="question-container-q28">
+            <p>28. When can a retention policy permanently delete content?</p>
+            <ul class="options">
+                <li><input type="radio" name="q28" value="a" id="q28a"> <label for="q28a">a) Immediately upon creation of the content.</label></li>
+                <li><input type="radio" name="q28" value="b" id="q28b"> <label for="q28b">b) Only after the specified retention period has ended.</label></li>
+                <li><input type="radio" name="q28" value="c" id="q28c"> <label for="q28c">c) Never, retention policies can only retain data.</label></li>
+                <li><input type="radio" name="q28" value="d" id="q28d"> <label for="q28d">d) As soon as any user decides to delete it.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q28"></div>
+        </div>
+        
+        <div class="question" id="question-container-q29">
+            <p>29. Microsoft's privacy principles state that they use customer data only for:</p>
+            <ul class="options">
+                <li><input type="radio" name="q29" value="a" id="q29a"> <label for="q29a">a) Providing and improving the services the customer has paid for.</label></li>
+                <li><input type="radio" name="q29" value="b" id="q29b"> <label for="q29b">b) Advertising and marketing purposes.</label></li>
+                <li><input type="radio" name="q29" value="c" id="q29c"> <label for="q29c">c) Selling to third-party data brokers.</label></li>
+                <li><input type="radio" name="q29" value="d" id="q29d"> <label for="q29d">d) Training their general-purpose AI models.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q29"></div>
+        </div>
+
+        <div class="question" id="question-container-q30">
+            <p>30. If a user tries to email a document labeled "Highly Confidential" to an external recipient, a DLP policy could be configured to:</p>
+            <ul class="options">
+                <li><input type="radio" name="q30" value="a" id="q30a"> <label for="q30a">a) Automatically downgrade the label to "General".</label></li>
+                <li><input type="radio" name="q30" value="b" id="q30b"> <label for="q30b">b) Block the email and notify an administrator.</label></li>
+                <li><input type="radio" name="q30" value="c" id="q30c"> <label for="q30c">c) Force the user to change their password.</label></li>
+                <li><input type="radio" name="q30" value="d" id="q30d"> <label for="q30d">d) Delete the document from the user's computer.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q30"></div>
+        </div>
+        
+        <div class="question" id="question-container-q31">
+            <p>31. The Principles of Retention state that content should be retained as long as it has value, and:</p>
+            <ul class="options">
+                <li><input type="radio" name="q31" value="a" id="q31a"> <label for="q31a">a) then be permanently archived in a physical location.</label></li>
+                <li><input type="radio" name="q31" value="b" id="q31b"> <label for="q31b">b) then be securely and permanently deleted.</label></li>
+                <li><input type="radio" name="q31" value="c" id="q31c"> <label for="q31c">c) then be made publicly accessible.</label></li>
+                <li><input type="radio" name="q31" value="d" id="q31d"> <label for="q31d">d) be kept forever just in case.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q31"></div>
+        </div>
+
+        <div class="question" id="question-container-q32">
+            <p>32. An alert for a Communication Compliance policy violation has been generated. What is the next step for an investigator?</p>
+            <ul class="options">
+                <li><input type="radio" name="q32" value="a" id="q32a"> <label for="q32a">a) Immediately delete the offending message.</label></li>
+                <li><input type="radio" name="q32" value="b" id="q32b"> <label for="q32b">b) Review the message, remediate if necessary, and resolve the alert.</label></li>
+                <li><input type="radio" name="q32" value="c" id="q32c"> <label for="q32c">c) Block the user's account permanently.</label></li>
+                <li><input type="radio" name="q32" value="d" id="q32d"> <label for="q32d">d) Escalate directly to law enforcement.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q32"></div>
+        </div>
+
+        <div class="question" id="question-container-q33">
+            <p>33. The concept of "customer actions" vs "Microsoft actions" is central to which compliance tool?</p>
+            <ul class="options">
+                <li><input type="radio" name="q33" value="a" id="q33a"> <label for="q33a">a) Service Trust Portal</label></li>
+                <li><input type="radio" name="q33" value="b" id="q33b"> <label for="q33b">b) eDiscovery</label></li>
+                <li><input type="radio" name="q33" value="c" id="q33c"> <label for="q33c">c) Compliance Manager</label></li>
+                <li><input type="radio" name="q33" value="d" id="q33d"> <label for="q33d">d) Data Loss Prevention</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q33"></div>
+        </div>
+
+        <div class="question" id="question-container-q34">
+            <p>34. What is the primary purpose of applying a retention label that marks content as a record?</p>
+            <ul class="options">
+                <li><input type="radio" name="q34" value="a" id="q34a"> <label for="q34a">a) To make the content easier to share with external users.</label></li>
+                <li><input type="radio" name="q34" value="b" id="q34b"> <label for="q34b">b) To prevent the content from being edited or deleted, often to meet legal or regulatory obligations.</label></li>
+                <li><input type="radio" name="q34" value="c" id="q34c"> <label for="q34c">c) To add a visual watermark to the content.</label></li>
+                <li><input type="radio" name="q34" value="d" id="q34d"> <label for="q34d">d) To ensure the content is automatically encrypted.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q34"></div>
+        </div>
+
+        <div class="question" id="question-container-q35">
+            <p>35. The process of searching for, collecting, reviewing, and exporting electronically stored information (ESI) for legal purposes is called:</p>
+            <ul class="options">
+                <li><input type="radio" name="q35" value="a" id="q35a"> <label for="q35a">a) eDiscovery</label></li>
+                <li><input type="radio" name="q35" value="b" id="q35b"> <label for="q35b">b) Data Loss Prevention</label></li>
+                <li><input type="radio" name="q35" value="c" id="q35c"> <label for="q35c">c) Insider Risk Management</label></li>
+                <li><input type="radio" name="q35" value="d" id="q35d"> <label for="q35d">d) Auditing</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q35"></div>
+        </div>
+
+        <div class="question" id="question-container-q36">
+            <p>36. Microsoft Purview Information Protection helps to classify data based on what primary factor?</p>
+            <ul class="options">
+                <li><input type="radio" name="q36" value="a" id="q36a"> <label for="q36a">a) The user who created the data.</label></li>
+                <li><input type="radio" name="q36" value="b" id="q36b"> <label for="q36b">b) The date the data was created.</label></li>
+                <li><input type="radio" name="q36" value="c" id="q36c"> <label for="q36c">c) The sensitivity of the data.</label></li>
+                <li><input type="radio" name="q36" value="d" id="q36d"> <label for="q36d">d) The size of the data file.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q36"></div>
+        </div>
+
+        <div class="question" id="question-container-q37">
+            <p>37. If a document is subject to both a retention policy (delete after 3 years) and a legal hold, what happens to the document?</p>
+            <ul class="options">
+                <li><input type="radio" name="q37" value="a" id="q37a"> <label for="q37a">a) It is deleted after 3 years.</label></li>
+                <li><input type="radio" name="q37" value="b" id="q37b"> <label for="q37b">b) It is preserved until the legal hold is released, even if that is longer than 3 years.</label></li>
+                <li><input type="radio" name="q37" value="c" id="q37c"> <label for="q37c">c) The policy that was applied first takes precedence.</label></li>
+                <li><input type="radio" name="q37" value="d" id="q37d"> <label for="q37d">d) The user is prompted to choose which policy to apply.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q37"></div>
+        </div>
+
+        <div class="question" id="question-container-q38">
+            <p>38. What is a "custodian" in an eDiscovery (Premium) case?</p>
+            <ul class="options">
+                <li><input type="radio" name="q38" value="a" id="q38a"> <label for="q38a">a) The lawyer assigned to the case.</label></li>
+                <li><input type="radio" name="q38" value="b" id="q38b"> <label for="q38b">b) A person who has administrative control of the eDiscovery tool.</label></li>
+                <li><input type="radio" name="q38" value="c" id="q38c"> <label for="q38c">c) A person who has custody of data relevant to the case, whose data sources can be placed on hold and searched.</label></li>
+                <li><input type="radio" name="q38" value="d" id="q38d"> <label for="q38d">d) A third-party auditor.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q38"></div>
+        </div>
+
+        <div class="question" id="question-container-q39">
+            <p>39. Which feature allows you to see how Microsoft's cloud services map their controls to various industry standards and regulations?</p>
+            <ul class="options">
+                <li><input type="radio" name="q39" value="a" id="q39a"> <label for="q39a">a) Compliance Manager</label></li>
+                <li><input type="radio" name="q39" value="b" id="q39b"> <label for="q39b">b) Service Trust Portal</label></li>
+                <li><input type="radio" name="q39" value="c" id="q39c"> <label for="q39c">c) Microsoft Sentinel</label></li>
+                <li><input type="radio" name="q39" value="d" id="q39d"> <label for="q39d">d) Microsoft 365 Defender</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q39"></div>
+        </div>
+
+        <div class="question" id="question-container-q40">
+            <p>40. A DLP policy identifies a user attempting to send an email with sensitive data. The policy is configured to present the user with an option to override the block if they provide a business justification. This is an example of:</p>
+            <ul class="options">
+                <li><input type="radio" name="q40" value="a" id="q40a"> <label for="q40a">a) A hard block with no exception.</label></li>
+                <li><input type="radio" name="q40" value="b" id="q40b"> <label for="q40b">b) User education and empowerment.</label></li>
+                <li><input type="radio" name="q40" value="c" id="q40c"> <label for="q40c">c) A retention policy.</label></li>
+                <li><input type="radio" name="q40" value="d" id="q40d"> <label for="q40d">d) An information barrier.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q40"></div>
+        </div>
+
+        <div class="question" id="question-container-q41">
+            <p>41. Pseudonymization, a technique recommended by the GDPR, is used in which Microsoft Purview solution to protect the privacy of users under review?</p>
+            <ul class="options">
+                <li><input type="radio" name="q41" value="a" id="q41a"> <label for="q41a">a) Insider Risk Management</label></li>
+                <li><input type="radio" name="q41" value="b" id="q41b"> <label for="q41b">b) Data Lifecycle Management</label></li>
+                <li><input type="radio" name="q41" value="c" id="q41c"> <label for="q41c">c) eDiscovery</label></li>
+                <li><input type="radio" name="q41" value="d" id="q41d"> <label for="q41d">d) Information Protection</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q41"></div>
+        </div>
+
+        <div class="question" id="question-container-q42">
+            <p>42. A company needs to ensure that all financial contracts are kept for 10 years and then reviewed before deletion. What is the best tool for this?</p>
+            <ul class="options">
+                <li><input type="radio" name="q42" value="a" id="q42a"> <label for="q42a">a) A sensitivity label</label></li>
+                <li><input type="radio" name="q42" value="b" id="q42b"> <label for="q42b">b) A retention policy with a disposition review</label></li>
+                <li><input type="radio" name="q42" value="c" id="q42c"> <label for="q42c">c) A DLP policy</label></li>
+                <li><input type="radio" name="q42" value="d" id="q42d"> <label for="q42d">d) An eDiscovery hold</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q42"></div>
+        </div>
+
+        <div class="question" id="question-container-q43">
+            <p>43. What is a "review set" in eDiscovery (Premium)?</p>
+            <ul class="options">
+                <li><input type="radio" name="q43" value="a" id="q43a"> <label for="q43a">a) A list of all legal cases in the organization.</label></li>
+                <li><input type="radio" name="q43" value="b" id="q43b"> <label for="q43b">b) The group of lawyers and paralegals assigned to a case.</label></li>
+                <li><input type="radio" name="q43"
+                value="c" id="q43c"> <label for="q43c">c) A static set of documents and emails collected from custodian searches that can be analyzed, queried, and tagged.</label></li>
+                <li><input type="radio" name="q43" value="d" id="q43d"> <label for="q43d">d) A policy that automatically deletes irrelevant data.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q43"></div>
+        </div>
+
+        <div class="question" id="question-container-q44">
+            <p>44. When you apply a sensitivity label that encrypts a file, the access permissions are:</p>
+            <ul class="options">
+                <li><input type="radio" name="q44" value="a" id="q44a"> <label for="q44a">a) Stored in the file's metadata and travel with the file.</label></li>
+                <li><input type="radio" name="q44" value="b" id="q44b"> <label for="q44b">b) Only enforced when the file is in SharePoint Online.</label></li>
+                <li><input type="radio" name="q44" value="c" id="q44c"> <label for="q44c">c) Determined by the folder the file is saved in.</label></li>
+                <li><input type="radio" name="q44" value="d" id="q44d"> <label for="q44d">d) Removed as soon as the file is emailed.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q44"></div>
+        </div>
+
+        <div class="question" id="question-container-q45">
+            <p>45. To use many of the advanced compliance features like Insider Risk Management and Communication Compliance, what must be enabled first?</p>
+            <ul class="options">
+                <li><input type="radio" name="q45" value="a" id="q45a"> <label for="q45a">a) The unified audit log</label></li>
+                <li><input type="radio" name="q45" value="b" id="q45b"> <label for="q45b">b) Multi-factor authentication for all users</label></li>
+                <li><input type="radio" name="q45" value="c" id="q45c"> <label for="q45c">c) Azure DDoS Protection</label></li>
+                <li><input type="radio" name="q45" value="d" id="q45d"> <label for="q45d">d) Sensitivity labels</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q45"></div>
+        </div>
+
+        <div class="question" id="question-container-q46">
+            <p>46. The Data Protection Baseline assessment in Compliance Manager is based on:</p>
+            <ul class="options">
+                <li><input type="radio" name="q46" value="a" id="q46a"> <label for="q46a">a) The specific laws of your country.</label></li>
+                <li><input type="radio" name="q46" value="b" id="q46b"> <label for="q46b">b) A set of controls based on common industry regulations and standards like GDPR, ISO 27001, and NIST.</label></li>
+                <li><input type="radio" name="q46" value="c" id="q46c"> <label for="q46c">c) Recommendations from the sales team.</label></li>
+                <li><input type="radio" name="q46" value="d" id="q46d"> <label for="q46d">d) Your organization's specific security policies.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q46"></div>
+        </div>
+
+        <div class="question" id="question-container-q47">
+            <p>47. What happens when a user applies a retention label to an email in Outlook?</p>
+            <ul class="options">
+                <li><input type="radio" name="q47" value="a" id="q47a"> <label for="q47a">a) The email is immediately encrypted.</label></li>
+                <li><input type="radio" name="q47" value="b" id="q47b"> <label for="q47b">b) The email is forwarded to the compliance team.</label></li>
+                <li><input type="radio" name="q47" value="c" id="q47c"> <label for="q47c">c) The email becomes subject to the retention (and deletion) settings defined for that label.</label></li>
+                <li><input type="radio" name="q47" value="d" id="q47d"> <label for="q47d">d) The email is immediately and permanently deleted.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q47"></div>
+        </div>
+
+        <div class="question" id="question-container-q48">
+            <p>48. Which Compliance Manager feature helps you translate complex regulatory requirements into a specific set of controls you can implement?</p>
+            <ul class="options">
+                <li><input type="radio" name="q48" value="a" id="q48a"> <label for="q48a">a) The compliance score calculation.</label></li>
+                <li><input type="radio" name="q48" value="b" id="q48b"> <label for="q48b">b) The Service Trust Portal link.</label></li>
+                <li><input type="radio" name="q48" value="c" id="q48c"> <label for="q48c">c) Assessment templates.</label></li>
+                <li><input type="radio" name="q48" value="d" id="q48d"> <label for="q48d">d) eDiscovery integration.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q48"></div>
+        </div>
+
+        <div class="question" id="question-container-q49">
+            <p>49. A DLP policy can be run in "test mode". What is the purpose of this mode?</p>
+            <ul class="options">
+                <li><input type="radio" name="q49" value="a" id="q49a"> <label for="q49a">a) To block all matching content immediately.</label></li>
+                <li><input type="radio" name="q49" value="b" id="q49b"> <label for="q49b">b) To assess the impact of the policy by logging matches and showing policy tips, without actually blocking anything.</label></li>
+                <li><input type="radio" name="q49" value="c" id="q49c"> <label for="q49c">c) To apply the policy only to administrators.</label></li>
+                <li><input type="radio" name="q49" value="d" id="q49d"> <label for="q49d">d) To permanently delete any content that matches the policy.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q49"></div>
+        </div>
+
+        <div class="question" id="question-container-q50">
+            <p>50. You need to provide proof to an auditor that specific user actions were taken in SharePoint Online on a certain date. Which tool would you use to find this information?</p>
+            <ul class="options">
+                <li><input type="radio" name="q50" value="a" id="q50a"> <label for="q50a">a) Compliance Manager</label></li>
+                <li><input type="radio" name="q50" value="b" id="q50b"> <label for="q50b">b) Service Trust Portal</label></li>
+                <li><input type="radio" name="q50" value="c" id="q50c"> <label for="q50c">c) Microsoft Purview Audit</label></li>
+                <li><input type="radio" name="q50" value="d" id="q50d"> <label for="q50d">d) Information Barriers</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q50"></div>
+        </div>
+
+        <button type="button" id="submit">Submit Answers</button>
+    </form>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const quizForm = document.getElementById('quizForm');
+            const submitButton = document.getElementById('submit');
+            const resultsDiv = document.getElementById('results');
+
+            const quizData = {
+                q1: { answer: 'b', explanation: 'Sensitivity Labels from Microsoft Purview Information Protection allow you to classify data across your organization. Once classified, you can apply protection actions like encryption, content marking (watermarks), and access restrictions.' },
+                q2: { answer: 'b', explanation: 'Data Loss Prevention (DLP) policies in Microsoft Purview can identify, monitor, and automatically protect sensitive information. You can create a DLP policy with a condition that looks for content containing credit card numbers and an action to block it from being sent externally.' },
+                q3: { answer: 'a', explanation: 'Microsoft Purview Compliance Manager helps translate complex regulatory requirements into specific controls and provides a quantifiable score to help you track your compliance posture. It gives you recommended actions to take to improve your score.' },
+                q4: { answer: 'c', explanation: 'eDiscovery (Electronic Discovery) is the process of identifying and delivering electronic information that can be used as evidence in legal cases. Microsoft Purview eDiscovery tools allow you to search for content in Exchange Online, SharePoint Online, OneDrive, Teams, and more.' },
+                q5: { answer: 'b', explanation: 'Data Lifecycle Management (formerly part of Records Management) in Microsoft Purview helps you govern your data for compliance or regulatory requirements. It allows you to create policies to retain content for a specific period and then automatically delete it.' },
+                q6: { answer: 'c', explanation: 'The Service Trust Portal provides access to independent audit reports, such as SOC (Service Organization Controls), ISO, and FedRAMP. These reports are from third-party auditors and attest to the design and effectiveness of Microsoft\'s security controls.' },
+                q7: { answer: 'b', explanation: 'Insider Risk Management in Microsoft Purview correlates various signals to identify potential malicious or inadvertent insider risks, such as data theft by departing employees, confidential data leaks, and security policy violations.' },
+                q8: { answer: 'a', explanation: 'Information Barriers are policies that an admin can configure to prevent individuals or groups from communicating with each other. This is often used in highly regulated industries like finance to avoid conflicts of interest.' },
+                q9: { answer: 'b', explanation: 'Retention labels are used in Data Lifecycle Management to classify data for governance. You can configure a label to retain content for a certain period, delete it after a certain period, or mark it as a permanent record. Protection and markings are functions of sensitivity labels.' },
+                q10: { answer: 'c', explanation: 'Compliance Manager operates on the shared responsibility model. It tracks improvement actions taken by Microsoft and actions that are the responsibility of your organization to implement, providing a score based on both.' },
+                q11: { answer: 'b', explanation: 'The encryption technology used by sensitivity labels is Azure Rights Management (Azure RMS) from Azure Information Protection. This protection service uses encryption, identity, and authorization policies.' },
+                q12: { answer: 'c', explanation: 'Communication Compliance is a solution in Microsoft Purview that helps minimize communication risks by helping you detect, capture, and act on inappropriate messages in your organization.' },
+                q13: { answer: 'b', explanation: 'Content markings are visual identifiers applied to documents or emails, such as headers, footers, or watermarks. This is one of the actions a sensitivity label can be configured to apply.' },
+                q14: { answer: 'd', explanation: 'Placing a legal hold (or litigation hold) on a custodian\'s data sources ensures that all content, including modified and deleted items, is preserved and immutable for the duration of the hold.' },
+                q15: { answer: 'b', explanation: 'The Microsoft Purview compliance portal (compliance.microsoft.com) is the specialized, unified portal for all compliance, data governance, and risk management tasks.' },
+                q16: { answer: 'c', explanation: 'Microsoft Purview DLP policies can be applied across the entire Microsoft 365 stack, as well as on managed endpoints (via Defender for Endpoint), on-premises file servers, and even third-party cloud apps (via Defender for Cloud Apps).' },
+                q17: { answer: 'b', explanation: 'To declare content as a record that cannot be changed or deleted, you must use a retention label configured to mark items as a regulatory record. This provides the highest level of immutability.' },
+                q18: { answer: 'c', explanation: 'Communication Compliance policies can be configured with classifiers that detect threats, harassment, and profanity in Microsoft Teams, Exchange, and other communication platforms.' },
+                q19: { answer: 'b', explanation: 'Improvement actions are the core of Compliance Manager. For each control, they provide detailed implementation guidance, including which solutions to use and links to the relevant configuration pages.' },
+                q20: { answer: 'b', explanation: 'A sensitive information type (SIT) is a predefined or custom pattern that can be detected by DLP, Information Protection, and other services. Examples include financial data, PII, and health information.' },
+                q21: { answer: 'c', explanation: 'The Microsoft Service Trust Portal is the public-facing site for publishing audit reports and other compliance information about Microsoft\'s cloud services. It provides transparency into how Microsoft operates its services.' },
+                q22: { answer: 'a', explanation: 'Policy tips are contextual notifications that appear in applications like Outlook or SharePoint when a user is about to perform an action that violates a Data Loss Prevention (DLP) policy. They educate users in real-time.' },
+                q23: { answer: 'c', explanation: 'Disposition is the final stage of the records management lifecycle. It occurs after the retention period ends and involves a formal review process to determine if the content should be permanently deleted or retained longer.' },
+                q24: { answer: 'b', explanation: 'Information Barriers are specifically designed for this "ethical wall" scenario, preventing defined segments of users from communicating or collaborating with each other in Microsoft Teams and SharePoint.' },
+                q25: { answer: 'b', explanation: 'eDiscovery (Premium) builds on the Standard version by adding a complete end-to-end workflow, including managing custodians, advanced indexing, review set analytics, and support for non-M365 data sources.' },
+                q26: { answer: 'b', explanation: 'Microsoft Purview Audit (Standard and Premium) provides a unified audit log that captures thousands of different user and admin activities, creating a crucial forensic trail for investigations.' },
+                q27: { answer: 'c', explanation: 'Insider Risk Management is designed to correlate signals (like file activity, user sentiment, and HR data) to identify potential data theft or leaks by internal users, such as a departing employee.' },
+                q28: { answer: 'b', explanation: 'A retention policy enforces a minimum retention period. Content cannot be permanently deleted by a policy or a user until this period has expired.' },
+                q29: { answer: 'a', explanation: 'Microsoft\'s privacy commitment is that they are a data processor, not a data controller. Customer data is only used to provide the contracted services and is never used for advertising or other commercial purposes.' },
+                q30: { answer: 'b', explanation: 'A DLP policy is a rule-based engine. A common configuration is to detect when content with a specific sensitivity label is emailed externally and then block that email to prevent a data leak.' },
+                q31: { answer: 'b', explanation: 'This is a core tenet of data lifecycle management and records management. Keeping data forever ("data hoarding") increases risk and cost. The principle is to keep what you need for as long as you need it, and then dispose of it defensibly.' },
+                q32: { answer: 'b', explanation: 'The workflow for Communication Compliance is for a designated investigator to review the context of the flagged message, decide if it violates policy, and then take a remediation action (such as notifying the user, escalating to HR, or resolving the alert as benign).' },
+                q33: { answer: 'c', explanation: 'Compliance Manager is built on the shared responsibility model. It clearly delineates the improvement actions that Microsoft has completed ("Microsoft actions") from the ones that the customer is responsible for implementing ("customer actions").' },
+                q34: { answer: 'b', explanation: 'Marking an item as a record makes it immutable. This means it cannot be edited, moved, or permanently deleted by users, which is essential for proving the authenticity of a document for legal, regulatory, or business record-keeping purposes.' },
+                q35: { answer: 'a', explanation: 'eDiscovery (Electronic Discovery) is the official term for the entire legal process of identifying, preserving, collecting, reviewing, analyzing, and producing electronically stored information (ESI) in response to a legal or investigatory request.' },
+                q36: { answer: 'c', explanation: 'The entire purpose of Microsoft Purview Information Protection is to help organizations discover, classify, and protect their data based on its sensitivity and business impact.' },
+                q37: { answer: 'b', explanation: 'This illustrates the Principles of Retention. A legal hold (or eDiscovery hold) always takes precedence over any deletion action from a retention policy. Preservation for legal reasons is paramount.' },
+                q38: { answer: 'c', explanation: 'In eDiscovery (Premium), a custodian is a person in the organization who is a subject of the investigation. Their data locations (mailbox, OneDrive, etc.) are associated with them in the case for preservation and searching.' },
+                q39: { answer: 'b', explanation: 'The Service Trust Portal is the repository where Microsoft provides extensive documentation, audit reports, and compliance guides showing how its controls align with and help customers meet the requirements of various global, regional, and industry standards.' },
+                q40: { answer: 'b', explanation: 'DLP policies are powerful tools for user education. Instead of just blocking actions, they can be configured to inform users about the policy in real-time (with policy tips) and allow for justified exceptions, which improves user awareness and reduces friction.' },
+                q41: { answer: 'a', explanation: 'To help maintain objectivity and meet privacy requirements, both Insider Risk Management and Communication Compliance offer the option to display pseudonymized (anonymized) versions of usernames in the alerts dashboard.' },
+                q42: { answer: 'b', explanation: 'This is a classic records management scenario. A retention policy or label can be configured to retain content for a specific period (10 years) and then trigger a disposition review, where a records manager must approve the final deletion.' },
+                q43: { answer: 'c', explanation: 'After a search is performed in eDiscovery (Premium), the results are added to a review set. This is a secure, static workspace where legal teams can perform further analysis, filter, tag, redact, and prepare the data for export without affecting the original source content.' },
+                q44: { answer: 'a', explanation: 'The power of Microsoft Purview Information Protection is that the classification and protection (encryption and permissions) are embedded in the file's metadata. This means the protection is persistent and travels with the file, regardless of where it is saved, copied, or emailed.' },
+                q45: { answer: 'a', explanation: 'The unified audit log is the foundation for many compliance services. It must be turned on to capture the user and admin activities that serve as the signals and evidence for services like Insider Risk Management, Communication Compliance, and eDiscovery.' },
+                q46: { answer: 'b', explanation: 'The Data Protection Baseline is a default assessment provided by Compliance Manager. It includes a set of key controls from various regulations like GDPR and standards like NIST and ISO to give organizations a comprehensive starting point for improving data protection.' },
+                q47: { answer: 'c', explanation: 'When a retention label is applied, the item (in this case, an email) becomes subject to the rules of that label. If the label is configured to "retain for 7 years and then delete," the email will be preserved for that period, even if the user tries to delete it, and then deleted after the period ends.' },
+                q48: { answer: 'c', explanation: 'Assessment templates in Compliance Manager are pre-built collections of controls for a specific regulation or standard (e.g., a GDPR template, a HIPAA template). They save organizations the effort of manually interpreting the regulation and mapping it to actionable controls.' },
+                q49: { answer: 'b', explanation: 'Running a DLP policy in test mode is a critical first step. It allows you to see how the policy would behave in your environment and fine-tune the rules to avoid false positives or disrupting legitimate business, all without enforcing any restrictive actions on users.' },
+                q50: { answer: 'c', explanation: 'Microsoft Purview Audit is the definitive tool for this. You can search the unified audit log for specific activities (like FileAccessed, FileModified), filter by user, SharePoint site, and date range to find the exact records needed for an audit.' },
+            };
+
+            submitButton.addEventListener('click', () => {
+                let score = 0;
+                const userAnswers = new FormData(quizForm);
+                const totalQuestions = Object.keys(quizData).length;
+
+                submitButton.disabled = true;
+                submitButton.textContent = 'Answers Submitted';
+
+                for (let i = 1; i <= totalQuestions; i++) {
+                    const questionKey = `q${i}`;
+                    const container = document.getElementById(`question-container-${questionKey}`);
+                    const selectedValue = userAnswers.get(questionKey);
+                    const correctAnswer = quizData[questionKey].answer;
+                    const explanationText = quizData[questionKey].explanation;
+                    const explanationDiv = document.getElementById(`explanation-${questionKey}`);
+
+                    const radioButtons = container.querySelectorAll(`input[name="${questionKey}"]`);
+                    
+                    radioButtons.forEach(radio => {
+                        const listItem = radio.parentElement;
+                        listItem.classList.remove('correct-answer', 'incorrect-answer');
+
+                        if (radio.value === correctAnswer) {
+                             listItem.classList.add('correct-answer');
+                        }
+
+                        if (selectedValue && radio.value === selectedValue && selectedValue !== correctAnswer) {
+                            listItem.classList.add('incorrect-answer');
+                        }
+                    });
+
+                    if (selectedValue === correctAnswer) {
+                        score++;
+                    }
+                    
+                    explanationDiv.innerHTML = `<strong>Explanation:</strong> ${explanationText}`;
+                    explanationDiv.style.display = 'block';
+                }
+
+                resultsDiv.innerHTML = `You scored ${score} out of ${totalQuestions}. Review your answers and the explanations below.`;
+                resultsDiv.style.display = 'block';
+                window.scrollTo(0, 0);
+            });
+        });
+    </script>
+
+</body>
+</html>

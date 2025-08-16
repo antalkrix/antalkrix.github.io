@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SC-900 Module 2 Practice Test</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #0078d4;
+        }
+        #quizForm {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-width: 900px;
+            margin: auto;
+        }
+        .question {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            margin-bottom: 10px;
+            padding: 5px;
+            border-radius: 4px;
+        }
+        label {
+            cursor: pointer;
+            display: inline-block;
+            margin-left: 5px;
+        }
+        #submit {
+            display: block;
+            margin: 20px auto;
+            padding: 12px 25px;
+            background-color: #0078d4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #submit:disabled {
+            background-color: #a0a0a0;
+            cursor: not-allowed;
+        }
+        #results {
+            margin: 0 auto 20px auto;
+            font-weight: bold;
+            text-align: center;
+            font-size: 20px;
+            padding: 15px;
+            background-color: #e7f3fe;
+            border-left: 6px solid #0078d4;
+            display: none; /* Hidden by default */
+            max-width: 900px;
+        }
+        .correct-answer label {
+            color: #107c10;
+            font-weight: bold;
+        }
+        .incorrect-answer {
+            background-color: #fde7e9;
+        }
+        .incorrect-answer label {
+            color: #d83b01;
+            font-weight: bold;
+        }
+        .explanation {
+            display: none; /* Hidden by default */
+            margin-top: 15px;
+            padding: 12px;
+            border: 1px solid #ffb900;
+            background-color: #fffbdd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Module 2: Describe the capabilities of Microsoft Entra</h1>
+
+    <div id="results"></div>
+
+    <form id="quizForm">
+
+        <div class="question" id="question-container-q1">
+            <p>1. What is the primary function of Microsoft Entra ID?</p>
+            <ul class="options">
+                <li><input type="radio" name="q1" value="a" id="q1a"> <label for="q1a">a) To manage virtual machines</label></li>
+                <li><input type="radio" name="q1" value="b" id="q1b"> <label for="q1b">b) To provide cloud-based identity and access management</label></li>
+                <li><input type="radio" name="q1" value="c" id="q1c"> <label for="q1c">c) To store files and documents</label></li>
+                <li><input type="radio" name="q1" value="d" id="q1d"> <label for="q1d">d) To monitor network traffic</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q1"></div>
+        </div>
+
+        <div class="question" id="question-container-q2">
+            <p>2. Which Microsoft Entra feature allows users to log in to multiple applications with a single set of credentials?</p>
+            <ul class="options">
+                <li><input type="radio" name="q2" value="a" id="q2a"> <label for="q2a">a) Multi-Factor Authentication (MFA)</label></li>
+                <li><input type="radio" name="q2" value="b" id="q2b"> <label for="q2b">b) Conditional Access</label></li>
+                <li><input type="radio" name="q2" value="c" id="q2c"> <label for="q2c">c) Single Sign-On (SSO)</label></li>
+                <li><input type="radio" name="q2" value="d" id="q2d"> <label for="q2d">d) Privileged Identity Management (PIM)</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q2"></div>
+        </div>
+
+        <div class="question" id="question-container-q3">
+            <p>3. A company wants to require a second form of verification for users accessing sensitive applications. Which feature should they implement?</p>
+            <ul class="options">
+                <li><input type="radio" name="q3" value="a" id="q3a"> <label for="q3a">a) Self-Service Password Reset (SSPR)</label></li>
+                <li><input type="radio" name="q3" value="b" id="q3b"> <label for="q3b">b) Multi-Factor Authentication (MFA)</label></li>
+                <li><input type="radio" name="q3" value="c" id="q3c"> <label for="q3c">c) Role-Based Access Control (RBAC)</label></li>
+                <li><input type="radio" name="q3" value="d" id="q3d"> <label for="q3d">d) Microsoft Entra Connect</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q3"></div>
+        </div>
+
+        <div class="question" id="question-container-q4">
+            <p>4. Which tool is used to synchronize on-premises Active Directory objects with Microsoft Entra ID?</p>
+            <ul class="options">
+                <li><input type="radio" name="q4" value="a" id="q4a"> <label for="q4a">a) Azure Arc</label></li>
+                <li><input type="radio" name="q4" value="b" id="q4b"> <label for="q4b">b) Microsoft Sentinel</label></li>
+                <li><input type="radio" name="q4" value="c" id="q4c"> <label for="q4c">c) Microsoft Entra Connect</label></li>
+                <li><input type="radio" name="q4" value="d" id="q4d"> <label for="q4d">d) Azure Lighthouse</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q4"></div>
+        </div>
+
+        <div class="question" id="question-container-q5">
+            <p>5. What type of identity in Microsoft Entra ID is used to represent an application that needs to access resources?</p>
+            <ul class="options">
+                <li><input type="radio" name="q5" value="a" id="q5a"> <label for="q5a">a) User identity</label></li>
+                <li><input type="radio" name="q5" value="b" id="q5b"> <label for="q5b">b) Group identity</label></li>
+                <li><input type="radio" name="q5" value="c" id="q5c"> <label for="q5c">c) Service Principal</label></li>
+                <li><input type="radio" name="q5" value="d" id="q5d"> <label for="q5d">d) Guest identity</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q5"></div>
+        </div>
+        
+        <div class="question" id="question-container-q6">
+            <p>6. An administrator needs to be assigned a role for a limited time to perform a critical task. Which service should be used?</p>
+            <ul class="options">
+                <li><input type="radio" name="q6" value="a" id="q6a"> <label for="q6a">a) Conditional Access</label></li>
+                <li><input type="radio" name="q6" value="b" id="q6b"> <label for="q6b">b) Microsoft Entra Privileged Identity Management (PIM)</label></li>
+                <li><input type="radio" name="q6" value="c" id="q6c"> <label for="q6c">c) Microsoft Entra ID Protection</label></li>
+                <li><input type="radio" name="q6" value="d" id="q6d"> <label for="q6d">d) Self-Service Password Reset (SSPR)</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q6"></div>
+        </div>
+
+        <div class="question" id="question-container-q7">
+            <p>7. What is the purpose of Microsoft Entra Conditional Access?</p>
+            <ul class="options">
+                <li><input type="radio" name="q7" value="a" id="q7a"> <label for="q7a">a) To synchronize identities from on-premises.</label></li>
+                <li><input type="radio" name="q7" value="b" id="q7b"> <label for="q7b">b) To provide passwordless authentication.</label></li>
+                <li><input type="radio" name="q7" value="c" id="q7c"> <label for="q7c">c) To enforce access controls based on signals and conditions.</label></li>
+                <li><input type="radio" name="q7" value="d" id="q7d"> <label for="q7d">d) To allow users to reset their own passwords.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q7"></div>
+        </div>
+
+        <div class="question" id="question-container-q8">
+            <p>8. A user from a partner organization needs to collaborate on a project. What type of user account should be created for them in your Microsoft Entra tenant?</p>
+            <ul class="options">
+                <li><input type="radio" name="q8" value="a" id="q8a"> <label for="q8a">a) Member user</label></li>
+                <li><input type="radio" name="q8" value="b" id="q8b"> <label for="q8b">b) B2B guest user</label></li>
+                <li><input type="radio" name="q8" value="c" id="q8c"> <label for="q8c">c) Service principal</label></li>
+                <li><input type="radio" name="q8" value="d" id="q8d"> <label for="q8d">d) Managed identity</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q8"></div>
+        </div>
+        
+        <div class="question" id="question-container-q9">
+            <p>9. Which Microsoft Entra feature can detect and automatically remediate identity-based risks, such as leaked credentials or sign-ins from anonymous IP addresses?</p>
+            <ul class="options">
+                <li><input type="radio" name="q9" value="a" id="q9a"> <label for="q9a">a) Privileged Identity Management (PIM)</label></li>
+                <li><input type="radio" name="q9" value="b" id="q9b"> <label for="q9b">b) Conditional Access</label></li>
+                <li><input type="radio" name="q9" value="c" id="q9c"> <label for="q9c">c) Microsoft Entra ID Protection</label></li>
+                <li><input type="radio" name="q9" value="d" id="q9d"> <label for="q9d">d) Single Sign-On (SSO)</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q9"></div>
+        </div>
+
+        <div class="question" id="question-container-q10">
+            <p>10. What is an example of passwordless authentication?</p>
+            <ul class="options">
+                <li><input type="radio" name="q10" value="a" id="q10a"> <label for="q10a">a) Using a 20-character complex password</label></li>
+                <li><input type="radio" name="q10" value="b" id="q10b"> <label for="q10b">b) Windows Hello for Business (biometrics)</label></li>
+                <li><input type="radio" name="q10" value="c" id="q10c"> <label for="q10c">c) Requiring a password reset every 30 days</label></li>
+                <li><input type="radio" name="q10" value="d" id="q10d"> <label for="q10d">d) Using Self-Service Password Reset</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q10"></div>
+        </div>
+
+        <div class="question" id="question-container-q11">
+             <p>11. The feature that allows users to reset their forgotten passwords without contacting the help desk is called:</p>
+             <ul class="options">
+                 <li><input type="radio" name="q11" value="a" id="q11a"> <label for="q11a">a) Privileged Identity Management (PIM)</label></li>
+                 <li><input type="radio" name="q11" value="b" id="q11b"> <label for="q11b">b) Conditional Access</label></li>
+                 <li><input type="radio" name="q11" value="c" id="q11c"> <label for="q11c">c) Self-Service Password Reset (SSPR)</label></li>
+                 <li><input type="radio" name="q11" value="d" id="q11d"> <label for="q11d">d) Single Sign-On (SSO)</label></li>
+             </ul>
+             <div class="explanation" id="explanation-q11"></div>
+        </div>
+
+        <div class="question" id="question-container-q12">
+            <p>12. A company wants to build a customer-facing application and manage its customer identities. Which Microsoft Entra service should they use?</p>
+            <ul class="options">
+                <li><input type="radio" name="q12" value="a" id="q12a"> <label for="q12a">a) Microsoft Entra ID B2B</label></li>
+                <li><input type="radio" name="q12" value="b" id="q12b"> <label for="q12b">b) Microsoft Entra Domain Services</label></li>
+                <li><input type="radio" name="q12" value="c" id="q12c"> <label for="q12c">c) Microsoft Entra External ID for customers (B2C)</label></li>
+                <li><input type="radio" name="q12" value="d" id="q12d"> <label for="q12d">d) Microsoft Entra Connect</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q12"></div>
+        </div>
+
+        <div class="question" id="question-container-q13">
+            <p>13. What is the purpose of an access review in Microsoft Entra?</p>
+            <ul class="options">
+                <li><input type="radio" name="q13" value="a" id="q13a"> <label for="q13a">a) To detect suspicious sign-in activity.</label></li>
+                <li><input type="radio" name="q13" value="b" id="q13b"> <label for="q13b">b) To review and validate that users still require access to resources.</label></li>
+                <li><input type="radio" name="q13" value="c" id="q13c"> <label for="q13c">c) To reset all user passwords.</label></li>
+                <li><input type="radio" name="q13" value="d" id="q13d"> <label for="q13d">d) To synchronize new users from on-premises.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q13"></div>
+        </div>
+        
+        <div class="question" id="question-container-q14">
+            <p>14. An Azure VM needs to authenticate to Azure Key Vault to retrieve a secret without storing credentials in its code. Which identity type is best for this scenario?</p>
+            <ul class="options">
+                <li><input type="radio" name="q14" value="a" id="q14a"> <label for="q14a">a) User account</label></li>
+                <li><input type="radio" name="q14" value="b" id="q14b"> <label for="q14b">b) Guest account</label></li>
+                <li><input type="radio" name="q14" value="c" id="q14c"> <label for="q14c">c) Managed Identity</label></li>
+                <li><input type="radio" name="q14" value="d" id="q14d"> <label for="q14d">d) Group account</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q14"></div>
+        </div>
+        
+        <div class="question" id="question-container-q15">
+            <p>15. In a Conditional Access policy, which of the following is an example of a "signal"?</p>
+            <ul class="options">
+                <li><input type="radio" name="q15" value="a" id="q15a"> <label for="q15a">a) User location (IP address)</label></li>
+                <li><input type="radio" name="q15" value="b" id="q15b"> <label for="q15b">b) Block access</label></li>
+                <li><input type="radio" name="q15" value="c" id="q15c"> <label for="q15c">c) Require MFA</label></li>
+                <li><input type="radio" name="q15" value="d" id="q15d"> <label for="q15d">d) Grant access</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q15"></div>
+        </div>
+
+        <div class="question" id="question-container-q16">
+            <p>16. Which built-in role in Microsoft Entra ID has the highest level of permissions?</p>
+            <ul class="options">
+                <li><input type="radio" name="q16" value="a" id="q16a"> <label for="q16a">a) User Administrator</label></li>
+                <li><input type="radio" name="q16" value="b" id="q16b"> <label for="q16b">b) Security Administrator</label></li>
+                <li><input type="radio" name="q16" value="c" id="q16c"> <label for="q16c">c) Global Administrator</label></li>
+                <li><input type="radio" name="q16" value="d" id="q16d"> <label for="q16d">d) Billing Administrator</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q16"></div>
+        </div>
+        
+        <div class="question" id="question-container-q17">
+            <p>17. What does password hash synchronization in Microsoft Entra Connect do?</p>
+            <ul class="options">
+                <li><input type="radio" name="q17" value="a" id="q17a"> <label for="q17a">a) It stores plaintext passwords in the cloud.</label></li>
+                <li><input type="radio" name="q17" value="b" id="q17b"> <label for="q17b">b) It synchronizes a hash of the user's on-premises password hash to Microsoft Entra ID.</label></li>
+                <li><input type="radio" name="q17" value="c" id="q17c"> <label for="q17c">c) It forces users to have different passwords on-premises and in the cloud.</label></li>
+                <li><input type="radio" name="q17" value="d" id="q17d"> <label for="q17d">d) It disables on-premises authentication.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q17"></div>
+        </div>
+
+        <div class="question" id="question-container-q18">
+            <p>18. A dynamic group in Microsoft Entra ID automatically adds or removes members based on what?</p>
+            <ul class="options">
+                <li><input type="radio" name="q18" value="a" id="q18a"> <label for="q18a">a) Manual administrator assignments</label></li>
+                <li><input type="radio" name="q18" value="b" id="q18b"> <label for="q18b">b) Rules based on user attributes</label></li>
+                <li><input type="radio" name="q18" value="c" id="q18c"> <label for="q18c">c) The time of day</label></li>
+                <li><input type="radio" name="q18" value="d" id="q18d"> <label for="q18d">d) A user's request</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q18"></div>
+        </div>
+        
+        <div class="question" id="question-container-q19">
+            <p>19. What is the benefit of using pass-through authentication (PTA) with Microsoft Entra Connect?</p>
+            <ul class="options">
+                <li><input type="radio" name="q19" value="a" id="q19a"> <label for="q19a">a) It allows password validation to happen against the on-premises Active Directory in real-time.</label></li>
+                <li><input type="radio" name="q19" value="b" id="q19b"> <label for="q19b">b) It stores all passwords in the cloud.</label></li>
+                <li><input type="radio" name="q19" value="c" id="q19c"> <label for="q19c">c) It eliminates the need for an on-premises Active Directory.</label></li>
+                <li><input type="radio" name="q19" value="d" id="q19d"> <label for="q19d">d) It is the only way to enable MFA.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q19"></div>
+        </div>
+        
+        <div class="question" id="question-container-q20">
+            <p>20. In a Conditional Access policy, which of the following is an example of a "control"?</p>
+            <ul class="options">
+                <li><input type="radio" name="q20" value="a" id="q20a"> <label for="q20a">a) User risk level</label></li>
+                <li><input type="radio" name="q20" value="b" id="q20b"> <label for="q20b">b) Device platform</label></li>
+                <li><input type="radio" name="q20" value="c" id="q20c"> <label for="q20c">c) Require a compliant device</label></li>
+                <li><input type="radio" name="q20" value="d" id="q20d"> <label for="q20d">d) Client application</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q20"></div>
+        </div>
+
+        <div class="question" id="question-container-q21">
+            <p>21. What is the primary purpose of Entitlement Management in Microsoft Entra?</p>
+            <ul class="options">
+                <li><input type="radio" name="q21" value="a" id="q21a"> <label for="q21a">a) To manage licenses for Microsoft products.</label></li>
+                <li><input type="radio" name="q21" value="b" id="q21b"> <label for="q21b">b) To manage the identity lifecycle by automating access requests, approvals, and reviews.</label></li>
+                <li><input type="radio" name="q21" value="c" id="q21c"> <label for="q21c">c) To monitor for risky sign-ins.</label></li>
+                <li><input type="radio" name="q21" value="d" id="q21d"> <label for="q21d">d) To manage device compliance policies.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q21"></div>
+        </div>
+        
+        <div class="question" id="question-container-q22">
+            <p>22. An administrator wants to provide managed Active Directory domain services in Azure without deploying domain controllers as VMs. Which service should they use?</p>
+            <ul class="options">
+                <li><input type="radio" name="q22" value="a" id="q22a"> <label for="q22a">a) Microsoft Entra ID</label></li>
+                <li><input type="radio" name="q22" value="b" id="q22b"> <label for="q22b">b) Microsoft Entra Domain Services</label></li>
+                <li><input type="radio" name="q22" value="c" id="q22c"> <label for="q22c">c) Microsoft Entra Connect</label></li>
+                <li><input type="radio" name="q22" value="d" id="q22d"> <label for="q22d">d) Active Directory Federation Services (AD FS)</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q22"></div>
+        </div>
+        
+        <div class="question" id="question-container-q23">
+            <p>23. The "impossible travel" risk detection in Microsoft Entra ID Protection is triggered when:</p>
+            <ul class="options">
+                <li><input type="radio" name="q23" value="a" id="q23a"> <label for="q23a">a) A user signs in from a new device.</label></li>
+                <li><input type="radio" name="q23" value="b" id="q23b"> <label for="q23b">b) A user signs in from two locations in a timeframe that is physically impossible.</label></li>
+                <li><input type="radio" name="q23" value="c" id="q23c"> <label for="q23c">c) A user fails to provide the correct password.</label></li>
+                <li><input type="radio" name="q23" value="d" id="q23d"> <label for="q23d">d) A user requests access to a new application.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q23"></div>
+        </div>
+        
+        <div class="question" id="question-container-q24">
+            <p>24. In Microsoft Entra, what is used to grant permissions to a user, group, or service principal for a specific scope?</p>
+            <ul class="options">
+                <li><input type="radio" name="q24" value="a" id="q24a"> <label for="q24a">a) A Conditional Access policy</label></li>
+                <li><input type="radio" name="q24" value="b" id="q24b"> <label for="q24b">b) A role assignment (RBAC)</label></li>
+                <li><input type="radio" name="q24" value="c" id="q24c"> <label for="q24c">c) An access package</label></li>
+                <li><input type="radio" name="q24" value="d" id="q24d"> <label for="q24d">d) A dynamic group</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q24"></div>
+        </div>
+        
+        <div class="question" id="question-container-q25">
+            <p>25. The process where a user's on-premises Active Directory authenticates them and provides a token to Microsoft Entra ID is called:</p>
+            <ul class="options">
+                <li><input type="radio" name="q25" value="a" id="q25a"> <label for="q25a">a) Password Hash Synchronization</label></li>
+                <li><input type="radio" name="q25" value="b" id="q25b"> <label for="q25b">b) Pass-through Authentication</label></li>
+                <li><input type="radio" name="q25" value="c" id="q25c"> <label for="q25c">c) Federation (with AD FS)</label></li>
+                <li><input type="radio" name="q25" value="d" id="q25d"> <label for="q25d">d) Seamless Single Sign-On</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q25"></div>
+        </div>
+        
+        <div class="question" id="question-container-q26">
+            <p>26. What does "just-in-time" (JIT) access, provided by PIM, help to reduce?</p>
+            <ul class="options">
+                <li><input type="radio" name="q26" value="a" id="q26a"> <label for="q26a">a) The number of user licenses required</label></li>
+                <li><input type="radio" name="q26" value="b" id="q26b"> <label for="q26b">b) The number of permanent administrator assignments</label></li>
+                <li><input type="radio" name="q26" value="c" id="q26c"> <label for="q26c">c) The time it takes for passwords to synchronize</label></li>
+                <li><input type="radio" name="q26" value="d" id="q26d"> <label for="q26d">d) The number of applications a user can access</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q26"></div>
+        </div>
+        
+        <div class="question" id="question-container-q27">
+            <p>27. Which of the following is an example of "something you are" as an authentication factor?</p>
+            <ul class="options">
+                <li><input type="radio" name="q27" value="a" id="q27a"> <label for="q27a">a) A PIN code</label></li>
+                <li><input type="radio" name="q27" value="b" id="q27b"> <label for="q27b">b) A smart card</label></li>
+                <li><input type="radio" name="q27" value="c" id="q27c"> <label for="q27c">c) A facial scan</label></li>
+                <li><input type="radio" name="q27" value="d" id="q27d"> <label for="q27d">d) A temporary password</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q27"></div>
+        </div>
+
+        <div class="question" id="question-container-q28">
+            <p>28. When you register a device with Microsoft Entra ID, it creates an identity for the device. This allows you to:</p>
+            <ul class="options">
+                <li><input type="radio" name="q28" value="a" id="q28a"> <label for="q28a">a) Increase the device's processing power.</label></li>
+                <li><input type="radio" name="q28" value="b" id="q28b"> <label for="q28b">b) Manage and secure the device using policies.</label></li>
+                <li><input type="radio" name="q28" value="c" id="q28c"> <label for="q28c">c) Automatically install any application from the internet.</label></li>
+                <li><input type="radio" name="q28" value="d" id="q28d"> <label for="q28d">d) Prevent the user from ever changing their password.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q28"></div>
+        </div>
+        
+        <div class="question" id="question-container-q29">
+            <p>29. Microsoft Entra ID Protection provides two main types of policies. What are they?</p>
+            <ul class="options">
+                <li><input type="radio" name="q29" value="a" id="q29a"> <label for="q29a">a) Firewall and Antivirus policies</label></li>
+                <li><input type="radio" name="q29" value="b" id="q29b"> <label for="q29b">b) Sign-in risk policies and User risk policies</label></li>
+                <li><input type="radio" name="q29" value="c" id="q29c"> <label for="q29c">c) Backup and Restore policies</label></li>
+                <li><input type="radio" name="q29" value="d" id="q29d"> <label for="q29d">d) Application and Device policies</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q29"></div>
+        </div>
+
+        <div class="question" id="question-container-q30">
+            <p>30. A user in the Marketing department should have access to a specific set of applications. What is the most efficient way to manage this access in Microsoft Entra ID?</p>
+            <ul class="options">
+                <li><input type="radio" name="q30" value="a" id="q30a"> <label for="q30a">a) Assign permissions to each user individually.</label></li>
+                <li><input type="radio" name="q30" value="b" id="q30b"> <label for="q30b">b) Create a group for the Marketing department and assign permissions to the group.</label></li>
+                <li><input type="radio" name="q30" value="c" id="q30c"> <label for="q30c">c) Make every user a Global Administrator.</label></li>
+                <li><input type="radio" name="q30" value="d" id="q30d"> <label for="q30d">d) Use a different identity provider for each application.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q30"></div>
+        </div>
+        
+        <div class="question" id="question-container-q31">
+            <p>31. What is the difference between a Microsoft Entra role and an Azure role?</p>
+            <ul class="options">
+                <li><input type="radio" name="q31" value="a" id="q31a"> <label for="q31a">a) There is no difference.</label></li>
+                <li><input type="radio" name="q31" value="b" id="q31b"> <label for="q31b">b) Microsoft Entra roles manage Entra resources like users and groups; Azure roles manage Azure resources like VMs and storage.</label></li>
+                <li><input type="radio" name="q31" value="c" id="q31c"> <label for="q31c">c) Azure roles are for on-premises, and Microsoft Entra roles are for the cloud.</label></li>
+                <li><input type="radio" name="q31" value="d" id="q31d"> <label for="q31d">d) Microsoft Entra roles provide more permissions than Azure roles.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q31"></div>
+        </div>
+
+        <div class="question" id="question-container-q32">
+            <p>32. An organization wants to block all sign-ins from countries where they do not do business. Which feature is best for this?</p>
+            <ul class="options">
+                <li><input type="radio" name="q32" value="a" id="q32a"> <label for="q32a">a) Privileged Identity Management (PIM)</label></li>
+                <li><input type="radio" name="q32" value="b" id="q32b"> <label for="q32b">b) Conditional Access using named locations</label></li>
+                <li><input type="radio" name="q32" value="c" id="q32c"> <label for="q32c">c) Self-Service Password Reset (SSPR)</label></li>
+                <li><input type="radio" name="q32" value="d" id="q32d"> <label for="q32d">d) Microsoft Entra Connect</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q32"></div>
+        </div>
+
+        <div class="question" id="question-container-q33">
+            <p>33. Which of the following is a benefit of using hybrid identity?</p>
+            <ul class="options">
+                <li><input type="radio" name="q33" value="a" id="q33a"> <label for="q33a">a) It eliminates the need for on-premises infrastructure.</label></li>
+                <li><input type="radio" name="q33" value="b" id="q33b"> <label for="q33b">b) It provides a common user identity for authentication to both on-premises and cloud resources.</label></li>
+                <li><input type="radio" name="q33" value="c" id="q33c"> <label for="q33c">c) It requires users to have separate passwords for on-premises and cloud applications.</label></li>
+                <li><input type="radio" name="q33" value="d" id="q33d"> <label for="q33d">d) It is less secure than having separate identities.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q33"></div>
+        </div>
+
+        <div class="question" id="question-container-q34">
+            <p>34. What is the function of the Microsoft Authenticator app?</p>
+            <ul class="options">
+                <li><input type="radio" name="q34" value="a" id="q34a"> <label for="q34a">a) It is a web browser for securely accessing applications.</label></li>
+                <li><input type="radio" name="q34" value="b" id="q34b"> <label for="q34b">b) It can be used for both passwordless sign-in and as a second factor for MFA.</label></li>
+                <li><input type="radio" name="q34" value="c" id="q34c"> <label for="q34c">c) It is used exclusively for managing administrative roles.</label></li>
+                <li><input type="radio" name="q34" value="d" id="q34d"> <label for="q34d">d) It is a tool for synchronizing directories.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q34"></div>
+        </div>
+
+        <div class="question" id="question-container-q35">
+            <p>35. You need to review all users who have the Global Administrator role and have them justify their need for it. What feature should you use?</p>
+            <ul class="options">
+                <li><input type="radio" name="q35" value="a" id="q35a"> <label for="q35a">a) Conditional Access policies</label></li>
+                <li><input type="radio" name="q35" value="b" id="q35b"> <label for="q35b">b) Dynamic groups</label></li>
+                <li><input type="radio" name="q35" value="c" id="q35c"> <label for="q35c">c) Access reviews</label></li>
+                <li><input type="radio" name="q35" value="d" id="q35d"> <label for="q35d">d) SSO configuration</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q35"></div>
+        </div>
+
+        <div class="question" id="question-container-q36">
+            <p>36. What is the purpose of password writeback in Microsoft Entra Connect?</p>
+            <ul class="options">
+                <li><input type="radio" name="q36" value="a" id="q36a"> <label for="q36a">a) It writes the cloud password back to a text file.</label></li>
+                <li><input type="radio" name="q36" value="b" id="q36b"> <label for="q36b">b) It allows password changes in the cloud (e.g., via SSPR) to be synchronized back to the on-premises directory.</label></li>
+                <li><input type="radio" name="q36" value="c" id="q36c"> <label for="q36c">c) It prevents users from changing their passwords.</label></li>
+                <li><input type="radio" name="q36" value="d" id="q36d"> <label for="q36d">d) It only works for cloud-only identities.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q36"></div>
+        </div>
+
+        <div class="question" id="question-container-q37">
+            <p>37. A user attempts to sign in from an IP address with known malicious activity. Microsoft Entra ID Protection would classify this as what type of risk?</p>
+            <ul class="options">
+                <li><input type="radio" name="q37" value="a" id="q37a"> <label for="q37a">a) User risk</label></li>
+                <li><input type="radio" name="q37" value="b" id="q37b"> <label for="q37b">b) Sign-in risk</label></li>
+                <li><input type="radio" name="q37" value="c" id="q37c"> <label for="q37c">c) Device risk</label></li>
+                <li><input type="radio" name="q37" value="d" id="q37d"> <label for="q37d">d) Application risk</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q37"></div>
+        </div>
+
+        <div class="question" id="question-container-q38">
+            <p>38. What is the benefit of a "Microsoft Entra hybrid joined" device?</p>
+            <ul class="options">
+                <li><input type="radio" name="q38" value="a" id="q38a"> <label for="q38a">a) It is only managed by on-premises Active Directory.</label></li>
+                <li><input type="radio" name="q38" value="b" id="q38b"> <label for="q38b">b) It is joined to both on-premises AD and Microsoft Entra ID, allowing management from both.</label></li>
+                <li><input type="radio" name="q38" value="c" id="q38c"> <label for="q38c">c) It can only be used by guest users.</label></li>
+                <li><input type="radio" name="q38" value="d" id="q38d"> <label for="q38d">d) It does not require user authentication.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q38"></div>
+        </div>
+
+        <div class="question" id="question-container-q39">
+            <p>39. Which of the following can be used as a condition in a Conditional Access policy?</p>
+            <ul class="options">
+                <li><input type="radio" name="q39" value="a" id="q39a"> <label for="q39a">a) User or group</label></li>
+                <li><input type="radio" name="q39" value="b" id="q39b"> <label for="q39b">b) Cloud apps or actions</label></li>
+                <li><input type="radio" name="q39" value="c" id="q39c"> <label for="q39c">c) Device platform</label></li>
+                <li><input type="radio" name="q39" value="d" id="q39d"> <label for="q39d">d) All of the above</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q39"></div>
+        </div>
+
+        <div class="question" id="question-container-q40">
+            <p>40. What is a tenant in the context of Microsoft Entra ID?</p>
+            <ul class="options">
+                <li><input type="radio" name="q40" value="a" id="q40a"> <label for="q40a">a) A single user account with administrative privileges.</label></li>
+                <li><input type="radio" name="q40" value="b" id="q40b"> <label for="q40b">b) A dedicated and trusted instance of Microsoft Entra ID for an organization.</label></li>
+                <li><input type="radio" name="q40" value="c" id="q40c"> <label for="q40c">c) A virtual machine that runs a domain controller.</label></li>
+                <li><input type="radio" name="q40" value="d" id="q40d"> <label for="q40d">d) A physical security token.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q40"></div>
+        </div>
+
+        <div class="question" id="question-container-q41">
+            <p>41. An "app registration" in Microsoft Entra is required when:</p>
+            <ul class="options">
+                <li><input type="radio" name="q41" value="a" id="q41a"> <label for="q41a">a) A user wants to reset their password.</label></li>
+                <li><input type="radio" name="q41" value="b" id="q41b"> <label for="q41b">b) You are developing an application that needs to integrate with Microsoft Entra for sign-in.</label></li>
+                <li><input type="radio" name="q41" value="c" id="q41c"> <label for="q41c">c) You need to create a new security group.</label></li>
+                <li><input type="radio" name="q41" value="d" id="q41d"> <label for="q41d">d) You are assigning a license to a user.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q41"></div>
+        </div>
+
+        <div class="question" id="question-container-q42">
+            <p>42. What is the primary risk mitigated by using Privileged Identity Management (PIM)?</p>
+            <ul class="options">
+                <li><input type="radio" name="q42" value="a" id="q42a"> <label for="q42a">a) Phishing attacks against standard users.</label></li>
+                <li><input type="radio" name="q42" value="b" id="q42b"> <label for="q42b">b) Excessive, unnecessary, or misused privileged access rights.</label></li>
+                <li><input type="radio" name="q42" value="c" id="q42c"> <label for="q42c">c) Users forgetting their passwords.</label></li>
+                <li><input type="radio" name="q42" value="d" id="q42d"> <label for="q42d">d) Synchronization failures between on-premises AD and Microsoft Entra.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q42"></div>
+        </div>
+
+        <div class="question" id="question-container-q43">
+            <p>43. A user signs in successfully from their corporate laptop in the office. This sign-in is considered low risk. This evaluation is a key component of:</p>
+            <ul class="options">
+                <li><input type="radio" name="q43" value="a" id="q43a"> <label for="q43a">a) Standard authentication</label></li>
+                <li><input type="radio" name="q43" value="b" id="q43b"> <label for="q43b">b) Real-time risk assessment in Conditional Access and Identity Protection</label></li>
+                <li><input type="radio" name="q43" value="c" id="q43c"> <label for="q43c">c) Self-Service Password Reset</label></li>
+                <li><input type="radio" name="q43" value="d" id="q43d"> <label for="q43d">d) Directory synchronization</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q43"></div>
+        </div>
+
+        <div class="question" id="question-container-q44">
+            <p>44. Which authentication method offers the best user experience for on-premises users accessing cloud apps from domain-joined devices on the corporate network?</p>
+            <ul class="options">
+                <li><input type="radio" name="q44" value="a" id="q44a"> <label for="q44a">a) Forcing MFA on every sign-in</label></li>
+                <li><input type="radio" name="q44" value="b" id="q44b"> <label for="q44b">b) Seamless Single Sign-On</label></li>
+                <li><input type="radio" name="q44" value="c" id="q44c"> <label for="q44c">c) Manual password entry for each app</label></li>
+                <li><input type="radio" name="q44" value="d" id="q44d"> <label for="q44d">d) Federation with a third-party IdP</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q44"></div>
+        </div>
+
+        <div class="question" id="question-container-q45">
+            <p>45. When a user is deleted from Microsoft Entra ID, they enter a "soft-deleted" state. What does this mean?</p>
+            <ul class="options">
+                <li><input type="radio" name="q45" value="a" id="q45a"> <label for="q45a">a) They are permanently deleted immediately.</label></li>
+                <li><input type="radio" name="q45" value="b" id="q45b"> <label for="q45b">b) They can be restored for a limited period (typically 30 days).</label></li>
+                <li><input type="radio" name="q45" value="c" id="q45c"> <label for="q45c">c) Their account is disabled but can be re-enabled at any time.</label></li>
+                <li><input type="radio" name="q45" value="d" id="q45d"> <label for="q45d">d) Their licenses are removed, but the user object remains forever.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q45"></div>
+        </div>
+
+        <div class="question" id="question-container-q46">
+            <p>46. You want to enforce that all Global Administrators must use a FIDO2 security key to sign in. How would you configure this?</p>
+            <ul class="options">
+                <li><input type="radio" name="q46" value="a" id="q46a"> <label for="q46a">a) Using a Self-Service Password Reset policy.</label></li>
+                <li><input type="radio" name="q46" value="b" id="q46b"> <label for="q46b">b) Using a Conditional Access policy targeting Global Admins and requiring a specific authentication strength.</label></li>
+                <li><input type="radio" name="q46" value="c" id="q46c"> <label for="q46c">c) Using a PIM policy.</label></li>
+                <li><input type="radio" name="q46" value="d" id="q46d"> <label for="q46d">d) This configuration is not possible.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q46"></div>
+        </div>
+
+        <div class="question" id="question-container-q47">
+            <p>47. Which identity governance feature helps manage access for external users from connected organizations?</p>
+            <ul class="options">
+                <li><input type="radio" name="q47" value="a" id="q47a"> <label for="q47a">a) Dynamic Groups</label></li>
+                <li><input type="radio" name="q47" value="b" id="q47b"> <label for="q47b">b) Entitlement Management</label></li>
+                <li><input type="radio" name="q47" value="c" id="q47c"> <label for="q47c">c) Managed Identities</label></li>
+                <li><input type="radio" name="q47" value="d" id="q47d"> <label for="q47d">d) Password Protection</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q47"></div>
+        </div>
+
+        <div class="question" id="question-container-q48">
+            <p>48. What is the function of the "Banned Passwords" list in Microsoft Entra ID?</p>
+            <ul class="options">
+                <li><input type="radio" name="q48" value="a" id="q48a"> <label for="q48a">a) It's a list of passwords that only administrators can use.</label></li>
+                <li><input type="radio" name="q48" value="b" id="q48b"> <label for="q48b">b) It prevents users from using common, easily guessable, or compromised passwords.</label></li>
+                <li><input type="radio" name="q48" value="c" id="q48c"> <label for="q48c">c) It stores a list of all previously used passwords for a user.</label></li>
+                <li><input type="radio" name="q48" value="d" id="q48d"> <label for="q48d">d) It automatically generates secure passwords for users.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q48"></div>
+        </div>
+
+        <div class="question" id="question-container-q49">
+            <p>49. A company wants to ensure that when a user's risk level becomes "High" in Identity Protection, their session is automatically revoked. This is an example of:</p>
+            <ul class="options">
+                <li><input type="radio" name="q49" value="a" id="q49a"> <label for="q49a">a) Manual intervention by an administrator.</label></li>
+                <li><input type="radio" name="q49" value="b" id="q49b"> <label for="q49b">b) An automated risk-based policy.</label></li>
+                <li><input type="radio" name="q49" value="c" id="q49c"> <label for="q49c">c) A one-time security review.</label></li>
+                <li><input type="radio" name="q49" value="d" id="q49d"> <label for="q49d">d) A password synchronization feature.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q49"></div>
+        </div>
+
+        <div class="question" id="question-container-q50">
+            <p>50. You need to assign permissions to a group of users to manage support tickets within the Microsoft Entra admin center, without giving them broader administrative rights. Which role is most appropriate?</p>
+            <ul class="options">
+                <li><input type="radio" name="q50" value="a" id="q50a"> <label for="q50a">a) Global Administrator</label></li>
+                <li><input type="radio" name="q50" value="b" id="q50b"> <label for="q50b">b) User Administrator</label></li>
+                <li><input type="radio" name="q50" value="c" id="q50c"> <label for="q50c">c) Helpdesk Administrator</label></li>
+                <li><input type="radio" name="q50" value="d" id="q50d"> <label for="q50d">d) Security Reader</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q50"></div>
+        </div>
+
+        <button type="button" id="submit">Submit Answers</button>
+    </form>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const quizForm = document.getElementById('quizForm');
+            const submitButton = document.getElementById('submit');
+            const resultsDiv = document.getElementById('results');
+
+            const quizData = {
+                q1: { answer: 'b', explanation: 'Microsoft Entra ID (formerly Azure Active Directory) is Microsoft\'s cloud-based identity and access management (IAM) service, which helps employees sign in and access resources.' },
+                q2: { answer: 'c', explanation: 'Single Sign-On (SSO) enables a user to log in one time with one set of credentials to access multiple applications and services.' },
+                q3: { answer: 'b', explanation: 'Multi-Factor Authentication (MFA) provides an additional layer of security by requiring users to provide two or more verification factors.' },
+                q4: { answer: 'c', explanation: 'Microsoft Entra Connect is the tool designed to synchronize identity data between an on-premises Active Directory environment and Microsoft Entra ID.' },
+                q5: { answer: 'c', explanation: 'A Service Principal is the identity of an application within a Microsoft Entra tenant. It is created when you register an application and is used to control its access to resources.' },
+                q6: { answer: 'b', explanation: 'Microsoft Entra Privileged Identity Management (PIM) provides just-in-time (JIT) privileged access. Administrators must activate their roles for a limited, time-bound period.' },
+                q7: { answer: 'c', explanation: 'Conditional Access uses "if-then" logic. It combines signals (like user location, device compliance, or risk) with decisions (like granting or blocking access) and enforces organizational policies.' },
+                q8: { answer: 'b', explanation: 'Microsoft Entra B2B (Business-to-Business) collaboration allows you to securely share your applications and services with guest users from any other organization, while you maintain control over your own corporate data.' },
+                q9: { answer: 'c', explanation: 'Microsoft Entra ID Protection uses machine learning to detect identity-based risks and allows you to configure automated remediation policies, such as forcing a password reset or blocking access if the risk is too high.' },
+                q10: { answer: 'b', explanation: 'Passwordless authentication replaces the password with something you have (like a phone) or something you are (like a fingerprint or face scan). Windows Hello for Business is a prime example.' },
+                q11: { answer: 'c', explanation: 'Self-Service Password Reset (SSPR) is a feature of Microsoft Entra ID that enables users to reset their own passwords after verifying their identity, reducing help desk calls.' },
+                q12: { answer: 'c', explanation: 'Microsoft Entra External ID for customers (formerly Azure AD B2C) is a customer identity and access management (CIAM) solution designed to manage identities for customer-facing applications.' },
+                q13: { answer: 'b', explanation: 'Access reviews are part of Microsoft Entra Identity Governance. They help organizations manage group memberships, access to enterprise applications, and role assignments to ensure that only the right people have continued access.' },
+                q14: { answer: 'c', explanation: 'Managed Identities provide an automatically managed identity in Microsoft Entra for Azure services to use when connecting to resources that support Entra authentication, eliminating the need for developers to manage credentials.' },
+                q15: { answer: 'a', explanation: 'In Conditional Access, signals are the "if" part of the policy. They include user/group, location, device information, application, and real-time risk detections. The other options are controls or outcomes.' },
+                q16: { answer: 'c', explanation: 'The Global Administrator role has unrestricted access to all management features in Microsoft Entra ID, as well as services that federate with it. It is the highest-level role.' },
+                q17: { answer: 'b', explanation: 'Password Hash Synchronization (PHS) synchronizes a hash of a user\'s on-premises AD password hash with Microsoft Entra ID. It does not synchronize or store the plaintext password in the cloud.' },
+                q18: { answer: 'b', explanation: 'Dynamic groups use rules based on user or device properties (like department, location, or OS type) to automatically manage group membership, reducing administrative overhead.' },
+                q19: { answer: 'a', explanation: 'Pass-through Authentication (PTA) validates user credentials directly against the on-premises Active Directory. This is useful for organizations that want to enforce their on-premises security and password policies without storing password hashes in the cloud.' },
+                q20: { answer: 'c', explanation: 'In Conditional Access, controls are the "then" part of the policy. They are the actions taken after the conditions are met, such as requiring MFA, needing a compliant device, or blocking access.' },
+                q21: { answer: 'b', explanation: 'Entitlement Management is an identity governance feature that enables organizations to manage the identity and access lifecycle at scale by automating access request workflows, access assignments, reviews, and expiration.' },
+                q22: { answer: 'b', explanation: 'Microsoft Entra Domain Services provides managed domain services such as domain join, group policy, LDAP, and Kerberos/NTLM authentication that is fully compatible with Windows Server Active Directory. It allows you to use these legacy services in Azure without deploying VMs as domain controllers.' },
+                q23: { answer: 'b', explanation: 'Impossible travel (or atypical travel) is a risk detection that flags two sign-ins from the same user from geographically distant locations within a time period that would have been impossible for the user to travel between.' },
+                q24: { answer: 'b', explanation: 'Role-Based Access Control (RBAC) in both Microsoft Entra and Azure uses role assignments to grant a set of permissions (the role) to a security principal (user, group, etc.) at a particular scope (tenant, subscription, resource group, etc.).' },
+                q25: { answer: 'c', explanation: 'Federation, typically with Active Directory Federation Services (AD FS), is an authentication method where Microsoft Entra hands off the authentication process to another trusted identity provider, such as an on-premises AD FS farm.' },
+                q26: { answer: 'b', explanation: 'The main purpose of PIM and just-in-time access is to minimize the number of people who have standing, permanent access to sensitive information or resources, which reduces the overall risk profile.' },
+                q27: { answer: 'c', explanation: 'Authentication factors are "something you know" (password, PIN), "something you have" (phone, smart card), and "something you are" (biometrics like a fingerprint or facial scan).' },
+                q28: { answer: 'b', explanation: 'Creating a device identity in Microsoft Entra allows the device to authenticate and be used as a condition for Conditional Access policies. It also enables management through tools like Microsoft Intune.' },
+                q29: { answer: 'b', explanation: 'Identity Protection policies are based on risk. A sign-in risk policy evaluates the risk of a specific authentication request, while a user risk policy evaluates the overall risk of the user account based on their activity over time.' },
+                q30: { answer: 'b', explanation: 'Using groups is the most efficient and scalable way to manage access. You assign the necessary application permissions to the group, and then you only need to manage the membership of that group.' },
+                q31: { answer: 'b', explanation: 'This is a key distinction. Microsoft Entra roles (like Global Administrator) control access to Microsoft Entra resources. Azure roles (like Contributor) control access to Azure resources (VMs, storage, etc.).' },
+                q32: { answer: 'b', explanation: 'Conditional Access is the ideal tool for this. You can define "named locations" for the countries you trust and then create a policy that blocks sign-ins from all other locations.' },
+                q33: { answer: 'b', explanation: 'Hybrid identity links a user\'s on-premises and cloud identities. This provides a seamless experience, allowing them to use one set of credentials to access resources regardless of where they are located.' },
+                q34: { answer: 'b', explanation: 'The Microsoft Authenticator app is a multi-function tool. It can receive push notifications for MFA, generate OATH TOTP codes, and enable passwordless phone sign-in.' },
+                q35: { answer: 'c', explanation: 'Access reviews are the specific identity governance feature designed to manage and recertify access. You can create an access review for a privileged role, assign reviewers (or have users self-review), and automatically remove access for those who no longer need it.' },
+                q36: { answer: 'b', explanation: 'Password writeback is a feature that must be enabled to allow SSPR to work for synchronized users. It synchronizes password changes made in the cloud back to the on-premises Active Directory, keeping passwords consistent.' },
+                q37: { answer: 'b', explanation: 'Sign-in risk is calculated in real-time for a specific authentication request. Factors include anonymous IP addresses, atypical locations, and malicious IP addresses. User risk is a longer-term calculation of the user\'s overall compromise level.' },
+                q38: { answer: 'b', explanation: 'A Microsoft Entra hybrid joined device is joined to both the on-premises AD and Microsoft Entra. This allows it to be managed by traditional tools like Group Policy and modern cloud tools like Microsoft Intune simultaneously.' },
+                q39: { answer: 'd', explanation: 'A Conditional Access policy is built from various conditions. You can target specific users/groups, specific cloud apps, and specific conditions like device platform, location, client apps, and risk level.' },
+                q40: { answer: 'b', explanation: 'When an organization signs up for a Microsoft cloud service like Azure or Microsoft 365, a dedicated instance of Microsoft Entra ID, known as a tenant, is created. It acts as a security and identity boundary for the organization.' },
+                q41: { answer: 'b', explanation: 'When you develop an application that needs to use Microsoft Entra for authentication, you must first register it in your tenant. This registration process creates a globally unique identity for the app and its corresponding service principal.' },
+                q42: { answer: 'b', explanation: 'PIM directly mitigates the risk of standing privileges. By making admin access temporary and requiring activation, it reduces the window of opportunity for an attacker to compromise a privileged account and misuse its permissions.' },
+                q43: { answer: 'b', explanation: 'Both Conditional Access and Identity Protection use a real-time risk assessment engine to evaluate each sign-in. Signals like location, device health, and known threats are used to calculate a risk score, which then determines if a policy is triggered.' },
+                q44: { answer: 'b', explanation: 'Seamless Single Sign-On, when used with PHS or PTA, automatically signs users in when they are on their corporate devices connected to your corporate network. It provides the smoothest user experience without requiring them to re-enter credentials.' },
+                q45: { answer: 'b', explanation: 'Microsoft Entra ID uses a soft-delete mechanism, moving deleted objects to a recycle bin. This prevents accidental deletion and allows administrators to restore the user and all their properties within a 30-day window.' },
+                q46: { answer: 'b', explanation: 'Conditional Access has a grant control called "Authentication strength" which allows you to specify the exact types of MFA methods that are allowed. You can create a policy targeting Global Admins that requires a phishing-resistant strength, which includes FIDO2 security keys.' },
+                q47: { answer: 'b', explanation: 'Entitlement Management allows you to create "access packages" and connect to external organizations. This lets you define which resources external users can request access to and manage their lifecycle, including approvals and expiration.' },
+                q48: { answer: 'b', explanation: 'Microsoft Entra Password Protection analyzes passwords as they are changed or reset. It blocks weak passwords by checking them against a global list of commonly used passwords and any custom banned words you add.' },
+                q49: { answer: 'b', explanation: 'This is the core function of risk-based policies in Identity Protection and Conditional Access. You configure a policy that says "IF user risk is High, THEN require MFA or block access," and the system automates the enforcement.' },
+                q50: { answer: 'c', explanation: 'The Helpdesk Administrator role is a least-privilege role designed for this purpose. It grants permissions to perform common helpdesk tasks like resetting passwords and managing service requests for non-administrators, without granting permissions to change roles or policies.' },
+            };
+
+            submitButton.addEventListener('click', () => {
+                let score = 0;
+                const userAnswers = new FormData(quizForm);
+                const totalQuestions = Object.keys(quizData).length;
+
+                submitButton.disabled = true;
+                submitButton.textContent = 'Answers Submitted';
+
+                for (let i = 1; i <= totalQuestions; i++) {
+                    const questionKey = `q${i}`;
+                    const container = document.getElementById(`question-container-${questionKey}`);
+                    const selectedValue = userAnswers.get(questionKey);
+                    const correctAnswer = quizData[questionKey].answer;
+                    const explanationText = quizData[questionKey].explanation;
+                    const explanationDiv = document.getElementById(`explanation-${questionKey}`);
+
+                    const radioButtons = container.querySelectorAll(`input[name="${questionKey}"]`);
+                    
+                    radioButtons.forEach(radio => {
+                        const listItem = radio.parentElement;
+                        listItem.classList.remove('correct-answer', 'incorrect-answer');
+
+                        if (radio.value === correctAnswer) {
+                             listItem.classList.add('correct-answer');
+                        }
+
+                        if (selectedValue && radio.value === selectedValue && selectedValue !== correctAnswer) {
+                            listItem.classList.add('incorrect-answer');
+                        }
+                    });
+
+                    if (selectedValue === correctAnswer) {
+                        score++;
+                    }
+                    
+                    explanationDiv.innerHTML = `<strong>Explanation:</strong> ${explanationText}`;
+                    explanationDiv.style.display = 'block';
+                }
+
+                resultsDiv.innerHTML = `You scored ${score} out of ${totalQuestions}. Review your answers and the explanations below.`;
+                resultsDiv.style.display = 'block';
+                window.scrollTo(0, 0);
+            });
+        });
+    </script>
+
+</body>
+</html>

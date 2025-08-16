@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SC-900 Module 1 Practice Test</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #0078d4;
+        }
+        #quizForm {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-width: 900px;
+            margin: auto;
+        }
+        .question {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            margin-bottom: 10px;
+            padding: 5px;
+            border-radius: 4px;
+        }
+        label {
+            cursor: pointer;
+            display: inline-block;
+            margin-left: 5px;
+        }
+        #submit {
+            display: block;
+            margin: 20px auto;
+            padding: 12px 25px;
+            background-color: #0078d4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #submit:disabled {
+            background-color: #a0a0a0;
+            cursor: not-allowed;
+        }
+        #results {
+            margin: 0 auto 20px auto;
+            font-weight: bold;
+            text-align: center;
+            font-size: 20px;
+            padding: 15px;
+            background-color: #e7f3fe;
+            border-left: 6px solid #0078d4;
+            display: none; /* Hidden by default */
+            max-width: 900px;
+        }
+        .correct-answer label {
+            color: #107c10;
+            font-weight: bold;
+        }
+        .incorrect-answer {
+            background-color: #fde7e9;
+        }
+        .incorrect-answer label {
+            color: #d83b01;
+            font-weight: bold;
+        }
+        .explanation {
+            display: none; /* Hidden by default */
+            margin-top: 15px;
+            padding: 12px;
+            border: 1px solid #ffb900;
+            background-color: #fffbdd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Module 1: Describe the concepts of security, compliance, and identity</h1>
+
+    <div id="results"></div>
+
+    <form id="quizForm">
+
+        <div class="question" id="question-container-q1">
+            <p>1. In the shared responsibility model for a Software as a Service (SaaS) solution, which of the following is the customer responsible for?</p>
+            <ul class="options">
+                <li><input type="radio" name="q1" value="a" id="q1a"> <label for="q1a">a) Physical datacenter security</label></li>
+                <li><input type="radio" name="q1" value="b" id="q1b"> <label for="q1b">b) Operating system patching</label></li>
+                <li><input type="radio" name="q1" value="c" id="q1c"> <label for="q1c">c) Network controls</label></li>
+                <li><input type="radio" name="q1" value="d" id="q1d"> <label for="q1d">d) Information and data classification</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q1"></div>
+        </div>
+
+        <div class="question" id="question-container-q2">
+            <p>2. Which security principle involves creating multiple layers of security controls to protect assets?</p>
+            <ul class="options">
+                <li><input type="radio" name="q2" value="a" id="q2a"> <label for="q2a">a) Zero Trust</label></li>
+                <li><input type="radio" name="q2" value="b" id="q2b"> <label for="q2b">b) Least Privilege</label></li>
+                <li><input type="radio" name="q2" value="c" id="q2c"> <label for="q2c">c) Defense in Depth</label></li>
+                <li><input type="radio" name="q2" value="d" id="q2d"> <label for="q2d">d) Shared Responsibility</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q2"></div>
+        </div>
+
+        <div class="question" id="question-container-q3">
+            <p>3. The Zero Trust model is based on which guiding principle?</p>
+            <ul class="options">
+                <li><input type="radio" name="q3" value="a" id="q3a"> <label for="q3a">a) Trust but verify</label></li>
+                <li><input type="radio" name="q3" value="b" id="q3b"> <label for="q3b">b) Trust internal networks, verify external</label></li>
+                <li><input type="radio" name="q3" value="c" id="q3c"> <label for="q3c">c) Never trust, always verify</label></li>
+                <li><input type="radio" name="q3" value="d" id="q3d"> <label for="q3d">d) Once verified, always trust</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q3"></div>
+        </div>
+
+        <div class="question" id="question-container-q4">
+            <p>4. What is the process of converting data into a format that cannot be easily understood by unauthorized parties?</p>
+            <ul class="options">
+                <li><input type="radio" name="q4" value="a" id="q4a"> <label for="q4a">a) Hashing</label></li>
+                <li><input type="radio" name="q4" value="b" id="q4b"> <label for="q4b">b) Encryption</label></li>
+                <li><input type="radio" name="q4" value="c" id="q4c"> <label for="q4c">c) Authorization</label></li>
+                <li><input type="radio" name="q4" value="d" id="q4d"> <label for="q4d">d) Authentication</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q4"></div>
+        </div>
+
+        <div class="question" id="question-container-q5">
+            <p>5. Which cryptographic process is one-way and cannot be reversed?</p>
+            <ul class="options">
+                <li><input type="radio" name="q5" value="a" id="q5a"> <label for="q5a">a) Symmetric encryption</label></li>
+                <li><input type="radio" name="q5" value="b" id="q5b"> <label for="q5b">b) Asymmetric encryption</label></li>
+                <li><input type="radio" name="q5" value="c" id="q5c"> <label for="q5c">c) Hashing</label></li>
+                <li><input type="radio" name="q5" value="d" id="q5d"> <label for="q5d">d) Decryption</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q5"></div>
+        </div>
+        
+        <div class="question" id="question-container-q6">
+            <p>6. What term describes the process of proving you are who you say you are?</p>
+            <ul class="options">
+                <li><input type="radio" name="q6" value="a" id="q6a"> <label for="q6a">a) Authorization</label></li>
+                <li><input type="radio" name="q6" value="b" id="q6b"> <label for="q6b">b) Authentication</label></li>
+                <li><input type="radio" name="q6" value="c" id="q6c"> <label for="q6c">c) Accounting</label></li>
+                <li><input type="radio" name="q6" value="d" id="q6d"> <label for="q6d">d) Auditing</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q6"></div>
+        </div>
+        
+        <div class="question" id="question-container-q7">
+            <p>7. After a user has been authenticated, what process determines what they are allowed to do?</p>
+            <ul class="options">
+                <li><input type="radio" name="q7" value="a" id="q7a"> <label for="q7a">a) Authorization</label></li>
+                <li><input type="radio" name="q7" value="b" id="q7b"> <label for="q7b">b) Identification</label></li>
+                <li><input type="radio" name="q7" value="c" id="q7c"> <label for="q7c">c) Auditing</label></li>
+                <li><input type="radio" name="q7" value="d" id="q7d"> <label for="q7d">d) Encryption</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q7"></div>
+        </div>
+
+        <div class="question" id="question-container-q8">
+            <p>8. Which of the following is a key principle of the Zero Trust model?</p>
+            <ul class="options">
+                <li><input type="radio" name="q8" value="a" id="q8a"> <label for="q8a">a) Trust all devices within the corporate network</label></li>
+                <li><input type="radio" name="q8" value="b" id="q8b"> <label for="q8b">b) Assume breach</label></li>
+                <li><input type="radio" name="q8" value="c" id="q8c"> <label for="q8c">c) Grant broad permissions for simplicity</label></li>
+                <li><input type="radio" name="q8" value="d" id="q8d"> <label for="q8d">d) Rely solely on network perimeter security</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q8"></div>
+        </div>
+        
+        <div class="question" id="question-container-q9">
+            <p>9. In a Platform as a Service (PaaS) model, who is responsible for managing the application and data?</p>
+            <ul class="options">
+                <li><input type="radio" name="q9" value="a" id="q9a"> <label for="q9a">a) The cloud provider only</label></li>
+                <li><input type="radio" name="q9" value="b" id="q9b"> <label for="q9b">b) The customer only</label></li>
+                <li><input type="radio" name="q9" value="c" id="q9c"> <label for="q9c">c) It is a shared responsibility</label></li>
+                <li><input type="radio" name="q9" value="d" id="q9d"> <label for="q9d">d) The hardware vendor</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q9"></div>
+        </div>
+
+        <div class="question" id="question-container-q10">
+            <p>10. The concept of granting only the permissions required to perform a specific job function is known as:</p>
+            <ul class="options">
+                <li><input type="radio" name="q10" value="a" id="q10a"> <label for="q10a">a) Defense in Depth</label></li>
+                <li><input type="radio" name="q10" value="b" id="q10b"> <label for="q10b">b) Zero Trust</label></li>
+                <li><input type="radio" name="q10" value="c" id="q10c"> <label for="q10c">c) Principle of Least Privilege</label></li>
+                <li><input type="radio" name="q10" value="d" id="q10d"> <label for="q10d">d) Shared Responsibility</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q10"></div>
+        </div>
+        
+        <div class="question" id="question-container-q11">
+             <p>11. Which type of encryption uses the same key for both encryption and decryption?</p>
+             <ul class="options">
+                 <li><input type="radio" name="q11" value="a" id="q11a"> <label for="q11a">a) Asymmetric encryption</label></li>
+                 <li><input type="radio" name="q11" value="b" id="q11b"> <label for="q11b">b) Symmetric encryption</label></li>
+                 <li><input type="radio" name="q11" value="c" id="q11c"> <label for="q11c">c) Hashing</label></li>
+                 <li><input type="radio" name="q11" value="d" id="q11d"> <label for="q11d">d) Public-key encryption</label></li>
+             </ul>
+             <div class="explanation" id="explanation-q11"></div>
+        </div>
+
+        <div class="question" id="question-container-q12">
+            <p>12. Which statement best describes a "hybrid cloud" model?</p>
+            <ul class="options">
+                <li><input type="radio" name="q12" value="a" id="q12a"> <label for="q12a">a) All resources are located on-premises.</label></li>
+                <li><input type="radio" name="q12" value="b" id="q12b"> <label for="q12b">b) All resources are hosted by a third-party cloud provider.</label></li>
+                <li><input type="radio" name="q12" value="c" id="q12c"> <label for="q12c">c) A combination of public cloud and private cloud resources.</label></li>
+                <li><input type="radio" name="q12" value="d" id="q12d"> <label for="q12d">d) Resources are shared by multiple organizations.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q12"></div>
+        </div>
+
+        <div class="question" id="question-container-q13">
+            <p>13. What is the primary purpose of an identity provider (IdP)?</p>
+            <ul class="options">
+                <li><input type="radio" name="q13" value="a" id="q13a"> <label for="q13a">a) To manage network firewalls.</label></li>
+                <li><input type="radio" name="q13" value="b" id="q13b"> <label for="q13b">b) To store and manage digital identities and provide authentication services.</label></li>
+                <li><input type="radio" name="q13" value="c" id="q13c"> <label for="q13c">c) To monitor for malware on endpoints.</label></li>
+                <li><input type="radio" name="q13" value="d" id="q13d"> <label for="q13d">d) To encrypt data at rest.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q13"></div>
+        </div>
+        
+        <div class="question" id="question-container-q14">
+            <p>14. The concept that security is a continuous, iterative process of improvement is known as:</p>
+            <ul class="options">
+                <li><input type="radio" name="q14" value="a" id="q14a"> <label for="q14a">a) Security through obscurity.</label></li>
+                <li><input type="radio" name="q14" value="b" id="q14b"> <label for="q14b">b) Security posture management.</label></li>
+                <li><input type="radio" name="q14" value="c" id="q14c"> <label for="q14c">c) One-time verification.</label></li>
+                <li><input type="radio" name="q14" value="d" id="q14d"> <label for="q14d">d) Defense in depth.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q14"></div>
+        </div>
+        
+        <div class="question" id="question-container-q15">
+            <p>15. In public-key cryptography, the private key should be:</p>
+            <ul class="options">
+                <li><input type="radio" name="q15" value="a" id="q15a"> <label for="q15a">a) Shared with everyone.</label></li>
+                <li><input type="radio" name="q15" value="b" id="q15b"> <label for="q15b">b) Kept secret by the owner.</label></li>
+                <li><input type="radio" name="q15" value="c" id="q15c"> <label for="q15c">c) Shared only with the cloud provider.</label></li>
+                <li><input type="radio" name="q15" value="d" id="q15d"> <label for="q15d">d) Embedded in public websites.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q15"></div>
+        </div>
+
+        <div class="question" id="question-container-q16">
+            <p>16. Which term refers to the rules and regulations that an organization must follow?</p>
+            <ul class="options">
+                <li><input type="radio" name="q16" value="a" id="q16a"> <label for="q16a">a) Security</label></li>
+                <li><input type="radio" name="q16" value="b" id="q16b"> <label for="q16b">b) Identity</label></li>
+                <li><input type="radio" name="q16" value="c" id="q16c"> <label for="q16c">c) Compliance</label></li>
+                <li><input type="radio" name="q16" value="d" id="q16d"> <label for="q16d">d) Encryption</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q16"></div>
+        </div>
+        
+        <div class="question" id="question-container-q17">
+            <p>17. In the context of the CIA triad, what does "Availability" refer to?</p>
+            <ul class="options">
+                <li><input type="radio" name="q17" value="a" id="q17a"> <label for="q17a">a) Data is accurate and trustworthy.</label></li>
+                <li><input type="radio" name="q17" value="b" id="q17b"> <label for="q17b">b) Data is protected from unauthorized disclosure.</label></li>
+                <li><input type="radio" name="q17" value="c" id="q17c"> <label for="q17c">c) Data and services are accessible when needed.</label></li>
+                <li><input type="radio" name="q17" value="d" id="q17d"> <label for="q17d">d) Data is encrypted at rest.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q17"></div>
+        </div>
+
+        <div class="question" id="question-container-q18">
+            <p>18. A user authenticating with a password (something they know) and a fingerprint (something they are) is an example of what?</p>
+            <ul class="options">
+                <li><input type="radio" name="q18" value="a" id="q18a"> <label for="q18a">a) Single-factor authentication</label></li>
+                <li><input type="radio" name="q18" value="b" id="q18b"> <label for="q18b">b) Authorization</label></li>
+                <li><input type="radio" name="q18" value="c" id="q18c"> <label for="q18c">c) Multi-factor authentication (MFA)</label></li>
+                <li><input type="radio" name="q18" value="d" id="q18d"> <label for="q18d">d) Single Sign-On (SSO)</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q18"></div>
+        </div>
+        
+        <div class="question" id="question-container-q19">
+            <p>19. What does the term "data residency" refer to?</p>
+            <ul class="options">
+                <li><input type="radio" name="q19" value="a" id="q19a"> <label for="q19a">a) The physical or geographic location of where data is stored.</label></li>
+                <li><input type="radio" name="q19" value="b" id="q19b"> <label for="q19b">b) The process of encrypting data while it is in transit.</label></li>
+                <li><input type="radio" name="q19" value="c" id="q19c"> <label for="q19c">c) The person responsible for the data.</label></li>
+                <li><input type="radio" name="q19" value="d" id="q19d"> <label for="q19d">d) The age of the data.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q19"></div>
+        </div>
+        
+        <div class="question" id="question-container-q20">
+            <p>20. Which concept has become the modern security perimeter for many organizations?</p>
+            <ul class="options">
+                <li><input type="radio" name="q20" value="a" id="q20a"> <label for="q20a">a) The physical office building</label></li>
+                <li><input type="radio" name="q20" value="b" id="q20b"> <label for="q20b">b) The corporate network firewall</label></li>
+                <li><input type="radio" name="q20" value="c" id="q20c"> <label for="q20c">c) Identity</label></li>
+                <li><input type="radio" name="q20" value="d" id="q20d"> <label for="q20d">d) The user's home network</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q20"></div>
+        </div>
+        
+        <div class="question" id="question-container-q21">
+            <p>21. A phishing attack is an example of what kind of threat?</p>
+            <ul class="options">
+                <li><input type="radio" name="q21" value="a" id="q21a"> <label for="q21a">a) Social engineering</label></li>
+                <li><input type="radio" name="q21" value="b" id="q21b"> <label for="q21b">b) Malware</label></li>
+                <li><input type="radio" name="q21" value="c" id="q21c"> <label for="q21c">c) Denial of Service</label></li>
+                <li><input type="radio" name="q21" value="d" id="q21d"> <label for="q21d">d) Physical theft</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q21"></div>
+        </div>
+        
+        <div class="question" id="question-container-q22">
+            <p>22. An organization combines its on-premises Active Directory with a cloud identity provider like Microsoft Entra ID. This is an example of what type of identity?</p>
+            <ul class="options">
+                <li><input type="radio" name="q22" value="a" id="q22a"> <label for="q22a">a) Cloud-native identity</label></li>
+                <li><input type="radio" name="q22" value="b" id="q22b"> <label for="q22b">b) Federated identity</label></li>
+                <li><input type="radio" name="q22" value="c" id="q22c"> <label for="q22c">c) On-premises identity</label></li>
+                <li><input type="radio" name="q22" value="d" id="q22d"> <label for="q22d">d) Hybrid identity</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q22"></div>
+        </div>
+        
+        <div class="question" id="question-container-q23">
+            <p>23. What does "Confidentiality" in the CIA triad ensure?</p>
+            <ul class="options">
+                <li><input type="radio" name="q23" value="a" id="q23a"> <label for="q23a">a) Data is available when needed.</label></li>
+                <li><input type="radio" name="q23" value="b" id="q23b"> <label for="q23b">b) Data is accurate and has not been altered.</label></li>
+                <li><input type="radio" name="q23" value="c" id="q23c"> <label for="q23c">c) Data is accessible only by authorized individuals.</label></li>
+                <li><input type="radio" name="q23" value="d" id="q23d"> <label for="q23d">d) Data access is logged and audited.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q23"></div>
+        </div>
+        
+        <div class="question" id="question-container-q24">
+            <p>24. In the Defense in Depth model, the "Perimeter" layer would typically include which security control?</p>
+            <ul class="options">
+                <li><input type="radio" name="q24" value="a" id="q24a"> <label for="q24a">a) Data encryption</label></li>
+                <li><input type="radio" name="q24" value="b" id="q24b"> <label for="q24b">b) Firewalls and DDoS protection</label></li>
+                <li><input type="radio" name="q24" value="c" id="q24c"> <label for="q24c">c) Multi-factor authentication</label></li>
+                <li><input type="radio" name="q24" value="d" id="q24d"> <label for="q24d">d) Security guards and fences</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q24"></div>
+        </div>
+        
+        <div class="question" id="question-container-q25">
+            <p>25. The goal of Governance, Risk, and Compliance (GRC) is to:</p>
+            <ul class="options">
+                <li><input type="radio" name="q25" value="a" id="q25a"> <label for="q25a">a) Only focus on writing security policies.</label></li>
+                <li><input type="radio" name="q25" value="b" id="q25b"> <label for="q25b">b) Align an organization's IT activities with its business goals while managing risk and meeting regulatory requirements.</label></li>
+                <li><input type="radio" name="q25" value="c" id="q25c"> <label for="q25c">c) Replace the need for a security team.</label></li>
+                <li><input type="radio" name="q25" value="d" id="q25d"> <label for="q25d">d) Exclusively manage financial compliance.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q25"></div>
+        </div>
+        
+        <div class="question" id="question-container-q26">
+            <p>26. Which of the following is an example of "something you have" for authentication?</p>
+            <ul class="options">
+                <li><input type="radio" name="q26" value="a" id="q26a"> <label for="q26a">a) A password</label></li>
+                <li><input type="radio" name="q26" value="b" id="q26b"> <label for="q26b">b) A fingerprint scan</label></li>
+                <li><input type="radio" name="q26" value="c" id="q26c"> <label for="q26c">c) A one-time code from a mobile app</label></li>
+                <li><input type="radio" name="q26" value="d" id="q26d"> <label for="q26d">d) Your mother's maiden name</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q26"></div>
+        </div>
+        
+        <div class="question" id="question-container-q27">
+            <p>27. A digital signature is used to ensure:</p>
+            <ul class="options">
+                <li><input type="radio" name="q27" value="a" id="q27a"> <label for="q27a">a) Confidentiality</label></li>
+                <li><input type="radio" name="q27" value="b" id="q27b"> <label for="q27b">b) Availability</label></li>
+                <li><input type="radio" name="q27" value="c" id="q27c"> <label for="q27c">c) Integrity and non-repudiation</label></li>
+                <li><input type="radio" name="q27" value="d" id="q27d"> <label for="q27d">d) Physical security</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q27"></div>
+        </div>
+
+        <div class="question" id="question-container-q28">
+            <p>28. When using cloud services, the physical security of the datacenter is the responsibility of:</p>
+            <ul class="options">
+                <li><input type="radio" name="q28" value="a" id="q28a"> <label for="q28a">a) The customer</label></li>
+                <li><input type="radio" name="q28" value="b" id="q28b"> <label for="q28b">b) The cloud provider</label></li>
+                <li><input type="radio" name="q28" value="c" id="q28c"> <label for="q28c">c) The end-user</label></li>
+                <li><input type="radio" name="q28" value="d" id="q28d"> <label for="q28d">d) A third-party security auditor</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q28"></div>
+        </div>
+        
+        <div class="question" id="question-container-q29">
+            <p>29. The concept of "verify explicitly" in the Zero Trust model means you should:</p>
+            <ul class="options">
+                <li><input type="radio" name="q29" value="a" id="q29a"> <label for="q29a">a) Only verify users once a day.</label></li>
+                <li><input type="radio" name="q29" value="b" id="q29b"> <label for="q29b">b) Always authenticate and authorize based on all available data points.</label></li>
+                <li><input type="radio" name="q29" value="c" id="q29c"> <label for="q29c">c) Trust user identity without checking device health.</label></li>
+                <li><input type="radio" name="q29" value="d" id="q29d"> <label for="q29d">d) Only verify access from unknown locations.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q29"></div>
+        </div>
+
+        <div class="question" id="question-container-q30">
+            <p>30. Hashing a password before storing it helps protect:</p>
+            <ul class="options">
+                <li><input type="radio" name="q30" value="a" id="q30a"> <label for="q30a">a) Its availability</label></li>
+                <li><input type="radio" name="q30" value="b" id="q30b"> <label for="q30b">b) Its confidentiality</label></li>
+                <li><input type="radio" name="q30" value="c" id="q30c"> <label for="q30c">c) Its physical location</label></li>
+                <li><input type="radio" name="q30" value="d" id="q30d"> <label for="q30d">d) Its font size</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q30"></div>
+        </div>
+
+        <div class="question" id="question-container-q31">
+            <p>31. Which of these is an example of an identity?</p>
+            <ul class="options">
+                <li><input type="radio" name="q31" value="a" id="q31a"> <label for="q31a">a) A user account</label></li>
+                <li><input type="radio" name="q31" value="b" id="q31b"> <label for="q31b">b) An application</label></li>
+                <li><input type="radio" name="q31" value="c" id="q31c"> <label for="q31c">c) A device</label></li>
+                <li><input type="radio" name="q31" value="d" id="q31d"> <label for="q31d">d) All of the above</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q31"></div>
+        </div>
+
+        <div class="question" id="question-container-q32">
+            <p>32. An organization is legally required to store its customer data only within the borders of Germany. This is a requirement related to:</p>
+            <ul class="options">
+                <li><input type="radio" name="q32" value="a" id="q32a"> <label for="q32a">a) Data sovereignty</label></li>
+                <li><input type="radio" name="q32" value="b" id="q32b"> <label for="q32b">b) Data encryption</label></li>
+                <li><input type="radio" name="q32" value="c" id="q32c"> <label for="q32c">c) Data hashing</label></li>
+                <li><input type="radio" name="q32" value="d" id="q32d"> <label for="q32d">d) Data availability</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q32"></div>
+        </div>
+
+        <div class="question" id="question-container-q33">
+            <p>33. What is the main difference between authentication and authorization?</p>
+            <ul class="options">
+                <li><input type="radio" name="q33" value="a" id="q33a"> <label for="q33a">a) They are the same concept.</label></li>
+                <li><input type="radio" name="q33" value="b" id="q33b"> <label for="q33b">b) Authentication is for users, authorization is for devices.</label></li>
+                <li><input type="radio" name="q33" value="c" id="q33c"> <label for="q33c">c) Authentication verifies identity, while authorization determines access rights.</label></li>
+                <li><input type="radio" name="q33" value="d" id="q33d"> <label for="q33d">d) Authentication happens in the cloud, authorization happens on-premises.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q33"></div>
+        </div>
+
+        <div class="question" id="question-container-q34">
+            <p>34. In an Infrastructure as a Service (IaaS) environment, patching the guest operating system is the responsibility of:</p>
+            <ul class="options">
+                <li><input type="radio" name="q34" value="a" id="q34a"> <label for="q34a">a) The cloud provider</label></li>
+                <li><input type="radio" name="q34" value="b" id="q34b"> <label for="q34b">b) The customer</label></li>
+                <li><input type="radio" name="q34" value="c" id="q34c"> <label for="q34c">c) The hardware manufacturer</label></li>
+                <li><input type="radio" name="q34" value="d" id="q34d"> <label for="q34d">d) It is fully automated and no one is responsible.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q34"></div>
+        </div>
+
+        <div class="question" id="question-container-q35">
+            <p>35. The practice of segmenting networks to prevent lateral movement by an attacker is a key part of which Zero Trust principle?</p>
+            <ul class="options">
+                <li><input type="radio" name="q35" value="a" id="q35a"> <label for="q35a">a) Verify explicitly</label></li>
+                <li><input type="radio" name="q35" value="b" id="q35b"> <label for="q35b">b) Use least privileged access</label></li>
+                <li><input type="radio" name="q35" value="c" id="q35c"> <label for="q35c">c) Assume breach</label></li>
+                <li><input type="radio" name="q35" value="d" id="q35d"> <label for="q35d">d) Trust but verify</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q35"></div>
+        </div>
+
+        <div class="question" id="question-container-q36">
+            <p>36. What is the primary function of a directory service?</p>
+            <ul class="options">
+                <li><input type="radio" name="q36" value="a" id="q36a"> <label for="q36a">a) To provide a central database to store and manage information about network resources, including user accounts.</label></li>
+                <li><input type="radio" name="q36" value="b" id="q36b"> <label for="q36b">b) To analyze network traffic for malicious activity.</label></li>
+                <li><input type="radio" name="q36" value="c" id="q36c"> <label for="q36c">c) To back up and restore files.</label></li>
+                <li><input type="radio" name="q36" value="d" id="q36d"> <label for="q36d">d) To install operating systems on new computers.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q36"></div>
+        </div>
+
+        <div class="question" id="question-container-q37">
+            <p>37. What type of compliance is concerned with laws and regulations passed by a government body?</p>
+            <ul class="options">
+                <li><input type="radio" name="q37" value="a" id="q37a"> <label for="q37a">a) Organizational compliance</label></li>
+                <li><input type="radio" name="q37" value="b" id="q37b"> <label for="q37b">b) Industry compliance</label></li>
+                <li><input type="radio" name="q37" value="c" id="q37c"> <label for="q37c">c) Regulatory compliance</label></li>
+                <li><input type="radio" name="q37" value="d" id="q37d"> <label for="q37d">d) Optional compliance</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q37"></div>
+        </div>
+
+        <div class="question" id="question-container-q38">
+            <p>38. Using a key pair (public and private) for encryption is a feature of:</p>
+            <ul class="options">
+                <li><input type="radio" name="q38" value="a" id="q38a"> <label for="q38a">a) Hashing algorithms</label></li>
+                <li><input type="radio" name="q38" value="b" id="q38b"> <label for="q38b">b) Symmetric encryption</label></li>
+                <li><input type="radio" name="q38" value="c" id="q38c"> <label for="q38c">c) Asymmetric encryption</label></li>
+                <li><input type="radio" name="q38" value="d" id="q38d"> <label for="q38d">d) Steganography</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q38"></div>
+        </div>
+
+        <div class="question" id="question-container-q39">
+            <p>39. Which of the following best describes the principle of "Integrity" in the CIA triad?</p>
+            <ul class="options">
+                <li><input type="radio" name="q39" value="a" id="q39a"> <label for="q39a">a) Ensuring that systems are running and accessible.</label></li>
+                <li><input type="radio" name="q39" value="b" id="q39b"> <label for="q39b">b) Ensuring that information is not disclosed to unauthorized individuals.</label></li>
+                <li><input type="radio" name="q39" value="c" id="q39c"> <label for="q39c">c) Ensuring that data is accurate and has not been tampered with.</label></li>
+                <li><input type="radio" name="q39" value="d" id="q39d"> <label for="q39d">d) Ensuring that user activities are logged.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q39"></div>
+        </div>
+
+        <div class="question" id="question-container-q40">
+            <p>40. In the shared responsibility model, security for the physical hosts and network is always the responsibility of:</p>
+            <ul class="options">
+                <li><input type="radio" name="q40" value="a" id="q40a"> <label for="q40a">a) The customer</label></li>
+                <li><input type="radio" name="q40" value="b" id="q40b"> <label for="q40b">b) The application developer</label></li>
+                <li><input type="radio" name="q40" value="c" id="q40c"> <label for="q40c">c) The cloud provider</label></li>
+                <li><input type="radio" name="q40" value="d" id="q40d"> <label for="q40d">d) A third-party security company</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q40"></div>
+        </div>
+
+        <div class="question" id="question-container-q41">
+            <p>41. What is the concept of allowing a user to authenticate once and then access multiple independent software systems?</p>
+            <ul class="options">
+                <li><input type="radio" name="q41" value="a" id="q41a"> <label for="q41a">a) Multi-Factor Authentication (MFA)</label></li>
+                <li><input type="radio" name="q41" value="b" id="q41b"> <label for="q41b">b) Role-Based Access Control (RBAC)</label></li>
+                <li><input type="radio" name="q41" value="c" id="q41c"> <label for="q41c">c) Single Sign-On (SSO)</label></li>
+                <li><input type="radio" name="q41" value="d" id="q41d"> <label for="q41d">d) Defense in Depth</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q41"></div>
+        </div>
+
+        <div class="question" id="question-container-q42">
+            <p>42. The term "threat actor" refers to:</p>
+            <ul class="options">
+                <li><input type="radio" name="q42" value="a" id="q42a"> <label for="q42a">a) A specific piece of malware.</label></li>
+                <li><input type="radio" name="q42" value="b" id="q42b"> <label for="q42b">b) An entity responsible for a security incident or threat.</label></li>
+                <li><input type="radio" name="q42" value="c" id="q42c"> <label for="q42c">c) A vulnerability in a software application.</label></li>
+                <li><input type="radio" name="q42" value="d" id="q42d"> <label for="q42d">d) A security policy.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q42"></div>
+        </div>
+
+        <div class="question" id="question-container-q43">
+            <p>43. Which of the following is NOT a pillar of the Zero Trust model?</p>
+            <ul class="options">
+                <li><input type="radio" name="q43" value="a" id="q43a"> <label for="q43a">a) Identities</label></li>
+                <li><input type="radio" name="q43" value="b" id="q43b"> <label for="q43b">b) Endpoints</label></li>
+                <li><input type="radio" name="q43" value="c" id="q43c"> <label for="q43c">c) Implicit Trust</label></li>
+                <li><input type="radio" name="q43" value="d" id="q43d"> <label for="q43d">d) Data</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q43"></div>
+        </div>
+
+        <div class="question" id="question-container-q44">
+            <p>44. A company using Microsoft 365 is responsible for configuring access rights and policies for their users. This falls under which category in the shared responsibility model?</p>
+            <ul class="options">
+                <li><input type="radio" name="q44" value="a" id="q44a"> <label for="q44a">a) Provider's responsibility</label></li>
+                <li><input type="radio" name="q44" value="b" id="q44b"> <label for="q44b">b) Customer's responsibility</label></li>
+                <li><input type="radio" name="q44" value="c" id="q44c"> <label for="q44c">c) Hardware vendor's responsibility</label></li>
+                <li><input type="radio" name="q44" value="d" id="q44d"> <label for="q44d">d) It's not a security responsibility</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q44"></div>
+        </div>
+
+        <div class="question" id="question-container-q45">
+            <p>45. Using a firewall to protect the network, antivirus on endpoints, and encryption for data are examples of which security strategy?</p>
+            <ul class="options">
+                <li><input type="radio" name="q45" value="a" id="q45a"> <label for="q45a">a) Single-layer security</label></li>
+                <li><input type="radio" name="q45" value="b" id="q45b"> <label for="q45b">b) Defense in Depth</label></li>
+                <li><input type="radio" name="q45" value="c" id="q45c"> <label for="q45c">c) Access control lists</label></li>
+                <li><input type="radio" name="q45" value="d" id="q45d"> <label for="q45d">d) Least Privilege</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q45"></div>
+        </div>
+
+        <div class="question" id="question-container-q46">
+            <p>46. The GDPR (General Data Protection Regulation) is an example of what?</p>
+            <ul class="options">
+                <li><input type="radio" name="q46" value="a" id="q46a"> <label for="q46a">a) An encryption standard</label></li>
+                <li><input type="radio" name="q46" value="b" id="q46b"> <label for="q46b">b) A data privacy and protection regulation</label></li>
+                <li><input type="radio" name="q46" value="c" id="q46c"> <label for="q46c">c) A type of firewall</label></li>
+                <li><input type="radio" name="q46" value="d" id="q46d"> <label for="q46d">d) A model of cloud service</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q46"></div>
+        </div>
+
+        <div class="question" id="question-container-q47">
+            <p>47. Which term describes the process of keeping a record of events that occur in a system?</p>
+            <ul class="options">
+                <li><input type="radio" name="q47" value="a" id="q47a"> <label for="q47a">a) Authentication</label></li>
+                <li><input type="radio" name="q47" value="b" id="q47b"> <label for="q47b">b) Authorization</label></li>
+                <li><input type="radio" name="q47" value="c" id="q47c"> <label for="q47c">c) Auditing (or Logging)</label></li>
+                <li><input type="radio" name="q47" value="d" id="q47d"> <label for="q47d">d) Encryption</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q47"></div>
+        </div>
+
+        <div class="question" id="question-container-q48">
+            <p>48. A credential is used for:</p>
+            <ul class="options">
+                <li><input type="radio" name="q48" value="a" id="q48a"> <label for="q48a">a) Authorization</label></li>
+                <li><input type="radio" name="q48" value="b" id="q48b"> <label for="q48b">b) Encryption</label></li>
+                <li><input type="radio" name="q48" value="c" id="q48c"> <label for="q48c">c) Auditing</label></li>
+                <li><input type="radio" name="q48" value="d" id="q48d"> <label for="q48d">d) Authentication</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q48"></div>
+        </div>
+
+        <div class="question" id="question-container-q49">
+            <p>49. A security policy is a high-level document that outlines:</p>
+            <ul class="options">
+                <li><input type="radio" name="q49" value="a" id="q49a"> <label for="q49a">a) Specific firewall rules.</label></li>
+                <li><input type="radio" name="q49" value="b" id="q49b"> <label for="q49b">b) An organization's security goals and principles.</label></li>
+                <li><input type="radio" name="q49" value="c" id="q49c"> <label for="q49c">c) The exact software versions to be used.</label></li>
+                <li><input type="radio" name="q49" value="d" id="q49d"> <label for="q49d">d) A list of all user passwords.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q49"></div>
+        </div>
+
+        <div class="question" id="question-container-q50">
+            <p>50. Which of the following is a potential risk of using a "public" cloud model compared to a "private" cloud?</p>
+            <ul class="options">
+                <li><input type="radio" name="q50" value="a" id="q50a"> <label for="q50a">a) Higher upfront hardware costs</label></li>
+                <li><input type="radio" name="q50" value="b" id="q50b"> <label for="q50b">b) Slower scalability</label></li>
+                <li><input type="radio" name="q50" value="c" id="q50c"> <label for="q50c">c) Perceived lack of control and multi-tenancy concerns</label></li>
+                <li><input type="radio" name="q50" value="d" id="q50d"> <label for="q50d">d) Sole responsibility for all maintenance</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q50"></div>
+        </div>
+
+        <button type="button" id="submit">Submit Answers</button>
+    </form>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const quizForm = document.getElementById('quizForm');
+            const submitButton = document.getElementById('submit');
+            const resultsDiv = document.getElementById('results');
+
+            const quizData = {
+                q1: { answer: 'd', explanation: 'In a SaaS model, the cloud provider manages the infrastructure, platform, and application software. The customer is primarily responsible for their own data, how it is classified, and how they configure access to it.' },
+                q2: { answer: 'c', explanation: 'Defense in Depth is the strategy of having multiple, independent layers of security controls. If one layer fails, another is there to stop an attack.' },
+                q3: { answer: 'c', explanation: 'The core principle of the Zero Trust security model is "never trust, always verify." It assumes that the network is always hostile and requires verification for every access request.' },
+                q4: { answer: 'b', explanation: 'Encryption is the process of encoding data to make it unreadable to unauthorized parties. The data can be decoded (decrypted) with the correct key.' },
+                q5: { answer: 'c', explanation: 'Hashing is a one-way function. You can compute a hash from data, but you cannot reverse the process to get the original data from the hash. This is ideal for storing passwords securely.' },
+                q6: { answer: 'b', explanation: 'Authentication (often abbreviated as AuthN) is the process of verifying a claimed identity, for example, by checking a username and password.' },
+                q7: { answer: 'a', explanation: 'Authorization (often abbreviated as AuthZ) is the process that occurs after successful authentication. It determines the level of access and the specific actions an authenticated user is permitted to perform.' },
+                q8: { answer: 'b', explanation: 'The "Assume Breach" principle of Zero Trust means that you design your security strategy with the assumption that an attacker is already inside your network. This leads to measures like micro-segmentation and encryption of internal traffic.' },
+                q9: { answer: 'b', explanation: 'In a PaaS model, the provider manages the underlying infrastructure and operating system. The customer is responsible for deploying and managing their own applications and data on the platform.' },
+                q10: { answer: 'c', explanation: 'The Principle of Least Privilege dictates that a user, program, or process should only have the minimum permissions necessary to perform its function.' },
+                q11: { answer: 'b', explanation: 'Symmetric encryption uses a single, shared key to both encrypt and decrypt data. It is generally faster than asymmetric encryption.' },
+                q12: { answer: 'c', explanation: 'A hybrid cloud integrates on-premises infrastructure (a private cloud) with services from a public cloud provider. This allows data and applications to be shared between them.' },
+                q13: { answer: 'b', explanation: 'An Identity Provider (IdP) is a service that creates, maintains, and manages identity information while providing authentication services to other applications and services.' },
+                q14: { answer: 'b', explanation: 'Security posture management is the continuous process of discovery, assessment, and remediation of security risks and misconfigurations to improve an organization\'s overall security state.' },
+                q15: { answer: 'b', explanation: 'In asymmetric (public-key) cryptography, the public key is used to encrypt data and can be shared widely. The corresponding private key is kept secret by the owner and is used to decrypt the data.' },
+                q16: { answer: 'c', explanation: 'Compliance refers to adhering to a set of rules, such as policies, standards, laws, and regulations. Organizations often need to prove compliance to auditors.' },
+                q17: { answer: 'c', explanation: 'Availability is a component of the CIA triad ensuring that information and systems are accessible and operational for authorized users when they are needed.' },
+                q18: { answer: 'c', explanation: 'Multi-factor authentication (MFA) requires a user to provide two or more different types of verification factors to prove their identity, significantly increasing security.' },
+                q19: { answer: 'a', explanation: 'Data residency refers to the geographical location where data is stored. Some countries have data sovereignty laws that require certain types of data to be stored within the country\'s borders.' },
+                q20: { answer: 'c', explanation: 'With the rise of mobile workforces and cloud services, the traditional network perimeter has dissolved. Identity (verifying who the user is) is now considered the primary security perimeter.' },
+                q21: { answer: 'a', explanation: 'Phishing is a form of social engineering where attackers deceive people into revealing sensitive information, such as login credentials or credit card numbers.' },
+                q22: { answer: 'd', explanation: 'Hybrid identity is the term for a common identity for a user across both on-premises and cloud environments, typically achieved by synchronizing an on-premises directory (like Active Directory) with a cloud directory (like Microsoft Entra ID).' },
+                q23: { answer: 'c', explanation: 'Confidentiality is a component of the CIA triad that ensures data is protected from unauthorized access or disclosure. Encryption is a common control used to ensure confidentiality.' },
+                q24: { answer: 'b', explanation: 'In a layered Defense in Depth model, the perimeter layer is the first line of defense for the network and includes technologies like firewalls and Distributed Denial of Service (DDoS) protection.' },
+                q25: { answer: 'b', explanation: 'GRC is a structured approach to aligning IT with business objectives, while effectively managing risk and meeting compliance requirements.' },
+                q26: { answer: 'c', explanation: 'Authentication factors are categorized as something you know (password), something you have (physical token, mobile app code), and something you are (biometrics). A one-time code from an app falls under "something you have."' },
+                q27: { answer: 'c', explanation: 'A digital signature, created using the sender\'s private key, provides Integrity (proof the message wasn\'t altered) and Non-repudiation (proof of the sender\'s identity).' },
+                q28: { answer: 'b', explanation: 'According to the shared responsibility model, the cloud provider is always responsible for the security *of* the cloud, which includes the physical datacenters, servers, and network infrastructure.' },
+                q29: { answer: 'b', explanation: '"Verify explicitly" is a core Zero Trust principle. It means you should always authenticate and authorize based on all available signals, including user identity, location, device health, service, and data classification.' },
+                q30: { answer: 'b', explanation: 'Hashing is a cryptographic process that transforms a password into a fixed-length string of characters. If a database is breached, the stored hashes protect the confidentiality of the original passwords because they cannot be reversed.' },
+                q31: { answer: 'd', explanation: 'In modern identity and access management, an identity isn\'t just a person. It can be any entity that requires authentication and authorization, including users, devices, applications, and services.' },
+                q32: { answer: 'a', explanation: 'Data sovereignty is the concept that information which has been converted and stored in binary digital form is subject to the laws of the country in which it is located.' },
+                q33: { answer: 'c', explanation: 'This is a fundamental concept. Authentication (AuthN) proves "who you are." Authorization (AuthZ) determines "what you are allowed to do" after you have been authenticated.' },
+                q34: { answer: 'b', explanation: 'In the IaaS model, the cloud provider manages the physical infrastructure. The customer is responsible for the virtual machine from the operating system up, which includes patching, configuration, and security.' },
+                q35: { answer: 'c', explanation: 'The "Assume Breach" principle dictates that you should design your security to contain an attacker if they do get in. Network segmentation is a key control to limit an attacker\'s ability to move laterally from a compromised system to other parts of the network.' },
+                q36: { answer: 'a', explanation: 'A directory service, like Active Directory or Microsoft Entra ID, acts as a centralized database that stores and organizes information about users, groups, devices, and other network resources, and manages access to them.' },
+                q37: { answer: 'c', explanation: 'Regulatory compliance involves adhering to laws, regulations, guidelines, and specifications relevant to an organization\'s business processes. Examples include GDPR, HIPAA, and SOX.' },
+                q38: { answer: 'c', explanation: 'Asymmetric encryption, also known as public-key cryptography, uses a pair of keys: a public key for encryption and a private key for decryption.' },
+                q39: { answer: 'c', explanation: 'Integrity, as part of the CIA triad, ensures the trustworthiness and accuracy of data. It means the data has not been altered or tampered with by unauthorized parties. Hashing is a common control to verify integrity.' },
+                q40: { answer: 'c', explanation: 'Regardless of the cloud service model (IaaS, PaaS, SaaS), the cloud provider is always responsible for the physical security of its datacenters, including the servers, storage, and networking hardware.' },
+                q41: { answer: 'c', explanation: 'Single Sign-On (SSO) is an authentication scheme that allows a user to log in with a single set of credentials to multiple independent software systems.' },
+                q42: { answer: 'b', explanation: 'A threat actor, or malicious actor, is any person or entity that is responsible for an event that has a negative impact on the security of an organization or its data.' },
+                q43: { answer: 'c', explanation: 'The core idea of the Zero Trust model is to eliminate the concept of implicit trust based on network location. Instead, trust must be explicitly earned through verification. The pillars include Identities, Endpoints, Data, Apps, Infrastructure, and Networks.' },
+                q44: { answer: 'b', explanation: 'In a SaaS model like Microsoft 365, the customer is always responsible for their information and data, as well as managing user access and entitlements to that data.' },
+                q45: { answer: 'b', explanation: 'Defense in Depth is a security strategy that employs multiple layers of controls. The idea is to provide redundancy and slow down an attacker, so even if one control fails, others are in place to protect the asset.' },
+                q46: { answer: 'b', explanation: 'The GDPR is a comprehensive data protection and privacy regulation in the European Union that governs the processing of personal data of individuals inside the EU.' },
+                q47: { answer: 'c', explanation: 'Auditing is the process of creating and reviewing logs that record events, such as user sign-ins, access to files, and changes to permissions. These logs are crucial for security investigations.' },
+                q48: { answer: 'd', explanation: 'A credential, such as a username/password combination, a security key, or a certificate, is a piece of information used to verify a user\'s identity during the authentication process.' },
+                q49: { answer: 'b', explanation: 'A security policy is a formal document that defines an organization\'s stance on security. It sets the high-level goals and principles that guide the implementation of specific security controls and procedures.' },
+                q50: { answer: 'c', explanation: 'In a public cloud, resources are shared among multiple organizations (multi-tenancy). This can lead to concerns about data isolation and a feeling of reduced control compared to a private cloud, which is dedicated to a single organization.' },
+            };
+
+            submitButton.addEventListener('click', () => {
+                let score = 0;
+                const userAnswers = new FormData(quizForm);
+                const totalQuestions = Object.keys(quizData).length;
+
+                submitButton.disabled = true;
+                submitButton.textContent = 'Answers Submitted';
+
+                for (let i = 1; i <= totalQuestions; i++) {
+                    const questionKey = `q${i}`;
+                    const container = document.getElementById(`question-container-${questionKey}`);
+                    const selectedValue = userAnswers.get(questionKey);
+                    const correctAnswer = quizData[questionKey].answer;
+                    const explanationText = quizData[questionKey].explanation;
+                    const explanationDiv = document.getElementById(`explanation-${questionKey}`);
+
+                    const radioButtons = container.querySelectorAll(`input[name="${questionKey}"]`);
+                    
+                    radioButtons.forEach(radio => {
+                        const listItem = radio.parentElement;
+                        listItem.classList.remove('correct-answer', 'incorrect-answer');
+
+                        if (radio.value === correctAnswer) {
+                             listItem.classList.add('correct-answer');
+                        }
+
+                        if (selectedValue && radio.value === selectedValue && selectedValue !== correctAnswer) {
+                            listItem.classList.add('incorrect-answer');
+                        }
+                    });
+
+                    if (selectedValue === correctAnswer) {
+                        score++;
+                    }
+                    
+                    explanationDiv.innerHTML = `<strong>Explanation:</strong> ${explanationText}`;
+                    explanationDiv.style.display = 'block';
+                }
+
+                resultsDiv.innerHTML = `You scored ${score} out of ${totalQuestions}. Review your answers and the explanations below.`;
+                resultsDiv.style.display = 'block';
+                window.scrollTo(0, 0);
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SC-900 Module 3 Practice Test</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #0078d4;
+        }
+        #quizForm {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-width: 900px;
+            margin: auto;
+        }
+        .question {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            margin-bottom: 10px;
+            padding: 5px;
+            border-radius: 4px;
+        }
+        label {
+            cursor: pointer;
+            display: inline-block;
+            margin-left: 5px;
+        }
+        #submit {
+            display: block;
+            margin: 20px auto;
+            padding: 12px 25px;
+            background-color: #0078d4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #submit:disabled {
+            background-color: #a0a0a0;
+            cursor: not-allowed;
+        }
+        #results {
+            margin: 0 auto 20px auto;
+            font-weight: bold;
+            text-align: center;
+            font-size: 20px;
+            padding: 15px;
+            background-color: #e7f3fe;
+            border-left: 6px solid #0078d4;
+            display: none; /* Hidden by default */
+            max-width: 900px;
+        }
+        .correct-answer label {
+            color: #107c10;
+            font-weight: bold;
+        }
+        .incorrect-answer {
+            background-color: #fde7e9;
+        }
+        .incorrect-answer label {
+            color: #d83b01;
+            font-weight: bold;
+        }
+        .explanation {
+            display: none; /* Hidden by default */
+            margin-top: 15px;
+            padding: 12px;
+            border: 1px solid #ffb900;
+            background-color: #fffbdd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Module 3: Describe the capabilities of Microsoft security solutions</h1>
+
+    <div id="results"></div>
+
+    <form id="quizForm">
+
+        <div class="question" id="question-container-q1">
+            <p>1. What is the primary function of Microsoft Sentinel?</p>
+            <ul class="options">
+                <li><input type="radio" name="q1" value="a" id="q1a"> <label for="q1a">a) To manage security policies for endpoints</label></li>
+                <li><input type="radio" name="q1" value="b" id="q1b"> <label for="q1b">b) To act as a cloud-native SIEM and SOAR solution</label></li>
+                <li><input type="radio" name="q1" value="c" id="q1c"> <label for="q1c">c) To protect on-premises Active Directory domain controllers</label></li>
+                <li><input type="radio" name="q1" value="d" id="q1d"> <label for="q1d">d) To manage data retention and classification labels</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q1"></div>
+        </div>
+
+        <div class="question" id="question-container-q2">
+            <p>2. Which Microsoft 365 Defender service is specifically designed to protect against threats in emails, links, and collaboration tools?</p>
+            <ul class="options">
+                <li><input type="radio" name="q2" value="a" id="q2a"> <label for="q2a">a) Microsoft Defender for Endpoint</label></li>
+                <li><input type="radio" name="q2" value="b" id="q2b"> <label for="q2b">b) Microsoft Defender for Identity</label></li>
+                <li><input type="radio" name="q2" value="c" id="q2c"> <label for="q2c">c) Microsoft Defender for Office 365</label></li>
+                <li><input type="radio" name="q2" value="d" id="q2d"> <label for="q2d">d) Microsoft Defender for Cloud Apps</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q2"></div>
+        </div>
+
+        <div class="question" id="question-container-q3">
+            <p>3. Microsoft Defender for Cloud provides a "Secure Score" to help organizations with what?</p>
+            <ul class="options">
+                <li><input type="radio" name="q3" value="a" id="q3a"> <label for="q3a">a) Calculate the cost of their Azure resources.</label></li>
+                <li><input type="radio" name="q3" value="b" id="q3b"> <label for="q3b">b) Assess and improve their cloud security posture.</label></li>
+                <li><input type="radio" name="q3" value="c" id="q3c"> <label for="q3c">c) Track the number of active security incidents.</label></li>
+                <li><input type="radio" name="q3" value="d" id="q3d"> <label for="q3d">d) Manage user identities and access.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q3"></div>
+        </div>
+
+        <div class="question" id="question-container-q4">
+            <p>4. What does XDR stand for in the context of Microsoft 365 Defender?</p>
+            <ul class="options">
+                <li><input type="radio" name="q4" value="a" id="q4a"> <label for="q4a">a) Cross-Device Response</label></li>
+                <li><input type="radio" name="q4" value="b" id="q4b"> <label for="q4b">b) Extended Detection and Response</label></li>
+                <li><input type="radio" name="q4" value="c" id="q4c"> <label for="q4c">c) XML Data Redaction</label></li>
+                <li><input type="radio" name="q4" value="d" id="q4d"> <label for="q4d">d) External Data Recovery</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q4"></div>
+        </div>
+
+        <div class="question" id="question-container-q5">
+            <p>5. Microsoft Defender for Endpoint is designed to protect what kind of asset?</p>
+            <ul class="options">
+                <li><input type="radio" name="q5" value="a" id="q5a"> <label for="q5a">a) User identities</label></li>
+                <li><input type="radio" name="q5" value="b" id="q5b"> <label for="q5b">b) Cloud applications</label></li>
+                <li><input type="radio" name="q5" value="c" id="q5c"> <label for="q5c">c) Devices like laptops and servers</label></li>
+                <li><input type="radio" name="q5" value="d" id="q5d"> <label for="q5d">d) Email and documents</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q5"></div>
+        </div>
+        
+        <div class="question" id="question-container-q6">
+            <p>6. You need to securely store and manage secrets, keys, and certificates used by your cloud applications. Which Azure service is designed for this?</p>
+            <ul class="options">
+                <li><input type="radio" name="q6" value="a" id="q6a"> <label for="q6a">a) Azure Storage Account</label></li>
+                <li><input type="radio" name="q6" value="b" id="q6b"> <label for="q6b">b) Azure Policy</label></li>
+                <li><input type="radio" name="q6" value="c" id="q6c"> <label for="q6c">c) Azure Key Vault</label></li>
+                <li><input type="radio" name="q6" value="d" id="q6d"> <label for="q6d">d) Microsoft Entra ID</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q6"></div>
+        </div>
+
+        <div class="question" id="question-container-q7">
+            <p>7. Which Azure network security feature filters traffic to and from Azure resources in a virtual network using rules based on IP address, port, and protocol?</p>
+            <ul class="options">
+                <li><input type="radio" name="q7" value="a" id="q7a"> <label for="q7a">a) Azure DDoS Protection</label></li>
+                <li><input type="radio" name="q7" value="b" id="q7b"> <label for="q7b">b) Azure Firewall</label></li>
+                <li><input type="radio" name="q7" value="c" id="q7c"> <label for="q7c">c) Network Security Groups (NSGs)</label></li>
+                <li><input type="radio" name="q7" value="d" id="q7d"> <label for="q7d">d) Azure Application Gateway</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q7"></div>
+        </div>
+
+        <div class="question" id="question-container-q8">
+            <p>8. What is the primary role of a Cloud Access Security Broker (CASB) like Microsoft Defender for Cloud Apps?</p>
+            <ul class="options">
+                <li><input type="radio" name="q8" value="a" id="q8a"> <label for="q8a">a) To provide a secure VPN connection to the cloud</label></li>
+                <li><input type="radio" name="q8" value="b" id="q8b"> <label for="q8b">b) To act as a gatekeeper to broker access between users and cloud services</label></li>
+                <li><input type="radio" name="q8" value="c" id="q8c"> <label for="q8c">c) To manage and patch virtual machines in the cloud</label></li>
+                <li><input type="radio" name="q8" value="d" id="q8d"> <label for="q8d">d) To scan emails for phishing attempts</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q8"></div>
+        </div>
+        
+        <div class="question" id="question-container-q9">
+            <p>9. What does "SOAR" stand for in the context of Microsoft Sentinel?</p>
+            <ul class="options">
+                <li><input type="radio" name="q9" value="a" id="q9a"> <label for="q9a">a) Security Operations and Analytics Reporting</label></li>
+                <li><input type="radio" name="q9" value="b" id="q9b"> <label for="q9b">b) System Outage and Recovery</label></li>
+                <li><input type="radio" name="q9" value="c" id="q9c"> <label for="q9c">c) Security Orchestration, Automation, and Response</label></li>
+                <li><input type="radio" name="q9" value="d" id="q9d"> <label for="q9d">d) Service Optimization and Resource management</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q9"></div>
+        </div>
+
+        <div class="question" id="question-container-q10">
+            <p>10. Microsoft Defender for Identity focuses on monitoring signals from which environment?</p>
+            <ul class="options">
+                <li><input type="radio" name="q10" value="a" id="q10a"> <label for="q10a">a) Azure virtual machines</label></li>
+                <li><input type="radio" name="q10" value="b" id="q10b"> <label for="q10b">b) On-premises Active Directory Domain Services</label></li>
+                <li><input type="radio" name="q10" value="c" id="q10c"> <label for="q10c">c) User laptops and mobile devices</label></li>
+                <li><input type="radio" name="q10" value="d" id="q10d"> <label for="q10d">d) Microsoft 365 applications like SharePoint and Teams</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q10"></div>
+        </div>
+
+        <div class="question" id="question-container-q11">
+             <p>11. What is the function of the "Safe Links" feature in Microsoft Defender for Office 365?</p>
+             <ul class="options">
+                 <li><input type="radio" name="q11" value="a" id="q11a"> <label for="q11a">a) It encrypts email attachments.</label></li>
+                 <li><input type="radio" name="q11" value="b" id="q11b"> <label for="q11b">b) It provides time-of-click verification of URLs in emails and Office files.</label></li>
+                 <li><input type="radio" name="q11" value="c" id="q11c"> <label for="q11c">c) It checks user identities before allowing access to a link.</label></li>
+                 <li><input type="radio" name="q11" value="d" id="q11d"> <label for="q11d">d) It blocks all hyperlinks from external senders.</label></li>
+             </ul>
+             <div class="explanation" id="explanation-q11"></div>
+        </div>
+
+        <div class="question" id="question-container-q12">
+            <p>12. The security operations team wants to proactively hunt for threats across their datasets using structured queries. Which service is best suited for this task?</p>
+            <ul class="options">
+                <li><input type="radio" name="q12" value="a" id="q12a"> <label for="q12a">a) Microsoft Defender for Cloud</label></li>
+                <li><input type="radio" name="q12" value="b" id="q12b"> <label for="q12b">b) Microsoft Sentinel</label></li>
+                <li><input type="radio" name="q12" value="c" id="q12c"> <label for="q12c">c) Azure Monitor</label></li>
+                <li><input type="radio" name="q12" value="d" id="q12d"> <label for="q12d">d) Microsoft Purview</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q12"></div>
+        </div>
+
+        <div class="question" id="question-container-q13">
+            <p>13. Which type of attack is Azure DDoS Protection specifically designed to mitigate?</p>
+            <ul class="options">
+                <li><input type="radio" name="q13" value="a" id="q13a"> <label for="q13a">a) Phishing attacks via email</label></li>
+                <li><input type="radio" name="q13" value="b" id="q13b"> <label for="q13b">b) SQL injection attacks on a web application</label></li>
+                <li><input type="radio" name="q13" value="c" id="q13c"> <label for="q13c">c) Malware infection on an endpoint</label></li>
+                <li><input type="radio" name="q13" value="d" id="q13d"> <label for="q13d">d) Volumetric attacks that attempt to overwhelm a network with traffic</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q13"></div>
+        </div>
+        
+        <div class="question" id="question-container-q14">
+            <p>14. Microsoft Defender for Cloud's capabilities fall into two broad pillars. What are they?</p>
+            <ul class="options">
+                <li><input type="radio" name="q14" value="a" id="q14a"> <label for="q14a">a) SIEM and SOAR</label></li>
+                <li><input type="radio" name="q14" value="b" id="q14b"> <label for="q14b">b) Identity Protection and Access Management</label></li>
+                <li><input type="radio" name="q14" value="c" id="q14c"> <label for="q14c">c) Cloud Security Posture Management (CSPM) and Cloud Workload Protection (CWP)</label></li>
+                <li><input type="radio" name="q14" value="d" id="q14d"> <label for="q14d">d) Data Loss Prevention and Information Protection</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q14"></div>
+        </div>
+        
+        <div class="question" id="question-container-q15">
+            <p>15. What is the purpose of the "Safe Attachments" feature in Microsoft Defender for Office 365?</p>
+            <ul class="options">
+                <li><input type="radio" name="q15" value="a" id="q15a"> <label for="q15a">a) To scan all outbound attachments for sensitive data.</label></li>
+                <li><input type="radio" name="q15" value="b" id="q15b"> <label for="q15b">b) To check attachments in a virtual sandbox environment for malicious content before delivery.</label></li>
+                <li><input type="radio" name="q15" value="c" id="q15c"> <label for="q15c">c) To encrypt all email attachments automatically.</label></li>
+                <li><input type="radio" name="q15" value="d" id="q15d"> <label for="q15d">d) To ensure attachments are smaller than 10MB.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q15"></div>
+        </div>
+
+        <div class="question" id="question-container-q16">
+            <p>16. Which service provides a unified view of security incidents from across endpoints, identities, email, and applications in a single portal?</p>
+            <ul class="options">
+                <li><input type="radio" name="q16" value="a" id="q16a"> <label for="q16a">a) The Microsoft 365 Defender portal</label></li>
+                <li><input type="radio" name="q16" value="b" id="q16b"> <label for="q16b">b) The Microsoft Purview compliance portal</label></li>
+                <li><input type="radio" name="q16" value="c" id="q16c"> <label for="q16c">c) The Azure portal</label></li>
+                <li><input type="radio" name="q16" value="d" id="q16d"> <label for="q16d">d) The Service Trust Portal</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q16"></div>
+        </div>
+        
+        <div class="question" id="question-container-q17">
+            <p>17. The security principle of creating a secure, isolated execution environment for analyzing suspicious files is known as:</p>
+            <ul class="options">
+                <li><input type="radio" name="q17" value="a" id="q17a"> <label for="q17a">a) Sandboxing</label></li>
+                <li><input type="radio" name="q17" value="b" id="q17b"> <label for="q17b">b) Encryption</label></li>
+                <li><input type="radio" name="q17" value="c" id="q17c"> <label for="q17c">c) Hashing</label></li>
+                <li><input type="radio" name="q17" value="d" id="q17d"> <label for="q17d">d) Whitelisting</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q17"></div>
+        </div>
+
+        <div class="question" id="question-container-q18">
+            <p>18. Which Azure service is a stateful, managed firewall that can be used to control traffic between virtual networks and the internet?</p>
+            <ul class="options">
+                <li><input type="radio" name="q18" value="a" id="q18a"> <label for="q18a">a) Network Security Group (NSG)</label></li>
+                <li><input type="radio" name="q18" value="b" id="q18b"> <label for="q18b">b) Azure Firewall</label></li>
+                <li><input type="radio" name="q18" value="c" id="q18c"> <label for="q18c">c) Azure DDoS Protection</label></li>
+                <li><input type="radio" name="q18" value="d" id="q18d"> <label for="q18d">d) Azure Application Gateway</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q18"></div>
+        </div>
+        
+        <div class="question" id="question-container-q19">
+            <p>19. To connect various data sources like Microsoft Entra ID, Microsoft 365, and third-party solutions to Microsoft Sentinel, what do you need to configure?</p>
+            <ul class="options">
+                <li><input type="radio" name="q19" value="a" id="q19a"> <label for="q19a">a) Analytics Rules</label></li>
+                <li><input type="radio" name="q19" value="b" id="q19b"> <label for="q19b">b) Workbooks</label></li>
+                <li><input type="radio" name="q19" value="c" id="q19c"> <label for="q19c">c) Playbooks</label></li>
+                <li><input type="radio" name="q19" value="d" id="q19d"> <label for="q19d">d) Data Connectors</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q19"></div>
+        </div>
+        
+        <div class="question" id="question-container-q20">
+            <p>20. The Threat and Vulnerability Management feature in Microsoft Defender for Endpoint helps to:</p>
+            <ul class="options">
+                <li><input type="radio" name="q20" value="a" id="q20a"> <label for="q20a">a) Automatically respond to detected threats.</label></li>
+                <li><input type="radio" name="q20" value="b" id="q20b"> <label for="q20b">b) Discover, prioritize, and remediate endpoint vulnerabilities and misconfigurations.</label></li>
+                <li><input type="radio" name="q20" value="c" id="q20c"> <label for="q20c">c) Block all incoming network connections to an endpoint.</label></li>
+                <li><input type="radio" name="q20" value="d" id="q20d"> <label for="q20d">d) Manage user access permissions on the endpoint.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q20"></div>
+        </div>
+
+        <div class="question" id="question-container-q21">
+            <p>21. A security analyst uses a Kusto Query Language (KQL) query to look for specific patterns of malicious activity in Microsoft Sentinel. This activity is known as:</p>
+            <ul class="options">
+                <li><input type="radio" name="q21" value="a" id="q21a"> <label for="q21a">a) Incident creation</label></li>
+                <li><input type="radio" name="q21" value="b" id="q21b"> <label for="q21b">b) Playbook execution</label></li>
+                <li><input type="radio" name="q21" value="c" id="q21c"> <label for="q21c">c) Threat hunting</label></li>
+                <li><input type="radio" name="q21" value="d" id="q21d"> <label for="q21d">d) Data connection</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q21"></div>
+        </div>
+        
+        <div class="question" id="question-container-q22">
+            <p>22. Microsoft Defender for Cloud Apps helps you gain visibility and control over "Shadow IT." What is Shadow IT?</p>
+            <ul class="options">
+                <li><input type="radio" name="q22" value="a" id="q22a"> <label for="q22a">a) IT hardware that is painted black for security.</label></li>
+                <li><input type="radio" name="q22" value="b" id="q22b"> <label for="q22b">b) Cloud apps and services used by employees without official sanction or approval from the IT department.</label></li>
+                <li><input type="radio" name="q22" value="c" id="q22c"> <label for="q22c">c) The team of security analysts who work the night shift.</label></li>
+                <li><input type="radio" name="q22" value="d" id="q22d"> <label for="q22d">d) Legacy applications that are no longer supported.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q22"></div>
+        </div>
+        
+        <div class="question" id="question-container-q23">
+            <p>23. The ability of Microsoft 365 Defender to correlate alerts from multiple sources (like Defender for Endpoint and Defender for Office 365) into a single, comprehensive incident is a key feature of:</p>
+            <ul class="options">
+                <li><input type="radio" name="q23" value="a" id="q23a"> <label for="q23a">a) A SIEM solution</label></li>
+                <li><input type="radio" name="q23" value="b" id="q23b"> <label for="q23b">b) A CSPM solution</label></li>
+                <li><input type="radio" name="q23" value="c" id="q23c"> <label for="q23c">c) An XDR solution</label></li>
+                <li><input type="radio" name="q23" value="d" id="q23d"> <label for="q23d">d) A CASB solution</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q23"></div>
+        </div>
+        
+        <div class="question" id="question-container-q24">
+            <p>24. An organization wants to ensure all its Azure VMs automatically have a specific security agent installed. Which service can enforce this through policy?</p>
+            <ul class="options">
+                <li><input type="radio" name="q24" value="a" id="q24a"> <label for="q24a">a) Microsoft Sentinel</label></li>
+                <li><input type="radio" name="q24" value="b" id="q24b"> <label for="q24b">b) Microsoft Defender for Cloud</label></li>
+                <li><input type="radio" name="q24" value="c" id="q24c"> <label for="q24c">c) Azure Key Vault</label></li>
+                <li><input type="radio" name="q24" value="d" id="q24d"> <label for="q24d">d) Azure DDoS Protection</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q24"></div>
+        </div>
+        
+        <div class="question" id="question-container-q25">
+            <p>25. A company is concerned about attacks that compromise their on-premises domain controllers. Which Microsoft Defender service is specifically designed to detect these types of attacks?</p>
+            <ul class="options">
+                <li><input type="radio" name="q25" value="a" id="q25a"> <label for="q25a">a) Microsoft Defender for Endpoint</label></li>
+                <li><input type="radio" name="q25" value="b" id="q25b"> <label for="q25b">b) Microsoft Defender for Office 365</label></li>
+                <li><input type="radio" name="q25" value="c" id="q25c"> <label for="q25c">c) Microsoft Defender for Cloud</label></li>
+                <li><input type="radio" name="q25" value="d" id="q25d"> <label for="q25d">d) Microsoft Defender for Identity</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q25"></div>
+        </div>
+        
+        <div class="question" id="question-container-q26">
+            <p>26. What is a "playbook" in Microsoft Sentinel?</p>
+            <ul class="options">
+                <li><input type="radio" name="q26" value="a" id="q26a"> <label for="q26a">a) A pre-written KQL query for threat hunting.</label></li>
+                <li><input type="radio" name="q26" value="b" id="q26b"> <label for="q26b">b) A dashboard for visualizing data.</label></li>
+                <li><input type="radio" name="q26" value="c" id="q26c"> <label for="q26c">c) A collection of automated remediation actions that can be run in response to an alert.</label></li>
+                <li><input type="radio" name="q26" value="d" id="q26d"> <label for="q26d">d) A report of security recommendations.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q26"></div>
+        </div>
+        
+        <div class="question" id="question-container-q27">
+            <p>27. Network Security Groups (NSGs) operate at which layers of the OSI model?</p>
+            <ul class="options">
+                <li><input type="radio" name="q27" value="a" id="q27a"> <label for="q27a">a) Layer 7 (Application)</label></li>
+                <li><input type="radio" name="q27" value="b" id="q27b"> <label for="q27b">b) Layer 1 (Physical)</label></li>
+                <li><input type="radio" name="q27" value="c" id="q27c"> <label for="q27c">c) Layers 3 and 4 (Network and Transport)</label></li>
+                <li><input type="radio" name="q27" value="d" id="q27d"> <label for="q27d">d) Layer 2 (Data Link)</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q27"></div>
+        </div>
+
+        <div class="question" id="question-container-q28">
+            <p>28. Microsoft Defender for Cloud's "just-in-time (JIT) VM access" feature helps to:</p>
+            <ul class="options">
+                <li><input type="radio" name="q28" value="a" id="q28a"> <label for="q28a">a) Encrypt the virtual machine's disks.</label></li>
+                <li><input type="radio" name="q28" value="b" id="q28b"> <label for="q28b">b) Reduce the attack surface by locking down management ports like RDP and SSH, opening them only upon request.</label></li>
+                <li><input type="radio" name="q28" value="c" id="q28c"> <label for="q28c">c) Scan the virtual machine for malware.</label></li>
+                <li><input type="radio" name="q28" value="d" id="q28d"> <label for="q28d">d) Automatically patch the operating system.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q28"></div>
+        </div>
+        
+        <div class="question" id="question-container-q29">
+            <p>29. What type of information would you expect to find in Azure Key Vault?</p>
+            <ul class="options">
+                <li><input type="radio" name="q29" value="a" id="q29a"> <label for="q29a">a) User passwords for Microsoft Entra ID.</label></li>
+                <li><input type="radio" name="q29" value="b" id="q29b"> <label for="q29b">b) Security alerts and incidents.</label></li>
+                <li><input type="radio" name="q29" value="c" id="q29c"> <label for="q29c">c) API keys, connection strings, and TLS/SSL certificates.</label></li>
+                <li><input type="radio" name="q29" value="d" id="q29d"> <label for="q29d">d) Virtual machine disk images.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q29"></div>
+        </div>
+
+        <div class="question" id="question-container-q30">
+            <p>30. A user receives an email that looks legitimate, but the embedded link directs them to a malicious site. Which technology in the Microsoft security suite is designed to prevent this?</p>
+            <ul class="options">
+                <li><input type="radio" name="q30" value="a" id="q30a"> <label for="q30a">a) Defender for Identity Safe Logon</label></li>
+                <li><input type="radio" name="q30" value="b" id="q30b"> <label for="q30b">b) Defender for Office 365 Safe Links</label></li>
+                <li><input type="radio" name="q30" value="c" id="q30c"> <label for="q30c">c) Defender for Endpoint Secure Browser</label></li>
+                <li><input type="radio" name="q30" value="d" id="q30d"> <label for="q30d">d) Defender for Cloud Apps Safe Sessions</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q30"></div>
+        </div>
+        
+        <div class="question" id="question-container-q31">
+            <p>31. What is the main purpose of "workbooks" in Microsoft Sentinel?</p>
+            <ul class="options">
+                <li><input type="radio" name="q31" value="a" id="q31a"> <label for="q31a">a) To automatically respond to threats.</label></li>
+                <li><input type="radio" name="q31" value="b" id="q31b"> <label for="q31b">b) To create interactive reports and data visualizations.</label></li>
+                <li><input type="radio" name="q31" value="c" id="q31c"> <label for="q31c">c) To connect data sources to the workspace.</label></li>
+                <li><input type="radio" name="q31" value="d" id="q31d"> <label for="q31d">d) To define logic that creates incidents from alerts.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q31"></div>
+        </div>
+
+        <div class="question" id="question-container-q32">
+            <p>32. An alert shows that a user's credentials were used to sign in from North America and then from Asia five minutes later. Which service is best at detecting this type of anomaly?</p>
+            <ul class="options">
+                <li><input type="radio" name="q32" value="a" id="q32a"> <label for="q32a">a) Microsoft Entra ID Protection</label></li>
+                <li><input type="radio" name="q32" value="b" id="q32b"> <label for="q32b">b) Microsoft Defender for Endpoint</label></li>
+                <li><input type="radio" name="q32" value="c" id="q32c"> <label for="q32c">c) Azure DDoS Protection</label></li>
+                <li><input type="radio" name="q32" value="d" id="q32d"> <label for="q32d">d) Azure Key Vault</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q32"></div>
+        </div>
+
+        <div class="question" id="question-container-q33">
+            <p>33. Attack Surface Reduction (ASR) rules are a component of which product?</p>
+            <ul class="options">
+                <li><input type="radio" name="q33" value="a" id="q33a"> <label for="q33a">a) Microsoft Sentinel</label></li>
+                <li><input type="radio" name="q33" value="b" id="q33b"> <label for="q33b">b) Microsoft Defender for Endpoint</label></li>
+                <li><input type="radio" name="q33" value="c" id="q33c"> <label for="q33c">c) Microsoft Defender for Cloud</label></li>
+                <li><input type="radio" name="q33" value="d" id="q33d"> <label for="q33d">d) Microsoft Defender for Identity</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q33"></div>
+        </div>
+
+        <div class="question" id="question-container-q34">
+            <p>34. What is the difference between a Network Security Group (NSG) and Azure Firewall?</p>
+            <ul class="options">
+                <li><input type="radio" name="q34" value="a" id="q34a"> <label for="q34a">a) There is no difference; they are two names for the same service.</label></li>
+                <li><input type="radio" name="q34" value="b" id="q34b"> <label for="q34b">b) NSGs are for on-premises networks, while Azure Firewall is for cloud networks.</label></li>
+                <li><input type="radio" name="q34" value="c" id="q34c"> <label for="q34c">c) NSGs filter traffic at the NIC/subnet level, while Azure Firewall is a centralized, stateful firewall-as-a-service with more advanced features.</label></li>
+                <li><input type="radio" name="q34" value="d" id="q34d"> <label for="q34d">d) NSGs can filter application-level traffic, while Azure Firewall cannot.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q34"></div>
+        </div>
+
+        <div class="question" id="question-container-q35">
+            <p>35. The automated investigation and remediation (AIR) capabilities in Microsoft 365 Defender are designed to:</p>
+            <ul class="options">
+                <li><input type="radio" name="q35" value="a" id="q35a"> <label for="q35a">a) Reduce alert volume and free up security analysts to work on more complex threats.</label></li>
+                <li><input type="radio" name="q35" value="b" id="q35b"> <label for="q35b">b) Only collect logs for long-term storage.</label></li>
+                <li><input type="radio" name="q35" value="c" id="q35c"> <label for="q35c">c) Manage user passwords and MFA settings.</label></li>
+                <li><input type="radio" name="q35" value="d" id="q35d"> <label for="q35d">d) Provide security recommendations for Azure subscriptions.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q35"></div>
+        </div>
+
+        <div class="question" id="question-container-q36">
+            <p>36. What is the primary purpose of a SIEM system like Microsoft Sentinel?</p>
+            <ul class="options">
+                <li><input type="radio" name="q36" value="a" id="q36a"> <label for="q36a">a) To manage endpoint device configurations.</label></li>
+                <li><input type="radio" name="q36" value="b" id="q36b"> <label for="q36b">b) To aggregate and analyze log data from many sources to detect and respond to threats.</label></li>
+                <li><input type="radio" name="q36" value="c" id="q36c"> <label for="q36c">c) To encrypt sensitive emails and documents.</label></li>
+                <li><input type="radio" name="q36" value="d" id="q36d"> <label for="q36d">d) To provide a secure repository for cryptographic keys.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q36"></div>
+        </div>
+
+        <div class="question" id="question-container-q37">
+            <p>37. Microsoft Defender for Cloud can provide security recommendations for resources in:</p>
+            <ul class="options">
+                <li><input type="radio" name="q37" value="a" id="q37a"> <label for="q37a">a) Azure only</label></li>
+                <li><input type="radio" name="q37" value="b" id="q37b"> <label for="q37b">b) Azure and on-premises environments only</label></li>
+                <li><input type="radio" name="q37" value="c" id="q37c"> <label for="q37c">c) Azure, on-premises, and other clouds like AWS and GCP</label></li>
+                <li><input type="radio" name="q37" value="d" id="q37d"> <label for="q37d">d) Microsoft 365 only</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q37"></div>
+        </div>
+
+        <div class="question" id="question-container-q38">
+            <p>38. An "analytics rule" in Microsoft Sentinel is used to:</p>
+            <ul class="options">
+                <li><input type="radio" name="q38" value="a" id="q38a"> <label for="q38a">a) Visualize data in a dashboard.</label></li>
+                <li><input type="radio" name="q38" value="b" id="q38b"> <label for="q38b">b) Automatically run a response action.</label></li>
+                <li><input type="radio" name="q38" value="c" id="q38c"> <label for="q38c">c) Search for patterns in log data and generate alerts or incidents.</label></li>
+                <li><input type="radio" name="q38" value="d" id="q38d"> <label for="q38d">d) Ingest data from a new source.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q38"></div>
+        </div>
+
+        <div class="question" id="question-container-q39">
+            <p>39. An organization is concerned about users uploading large amounts of sensitive data to a non-sanctioned cloud storage provider. Which service is best for creating a policy to detect and block this activity?</p>
+            <ul class="options">
+                <li><input type="radio" name="q39" value="a" id="q39a"> <label for="q39a">a) Microsoft Defender for Identity</label></li>
+                <li><input type="radio" name="q39" value="b" id="q39b"> <label for="q39b">b) Microsoft Defender for Endpoint</label></li>
+                <li><input type="radio" name="q39" value="c" id="q39c"> <label for="q39c">c) Microsoft Defender for Cloud Apps</label></li>
+                <li><input type="radio" name="q39" value="d" id="q39d"> <label for="q39d">d) Microsoft Sentinel</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q39"></div>
+        </div>
+
+        <div class="question" id="question-container-q40">
+            <p>40. Endpoint Detection and Response (EDR) is a core capability of which product?</p>
+            <ul class="options">
+                <li><input type="radio" name="q40" value="a" id="q40a"> <label for="q40a">a) Azure Key Vault</label></li>
+                <li><input type="radio" name="q40" value="b" id="q40b"> <label for="q40b">b) Microsoft Defender for Endpoint</label></li>
+                <li><input type="radio" name="q40" value="c" id="q40c"> <label for="q40c">c) Microsoft Defender for Office 365</label></li>
+                <li><input type="radio" name="q40" value="d" id="q40d"> <label for="q40d">d) Azure Firewall</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q40"></div>
+        </div>
+
+        <div class="question" id="question-container-q41">
+            <p>41. What is the fundamental building block for storing and querying data in Microsoft Sentinel?</p>
+            <ul class="options">
+                <li><input type="radio" name="q41" value="a" id="q41a"> <label for="q41a">a) Azure Storage Account</label></li>
+                <li><input type="radio" name="q41" value="b" id="q41b"> <label for="q41b">b) Azure SQL Database</label></li>
+                <li><input type="radio" name="q41" value="c" id="q41c"> <label for="q41c">c) Log Analytics Workspace</label></li>
+                <li><input type="radio" name="q41" value="d" id="q41d"> <label for="q41d">d) Azure Data Lake</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q41"></div>
+        </div>
+
+        <div class="question" id="question-container-q42">
+            <p>42. A company wants to protect their web applications hosted in Azure from common exploits like SQL injection and cross-site scripting. Which service should they use?</p>
+            <ul class="options">
+                <li><input type="radio" name="q42" value="a" id="q42a"> <label for="q42a">a) Azure DDoS Protection</label></li>
+                <li><input type="radio" name="q42" value="b" id="q42b"> <label for="q42b">b) Network Security Groups</label></li>
+                <li><input type="radio" name="q42" value="c" id="q42c"> <label for="q42c">c) Azure Firewall</label></li>
+                <li><input type="radio" name="q42" value="d" id="q42d"> <label for="q42d">d) Azure Web Application Firewall (WAF)</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q42"></div>
+        </div>
+
+        <div class="question" id="question-container-q43">
+            <p>43. An "incident" in Microsoft 365 Defender or Microsoft Sentinel represents:</p>
+            <ul class="options">
+                <li><input type="radio" name="q43" value="a" id="q43a"> <label for="q43a">a) A single, low-fidelity log entry.</label></li>
+                <li><input type="radio" name="q43" value="b" id="q43b"> <label for="q43b">b) A group of related alerts that together form a potential attack story.</label></li>
+                <li><input type="radio" name="q43" value="c" id="q43c"> <label for="q43c">c) A security recommendation from Microsoft Defender for Cloud.</label></li>
+                <li><input type="radio" name="q43" value="d" id="q43d"> <label for="q43d">d) A compliance report for auditors.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q43"></div>
+        </div>
+
+        <div class="question" id="question-container-q44">
+            <p>44. Which feature helps protect the integrity of the boot process for Azure Virtual Machines?</p>
+            <ul class="options">
+                <li><input type="radio" name="q44" value="a" id="q44a"> <label for="q44a">a) Just-in-Time Access</label></li>
+                <li><input type="radio" name="q44" value="b" id="q44b"> <label for="q44b">b) Network Security Groups</label></li>
+                <li><input type="radio" name="q44" value="c" id="q44c"> <label for="q44c">c) Secure Boot and Measured Boot</label></li>
+                <li><input type="radio" name="q44" value="d" id="q44d"> <label for="q44d">d) Azure DDoS Protection</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q44"></div>
+        </div>
+
+        <div class="question" id="question-container-q45">
+            <p>45. When investigating a user's activity in Microsoft Defender for Cloud Apps, you can see their sign-ins, apps they used, and data they accessed. This information is available in the:</p>
+            <ul class="options">
+                <li><input type="radio" name="q45" value="a" id="q45a"> <label for="q45a">a) Secure Score report</label></li>
+                <li><input type="radio" name="q45" value="b" id="q45b"> <label for="q45b">b) Activity Log</label></li>
+                <li><input type="radio" name="q45" value="c" id="q45c"> <label for="q45c">c) Data Connector gallery</label></li>
+                <li><input type="radio" name="q45" value="d" id="q45d"> <label for="q45d">d) Azure Key Vault</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q45"></div>
+        </div>
+
+        <div class="question" id="question-container-q46">
+            <p>46. A primary benefit of a cloud-native SIEM like Microsoft Sentinel over a traditional on-premises SIEM is:</p>
+            <ul class="options">
+                <li><input type="radio" name="q46" value="a" id="q46a"> <label for="q46a">a) It requires less network bandwidth.</label></li>
+                <li><input type="radio" name="q46" value="b" id="q46b"> <label for="q46b">b) It eliminates the need for security analysts.</label></li>
+                <li><input type="radio" name="q46" value="c" id="q46c"> <label for="q46c">c) It provides rapid scalability and reduces the burden of infrastructure management.</label></li>
+                <li><input type="radio" name="q46" value="d" id="q46d"> <label for="q46d">d) It can only analyze data from cloud sources.</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q46"></div>
+        </div>
+
+        <div class="question" id="question-container-q47">
+            <p>47. Your organization wants to analyze traffic patterns to and from Azure resources to diagnose network issues or audit for compliance. Which feature would you use?</p>
+            <ul class="options">
+                <li><input type="radio" name="q47" value="a" id="q47a"> <label for="q47a">a) NSG flow logs</label></li>
+                <li><input type="radio" name="q47" value="b" id="q47b"> <label for="q47b">b) Azure Key Vault logs</label></li>
+                <li><input type="radio" name="q47" value="c" id="q47c"> <label for="q47c">c) Azure DDoS Protection reports</label></li>
+                <li><input type="radio" name="q47" value="d" id="q47d"> <label for="q47d">d) Secure Score history</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q47"></div>
+        </div>
+
+        <div class="question" id="question-container-q48">
+            <p>48. You want to give a third-party auditor read-only access to your security recommendations in Microsoft Defender for Cloud. Which built-in role would be most appropriate?</p>
+            <ul class="options">
+                <li><input type="radio" name="q48" value="a" id="q48a"> <label for="q48a">a) Security Admin</label></li>
+                <li><input type="radio" name="q48" value="b" id="q48b"> <label for="q48b">b) Contributor</label></li>
+                <li><input type="radio" name="q48" value="c" id="q48c"> <label for="q48c">c) Owner</label></li>
+                <li><input type="radio" name="q48" value="d" id="q48d"> <label for="q48d">d) Security Reader</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q48"></div>
+        </div>
+
+        <div class="question" id="question-container-q49">
+            <p>49. A security control that blocks Office applications from creating child processes is an example of what?</p>
+            <ul class="options">
+                <li><input type="radio" name="q49" value="a" id="q49a"> <label for="q49a">a) An Attack Surface Reduction (ASR) rule</label></li>
+                <li><input type="radio" name="q49" value="b" id="q49b"> <label for="q49b">b) A Safe Links policy</label></li>
+                <li><input type="radio" name="q49" value="c" id="q49c"> <label for="q49c">c) A SIEM analytics rule</label></li>
+                <li><input type="radio" name="q49" value="d" id="q49d"> <label for="q49d">d) A network security group rule</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q49"></div>
+        </div>
+
+        <div class="question" id="question-container-q50">
+            <p>50. The "golden ticket" attack is a sophisticated threat against which environment?</p>
+            <ul class="options">
+                <li><input type="radio" name="q50" value="a" id="q50a"> <label for="q50a">a) Microsoft Azure Storage</label></li>
+                <li><input type="radio" name="q50" value="b" id="q50b"> <label for="q50b">b) Microsoft 365 SharePoint Online</label></li>
+                <li><input type="radio" name="q50" value="c" id="q50c"> <label for="q50c">c) On-premises Active Directory</label></li>
+                <li><input type="radio" name="q50" value="d" id="q50d"> <label for="q50d">d) User endpoint devices</label></li>
+            </ul>
+            <div class="explanation" id="explanation-q50"></div>
+        </div>
+
+        <button type="button" id="submit">Submit Answers</button>
+    </form>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const quizForm = document.getElementById('quizForm');
+            const submitButton = document.getElementById('submit');
+            const resultsDiv = document.getElementById('results');
+
+            const quizData = {
+                q1: { answer: 'b', explanation: 'Microsoft Sentinel is a scalable, cloud-native solution that provides Security Information and Event Management (SIEM) for collecting data from many sources, and Security Orchestration, Automation, and Response (SOAR) for automating responses to threats.' },
+                q2: { answer: 'c', explanation: 'Microsoft Defender for Office 365 (formerly Office 365 ATP) provides protection against threats in email messages, links (URLs), and collaboration tools like SharePoint, OneDrive, and Microsoft Teams.' },
+                q3: { answer: 'b', explanation: 'Secure Score in Microsoft Defender for Cloud is a measure of an organization\'s security posture. It provides recommendations that, when implemented, will improve the score and reduce risk.' },
+                q4: { answer: 'b', explanation: 'XDR stands for Extended Detection and Response. Microsoft 365 Defender is an XDR solution that collects and correlates data from across the Microsoft 365 environment to provide a unified incident response experience.' },
+                q5: { answer: 'c', explanation: 'Microsoft Defender for Endpoint is an enterprise endpoint security platform designed to help networks prevent, detect, investigate, and respond to advanced threats on devices (endpoints) like desktops, laptops, and servers.' },
+                q6: { answer: 'c', explanation: 'Azure Key Vault is a cloud service for securely storing and accessing secrets, such as API keys, passwords, certificates, or cryptographic keys, which is essential for secure application development.' },
+                q7: { answer: 'c', explanation: 'Network Security Groups (NSGs) contain a list of security rules that allow or deny inbound or outbound network traffic based on source/destination IP address, port, and protocol. They are applied to network interfaces or subnets.' },
+                q8: { answer: 'b', explanation: 'A Cloud Access Security Broker (CASB) sits between users and cloud services to enforce security policies and provide visibility into cloud usage. Microsoft Defender for Cloud Apps is Microsoft\'s CASB solution.' },
+                q9: { answer: 'c', explanation: 'SOAR stands for Security Orchestration, Automation, and Response. In Microsoft Sentinel, this refers to the capabilities (using playbooks) that allow you to automate common tasks and responses to security incidents.' },
+                q10: { answer: 'b', explanation: 'Microsoft Defender for Identity (formerly Azure ATP) is a cloud-based security solution that leverages your on-premises Active Directory signals to identify, detect, and investigate advanced threats and malicious insider actions.' },
+                q11: { answer: 'b', explanation: 'Safe Links scans URLs in emails and Office documents at the time of click. If a link is found to be malicious, the user is warned or blocked from visiting the site, protecting them from phishing and malicious sites.' },
+                q12: { answer: 'b', explanation: 'Microsoft Sentinel includes powerful hunting search and query tools based on the Kusto Query Language (KQL). This allows security analysts to proactively hunt for security threats and anomalies across their organization\'s data sources.' },
+                q13: { answer: 'd', explanation: 'Azure DDoS (Distributed Denial of Service) Protection is designed to defend against large-scale, volumetric network attacks. These attacks try to exhaust a resource\'s network bandwidth, making it unavailable to legitimate users.' },
+                q14: { answer: 'c', explanation: 'Microsoft Defender for Cloud provides both CSPM to assess and strengthen your security posture (like Secure Score) and CWP to protect workloads running in Azure, on-premises, or other clouds against threats.' },
+                q15: { answer: 'b', explanation: 'Safe Attachments uses a virtual environment (a sandbox) to detonate email attachments and analyze their behavior. If the attachment is deemed malicious, it is blocked from reaching the user\'s mailbox.' },
+                q16: { answer: 'a', explanation: 'The Microsoft 365 Defender portal (security.microsoft.com) is the central XDR platform that aggregates alerts from Defender for Endpoint, Identity, Office 365, and Cloud Apps into unified incidents, simplifying investigation.' },
+                q17: { answer: 'a', explanation: 'Sandboxing is a security technique where a suspicious program or file is executed in a separate, isolated environment to observe its behavior without risking harm to the host system. This is used by features like Safe Attachments.' },
+                q18: { answer: 'b', explanation: 'While an NSG provides basic filtering, Azure Firewall is a managed, cloud-native, stateful firewall service that offers advanced features like threat intelligence-based filtering, FQDN filtering, and centralized policy management.' },
+                q19: { answer: 'd', explanation: 'Data connectors are the components in Microsoft Sentinel that you enable and configure to start ingesting logs and alerts from various sources, such as Microsoft Entra ID, firewalls, and endpoint solutions.' },
+                q20: { answer: 'b', explanation: 'Threat and Vulnerability Management is a component of Defender for Endpoint that provides real-time discovery of vulnerabilities and misconfigurations on endpoints and offers prioritized remediation recommendations.' },
+                q21: { answer: 'c', explanation: 'Threat hunting is the proactive practice of searching through networks, endpoints, and datasets to detect and isolate advanced threats that evade existing security solutions. In Sentinel, this is often done with KQL queries.' },
+                q22: { answer: 'b', explanation: 'Shadow IT refers to the use of IT systems, devices, software, applications, and services without explicit approval from the IT department. Defender for Cloud Apps helps discover this usage and assess the risk.' },
+                q23: { answer: 'c', explanation: 'Extended Detection and Response (XDR) solutions, like Microsoft 365 Defender, automatically collect and correlate data across multiple security domains (endpoints, email, identity, cloud apps) to provide a more complete picture of an attack.' },
+                q24: { answer: 'b', explanation: 'Microsoft Defender for Cloud integrates with Azure Policy to enforce security configurations. It can, for example, deploy the Log Analytics agent or other required extensions to all existing and new VMs in a subscription.' },
+                q25: { answer: 'd', explanation: 'Microsoft Defender for Identity is specifically designed to protect on-premises Active Directory. It analyzes signals from domain controllers to detect threats like pass-the-hash, golden ticket attacks, and other attempts to compromise identities.' },
+                q26: { answer: 'c', explanation: 'A playbook in Sentinel is a collection of procedures, based on Azure Logic Apps, that can be run automatically when an alert is triggered. This is the "Response" and "Automation" part of SOAR.' },
+                q27: { answer: 'c', explanation: 'NSGs are a packet filter, making decisions based on information at Layer 3 (IP addresses) and Layer 4 (TCP/UDP ports). They do not inspect the application-level data (Layer 7).' },
+                q28: { answer: 'b', explanation: 'JIT VM Access in Defender for Cloud reduces exposure to brute-force attacks by ensuring management ports are closed by default. Access is granted on an audited, time-limited basis upon request.' },
+                q29: { answer: 'c', explanation: 'Azure Key Vault is a secure store for secrets. It is designed to hold sensitive information that applications need, such as connection strings to databases, API keys for third-party services, and certificates.' },
+                q30: { answer: 'b', explanation: 'Microsoft Defender for Office 365 Safe Links is the specific feature that provides time-of-click verification of URLs in emails. It rewrites URLs and checks them against a reputation service every time they are clicked.' },
+                q31: { answer: 'b', explanation: 'Workbooks in Microsoft Sentinel provide a flexible canvas for data analysis and the creation of rich visual reports. They are often used to build interactive dashboards to visualize data from connected sources.' },
+                q32: { answer: 'a', explanation: 'Microsoft Entra ID Protection specializes in identity-based risks. Its "impossible travel" detection is specifically designed to identify sign-ins from geographically distant locations happening in a short period.' },
+                q33: { answer: 'b', explanation: 'Attack Surface Reduction (ASR) rules are a key feature of Microsoft Defender for Endpoint. They target specific software behaviors often used by malware to infect machines, such as macros creating executable content or scripts launching downloaded content.' },
+                q34: { answer: 'c', explanation: 'This describes the core difference. An NSG is a simple, distributed packet filter applied to a resource\'s NIC or subnet. Azure Firewall is a powerful, centralized service that provides perimeter security for the entire virtual network.' },
+                q35: { answer: 'a', explanation: 'Automated Investigation and Remediation (AIR) uses AI to mimic the actions of a top-tier security analyst. It investigates alerts, determines the root cause, and takes remediation actions, which significantly reduces the manual effort required from the security team.' },
+                q36: { answer: 'b', explanation: 'A Security Information and Event Management (SIEM) system is designed for log aggregation and correlation. It collects security data from across the enterprise, analyzes it for threat patterns, and generates alerts.' },
+                q37: { answer: 'c', explanation: 'Microsoft Defender for Cloud is a multi-cloud solution. Using Azure Arc, it can extend its Cloud Security Posture Management (CSPM) and Cloud Workload Protection (CWP) capabilities to servers running on-premises or in other cloud environments like AWS and GCP.' },
+                q38: { answer: 'c', explanation: 'An analytics rule in Sentinel contains the logic (typically a KQL query) that runs on a schedule against the collected data. If the query returns results, it can be configured to create an alert and group those alerts into an incident.' },
+                q39: { answer: 'c', explanation: 'This is a primary use case for a CASB like Microsoft Defender for Cloud Apps. It can discover which cloud apps are in use and create policies to control data flow, such as blocking uploads of sensitive data to unsanctioned applications.' },
+                q40: { answer: 'b', explanation: 'Endpoint Detection and Response (EDR) provides post-breach detection capabilities. Microsoft Defender for Endpoint is Microsoft\'s EDR solution, designed to detect, investigate, and respond to advanced threats on devices.' },
+                q41: { answer: 'c', explanation: 'Microsoft Sentinel is built on top of an Azure Log Analytics Workspace. All data ingested by Sentinel is stored in this workspace, and all queries (for hunting, analytics, etc.) are run against it.' },
+                q42: { answer: 'd', explanation: 'A Web Application Firewall (WAF) provides centralized protection for web applications from common exploits and vulnerabilities. In Azure, this is often deployed with Application Gateway or Azure Front Door.' },
+                q43: { answer: 'b', explanation: 'Both Microsoft 365 Defender (XDR) and Microsoft Sentinel (SIEM) use the concept of an incident to reduce alert fatigue. An incident is a container for all the related alerts, artifacts, and evidence that make up a single attack, providing analysts with a clear narrative.' },
+                q44: { answer: 'c', explanation: 'For Azure confidential VMs and some trusted launch VMs, Secure Boot and Measured Boot are technologies that help protect against bootkits and rootkits by cryptographically verifying the integrity of the entire boot chain, from firmware to the OS kernel.' },
+                q45: { answer: 'b', explanation: 'The Activity Log in Microsoft Defender for Cloud Apps is where you can investigate user activities across sanctioned and unsanctioned cloud apps. It provides a detailed audit trail of actions performed.' },
+                q46: { answer: 'c', explanation: 'Cloud-native solutions like Sentinel leverage the power of the cloud for massive scalability without requiring the customer to manage the underlying servers, storage, or infrastructure. This allows security teams to focus on security, not maintenance.' },
+                q47: { answer: 'a', explanation: 'NSG flow logs are a feature of Azure Network Watcher that allows you to log information about IP traffic flowing through a Network Security Group. This data is essential for network monitoring, auditing, and forensics.' },
+                q48: { answer: 'd', explanation: 'The Security Reader role is a built-in Azure role that provides read-only access to security-related services and recommendations. It\'s ideal for audit or compliance teams who need visibility without the ability to make changes.' },
+                q49: { answer: 'a', explanation: 'This is a classic example of an Attack Surface Reduction (ASR) rule in Microsoft Defender for Endpoint. These rules are designed to stop common malware attack vectors at the source by restricting risky application behaviors.' },
+                q50: { answer: 'c', explanation: 'A "golden ticket" attack is an advanced persistent threat technique where an attacker gains control of the Kerberos Ticket Granting Ticket (KRBTGT) account in on-premises Active Directory. Microsoft Defender for Identity is designed to detect this type of attack.' },
+            };
+
+            submitButton.addEventListener('click', () => {
+                let score = 0;
+                const userAnswers = new FormData(quizForm);
+                const totalQuestions = Object.keys(quizData).length;
+
+                submitButton.disabled = true;
+                submitButton.textContent = 'Answers Submitted';
+
+                for (let i = 1; i <= totalQuestions; i++) {
+                    const questionKey = `q${i}`;
+                    const container = document.getElementById(`question-container-${questionKey}`);
+                    const selectedValue = userAnswers.get(questionKey);
+                    const correctAnswer = quizData[questionKey].answer;
+                    const explanationText = quizData[questionKey].explanation;
+                    const explanationDiv = document.getElementById(`explanation-${questionKey}`);
+
+                    const radioButtons = container.querySelectorAll(`input[name="${questionKey}"]`);
+                    
+                    radioButtons.forEach(radio => {
+                        const listItem = radio.parentElement;
+                        listItem.classList.remove('correct-answer', 'incorrect-answer');
+
+                        if (radio.value === correctAnswer) {
+                             listItem.classList.add('correct-answer');
+                        }
+
+                        if (selectedValue && radio.value === selectedValue && selectedValue !== correctAnswer) {
+                            listItem.classList.add('incorrect-answer');
+                        }
+                    });
+
+                    if (selectedValue === correctAnswer) {
+                        score++;
+                    }
+                    
+                    explanationDiv.innerHTML = `<strong>Explanation:</strong> ${explanationText}`;
+                    explanationDiv.style.display = 'block';
+                }
+
+                resultsDiv.innerHTML = `You scored ${score} out of ${totalQuestions}. Review your answers and the explanations below.`;
+                resultsDiv.style.display = 'block';
+                window.scrollTo(0, 0);
+            });
+        });
+    </script>
+
+</body>
+</html>
